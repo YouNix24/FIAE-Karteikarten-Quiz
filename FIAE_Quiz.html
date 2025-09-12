@@ -46,7 +46,8 @@
   <header class="topbar">
     <h1>FIAE Karteikarten Quiz</h1>
     <div class="actions">
-      <a class="link" href="./Zusammenfassung_Abschlussprufung_Fast alle Themen.pdf" target="_blank">Zusammenfassung öffnen</a>
+      <button class="btn ghost" id="btnRescan" type="button" title="JSON neu scannen">Neu scannen</button>
+      <button class="btn ghost" id="btnToggleLogs" type="button" title="Debug-Logs anzeigen">Logs</button>
     </div>
   </header>
 
@@ -84,6 +85,9 @@
       <div id="topicsList" class="list"></div>
     </section>
   </main>
+
+  <!-- Sichtbare UI-Logs -->
+  <div id="uiLogs" class="ui-logs hidden" aria-live="polite" aria-atomic="false"></div>
 
   <div id="overlay" class="overlay hidden" aria-hidden="true">
     <div class="runner-card" role="dialog" aria-modal="true">

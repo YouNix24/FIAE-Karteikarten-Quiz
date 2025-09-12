@@ -1,127 +1,160 @@
 {
   "cards": [
     {
-      "question": "Welche Aussage beschreibt das Single-Responsibility-Prinzip (SRP) am besten?",
+      "question": "Was ist der Unterschied zwischen physischer und logischer Topologie?",
       "choices": [
-        "Eine Klasse sollte genau einen Grund zur Änderung haben",
-        "Eine Klasse darf nur eine Methode haben",
-        "Eine Klasse darf max. 100 Zeilen haben",
-        "Eine Klasse braucht nur ein Attribut"
+        "Physisch = Verkabelung, logisch = Datenfluss",
+        "Physisch = IP‑Routen, logisch = Kabelwege",
+        "Physisch = Ports, logisch = Stromversorgung",
+        "Kein Unterschied, beides identisch"
       ],
       "correct_index": 0,
-      "hint": "Fokus auf eine Verantwortung je Modul/Klasse."
+      "hint": "Physisch: wie Geräte verbunden sind; logisch: wie Daten fließen.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Topologie", "physisch", "logisch"]
     },
     {
-      "question": "Was ist der Hauptnutzen von Continuous Integration (CI) im Entwicklungsprozess?",
+      "question": "Wie ist eine Bus‑Topologie aufgebaut?",
       "choices": [
-        "Fehler früh erkennen durch häufige Integration",
-        "Jede Änderung sofort produktiv schalten",
-        "Alle Tests entfallen durch Automatisierung",
-        "Code-Reviews werden obsolet"
+        "Alle Geräte hängen an einem gemeinsamen Übertragungsmedium",
+        "Jedes Gerät ist mit allen anderen direkt verbunden",
+        "Geräte sind sternförmig an einem Zentrum angeschlossen",
+        "Kombination aus Stern und Ring"
       ],
       "correct_index": 0,
-      "hint": "Kleine, häufige Integrationen + automatisierte Tests."
+      "hint": "Oft ein gemeinsames Koax‑Kabel als Medium.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Bus", "Koax", "gemeinsames Medium"]
     },
     {
-      "question": "Welche Aussage zu Containern (z. B. Docker) trifft zu?",
+      "question": "Welcher Nachteil ist typisch für die Bus‑Topologie?",
       "choices": [
-        "Container teilen den Kernel des Host-Systems",
-        "Container sind vollständige VMs mit eigenem Kernel",
-        "Container benötigen zwingend Hypervisor Typ 1",
-        "Container ersetzen Versionskontrolle"
+        "Eine Kabelunterbrechung legt das gesamte Netz lahm",
+        "Hoher Verkabelungsaufwand",
+        "Zentraler Ausfallpunkt am Switch",
+        "Sehr teuer in der Umsetzung"
       ],
       "correct_index": 0,
-      "hint": "Isolation via Namespaces und Cgroups."
+      "hint": "Single Point of Failure des gemeinsamen Mediums.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Bus", "Nachteil", "Ausfall"]
     },
     {
-      "question": "Wozu dient eine Pull-Request (Merge Request) in Git-gestützten Workflows?",
+      "question": "Wie ist eine Ring‑Topologie aufgebaut?",
       "choices": [
-        "Code-Änderungen zur Review und Integration vorschlagen",
-        "Code direkt in den Hauptbranch deployen",
-        "Commits kryptografisch signieren",
-        "Binärdateien effizienter speichern"
+        "Geräte sind zu einem geschlossenen Kreis verbunden",
+        "Alle Geräte an einem Bus",
+        "Hierarchische Ebenen wie ein Stamm mit Ästen",
+        "Vollständig vermascht"
       ],
       "correct_index": 0,
-      "hint": "Diskussion, Review und Zusammenführen von Änderungen."
+      "hint": "Jeder Knoten mit seinen direkten Nachbarn.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Ring", "Kreis", "Nachbarn"]
     },
     {
-      "question": "Welcher HTTP-Header steuert hauptsächlich clientseitiges Caching und Zwischenspeicherung?",
-      "choices": ["Cache-Control", "Authorization", "Origin", "Content-Type"],
-      "correct_index": 0,
-      "hint": "z. B. max-age, no-store."
-    },
-    {
-      "question": "Was beschreibt ein UML-Sequenzdiagramm?",
+      "question": "Welcher Nachteil wird bei der Ring‑Topologie genannt?",
       "choices": [
-        "Interaktionen von Objekten im Zeitablauf",
-        "Struktur und Beziehungen von Klassen",
-        "Zustände und Übergänge eines Systems",
-        "Verteilung von Artefakten auf Knoten"
+        "Ausfall eines Geräts stört häufig den gesamten Ring",
+        "Viele Kollisionen",
+        "Teuer wegen vieler Kabel",
+        "Kein zentraler Punkt erweiterbar"
       ],
       "correct_index": 0,
-      "hint": "Nachrichten entlang von Lifelines."
+      "hint": "Außerdem oft langsamer und anfälliger.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Ring", "Nachteil", "Ausfall"]
     },
     {
-      "question": "Wozu dient Netzwerksegmentierung (z. B. per VLAN) in Unternehmensnetzen hauptsächlich?",
+      "question": "Wie ist eine Stern‑Topologie charakterisiert?",
       "choices": [
-        "Broadcast-Domänen begrenzen und Sicherheit erhöhen",
-        "Kabelbandbreite physisch erhöhen",
-        "Firewalls überflüssig machen",
-        "IPv6 vollständig ersetzen"
+        "Alle Geräte an einem zentralen Knoten (z. B. Switch)",
+        "Geräte sind in einem Ring verbunden",
+        "Alle Geräte teilen sich ein Koax‑Kabel",
+        "Jeder mit jedem direkt verbunden"
       ],
       "correct_index": 0,
-      "hint": "Trennung von Zonen, Reduktion von Broadcasts."
+      "hint": "Störungen betreffen meist nur das betroffene Endgerät.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Stern", "zentral", "Switch"]
     },
     {
-      "question": "Welchen Zweck erfüllt ein Reverse Proxy in einer Webarchitektur?",
+      "question": "Welcher Nachteil der Stern‑Topologie trifft zu?",
       "choices": [
-        "TLS terminieren und Anfragen an Backends verteilen",
-        "IP-Adressen im LAN vergeben",
-        "Namen lokal per Hosts-Datei auflösen",
-        "Datenbankabfragen effizienter ausführen"
+        "Fällt der zentrale Knoten aus, ist das Netz lahmgelegt",
+        "Hohe Kollisionsrate",
+        "Aufwendig zu erweitern",
+        "Kabelbruch hat keine Wirkung"
       ],
       "correct_index": 0,
-      "hint": "Load Balancing, TLS-Offloading, Caching."
+      "hint": "Zentraler Switch/Hub als Single Point of Failure.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Stern", "Nachteil", "Ausfall"]
     },
     {
-      "question": "Welche Zeitkomplexität hat die binäre Suche in einem sortierten Array?",
-      "choices": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
-      "correct_index": 0,
-      "hint": "Mit jedem Schritt halbiert sich der Suchraum."
-    },
-    {
-      "question": "Was ist ein zentraler Vorteil von Infrastructure as Code (IaC)?",
+      "question": "Welche Aussage beschreibt die Baum‑Topologie?",
       "choices": [
-        "Reproduzierbare, versionierbare Umgebungen",
-        "Dokumentation wird überflüssig",
-        "Tests sind nicht mehr erforderlich",
-        "Nur On-Premises nutzbar"
+        "Hierarchische Struktur, ähnlich Stamm mit Ästen",
+        "Alle Geräte teilen sich ein Medium",
+        "Vollständige Vermaschung",
+        "Kreisförmige Anordnung"
       ],
       "correct_index": 0,
-      "hint": "Automatisierbar, nachvollziehbar, wiederholbar."
+      "hint": "Oft in Firmennetzen eingesetzt; gut skalierbar.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Baum", "hierarchisch", "Skalierung"]
     },
     {
-      "question": "Welcher Sicherheitsgrundsatz wird mit dem Need-to-Know-Prinzip verfolgt?",
+      "question": "Welcher Nachteil wird für die Baum‑Topologie genannt?",
       "choices": [
-        "Zugriff nur für Rollen mit notwendiger Berechtigung",
-        "Alle Benutzer sehen alle Daten",
-        "Zugriff nach Seniorität statt Rolle",
-        "Zugriff nur zu festgelegten Bürozeiten"
+        "Fällt ein Ast aus, ist ein ganzes Teilnetz betroffen",
+        "Sehr hoher Gerätepreis",
+        "Keine logische Struktur möglich",
+        "Kollisionen verhindern die Nutzung"
       ],
       "correct_index": 0,
-      "hint": "Minimalprinzip: So wenig Rechte wie nötig."
+      "hint": "Zusätzlich höherer Verkabelungsaufwand.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Baum", "Nachteil", "Teilnetz"]
     },
     {
-      "question": "Wozu dient ein Feature Toggle im Auslieferungsprozess?",
+      "question": "Welche Eigenschaft kennzeichnet eine Mesh‑Topologie?",
       "choices": [
-        "Funktionen zur Laufzeit gezielt ein- oder ausschalten",
-        "Quellcode automatisch dokumentieren",
-        "Datenbanken online migrieren",
-        "Builds kryptografisch signieren"
+        "Jeder Knoten ist mit allen anderen direkt verbunden",
+        "Ein gemeinsames Kabel verbindet alle Geräte",
+        "Ein zentraler Verteiler verbindet alle Endgeräte",
+        "Geräte sind ringförmig verbunden"
       ],
       "correct_index": 0,
-      "hint": "Schrittweise Aktivierung, Canary, A/B-Tests."
+      "hint": "Sehr ausfallsicher dank vieler Alternativwege.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Mesh", "vermascht", "Ausfallsicherheit"]
+    },
+    {
+      "question": "Welcher Nachteil wird bei Mesh‑Topologien genannt?",
+      "choices": [
+        "Teuer und komplex in der Verkabelung",
+        "Viele Kollisionen auf dem Medium",
+        "Ein einziger Kabelbruch legt alles lahm",
+        "Zentraler Ausfallpunkt am Switch"
+      ],
+      "correct_index": 0,
+      "hint": "Vorteil: hohe Performance, Nachteil: Kosten/Komplexität.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Mesh", "Nachteil", "Komplexität"]
+    },
+    {
+      "question": "Was beschreibt eine Hybrid‑Topologie am besten?",
+      "choices": [
+        "Kombination verschiedener Topologien",
+        "Ein einzelnes Koax‑Kabel für alle",
+        "Nur Ring und Bus ohne Stern",
+        "Nur logische, keine physische Struktur"
+      ],
+      "correct_index": 0,
+      "hint": "Kann Stärken mehrerer Ansätze kombinieren; aber komplex.",
+      "topic": "Netzwerktopologien",
+      "tags": ["Hybrid", "Kombination", "Topologien"]
     }
   ]
 }
-

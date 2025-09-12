@@ -118,7 +118,7 @@ try {
         if (-not (Test-Path $logsDir)) { New-Item -ItemType Directory -Path $logsDir | Out-Null }
         $file = (Get-Date -Format 'yyyy-MM-dd'); $logFile = Join-Path $logsDir ("quiz_"+$file+".log")
         $remote = $client.Client.RemoteEndPoint.ToString()
-        $lineLog = "[$([DateTime]::UtcNow.ToString('o'))][$remote] $body"
+        $lineLog = "[$([DateTime]::UtcNow.ToString('o'))] [CLIENT $remote] $body"
         [System.IO.File]::AppendAllText($logFile, $lineLog + "`r`n")
         $hdr = "HTTP/1.1 204 No Content`r`nContent-Length: 0`r`nConnection: close`r`nAccess-Control-Allow-Origin: *`r`n`r`n"
         $h = [System.Text.Encoding]::ASCII.GetBytes($hdr)

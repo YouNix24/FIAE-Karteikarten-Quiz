@@ -1,77 +1,135 @@
 {
   "cards": [
     {
-      "question": "In UML-Klassendiagrammen: Wodurch wird eine Komposition (starke Ganz-Teil-Beziehung) am Assoziationsende dargestellt?",
-      "choices": ["Schwarzer Diamant", "Weißer Diamant", "Leere Dreieckspitze", "Kein Symbol"],
+      "question": "Was beschreibt einen Stakeholder am besten?",
+      "choices": [
+        "Person/Gruppe mit berechtigtem Interesse am Projekt/Unternehmen",
+        "Nur Eigentümer eines Unternehmens",
+        "Nur zahlende Kunden",
+        "Nur interne Mitarbeiter"
+      ],
       "correct_index": 0,
-      "hint": "Komposition: gefüllter (schwarzer) Diamant."
+      "hint": "Stakeholder können intern oder extern sein.",
+      "topic": "Stakeholder",
+      "tags": ["Stakeholder", "Definition", "Interesse"]
     },
     {
-      "question": "In UML-Klassendiagrammen: Wodurch wird eine Aggregation (schwache Ganz-Teil-Beziehung) dargestellt?",
-      "choices": ["Weißer Diamant", "Schwarzer Diamant", "Gefülltes Dreieck", "Punktlinie"],
-      "correct_index": 0,
-      "hint": "Aggregation: ungefüllter (weißer) Diamant."
+      "question": "Welches Beispiel ist KEIN interner Stakeholder?",
+      "choices": ["Mitarbeiter", "Management/Führungskräfte", "Eigentümer/Aktionäre", "Kunden"],
+      "correct_index": 3,
+      "hint": "Kunden zählen zu den externen Anspruchsgruppen.",
+      "topic": "Stakeholder",
+      "tags": ["Stakeholder", "extern", "Kunden"]
     },
     {
-      "question": "Was bedeutet die «extend»-Beziehung in einem UML-Use-Case-Diagramm in Bezug auf optionale Erweiterungen?",
-      "choices": ["Optionaler Zusatzfall", "Pflichtteil", "Vererbung", "Assoziation"],
+      "question": "Welches Werkzeug wird typischerweise in der Stakeholder‑Analyse genutzt?",
+      "choices": [
+        "Einfluss‑/Interessen‑Matrix",
+        "PERT‑Netzplan",
+        "Klassendiagramm",
+        "Kano‑Modell für Produktfeatures"
+      ],
       "correct_index": 0,
-      "hint": "Optionaler Ablauf, der einen Basisfall erweitert."
+      "hint": "Positioniert Stakeholder nach Macht/Einfluss und Interesse.",
+      "topic": "Stakeholder",
+      "tags": ["Analyse", "Matrix", "Einfluss", "Interesse"]
     },
     {
-      "question": "Welches Symbol kennzeichnet den Startzustand in einem UML-Zustandsdiagramm?",
-      "choices": ["Gefüllter Kreis", "Leerer Kreis", "Doppelkreis", "Raute"],
+      "question": "Was gehört zum Stakeholder‑Management?",
+      "choices": [
+        "Kommunikationsstrategien und regelmäßiges Feedback",
+        "Nur Kostenplanung",
+        "Nur Testautomatisierung",
+        "Nur Beschaffung von Hardware"
+      ],
       "correct_index": 0,
-      "hint": "Initial State = ausgefüllter Punkt."
+      "hint": "Systematisch identifizieren, einbinden, abstimmen.",
+      "topic": "Stakeholder",
+      "tags": ["Kommunikation", "Management", "Abstimmung"]
     },
     {
-      "question": "Wofür steht der Aktivierungsbalken in einem UML-Sequenzdiagramm entlang einer Lifeline?",
-      "choices": ["Ausführung auf der Lifeline", "Nachrichtentyp", "Klassenname", "Zustandswechsel"],
+      "question": "Was ist JBOD (Just a Bunch of Disks)?",
+      "choices": [
+        "Zusammenfassung von Platten ohne Redundanz/Performance‑Gewinn",
+        "Mirroring mit hoher Ausfallsicherheit",
+        "Striping mit hoher Performance",
+        "Doppelte Parität über mindestens 4 Platten"
+      ],
       "correct_index": 0,
-      "hint": "Zeigt aktive Ausführung/Kontrollfokus."
+      "hint": "Mehrere Festplatten werden zu einem Volume „gespannt“ (Spanning).",
+      "topic": "Speicher & RAID",
+      "tags": ["JBOD", "Speicher", "ohne Redundanz"]
     },
     {
-      "question": "Was bedeutet das Open-Closed-Prinzip (OCP) aus den SOLID-Prinzipien in Bezug auf Änderungen und Erweiterungen?",
-      "choices": ["Offen für Erweiterung", "Nur intern testbar", "Nur OO-Sprachen", "Nur mit UML"],
+      "question": "Welche Aussage zu JBOD trifft zu?",
+      "choices": [
+        "Fällt eine Platte aus, gehen nur deren Daten verloren",
+        "Verbessert immer die Performance",
+        "Erlaubt Hot‑Swap mit Parität",
+        "Spiegelt Daten automatisch"
+      ],
       "correct_index": 0,
-      "hint": "Gegen Änderung geschlossen, für Erweiterung offen."
+      "hint": "Keine Redundanz, kein automatischer Schutz.",
+      "topic": "Speicher & RAID",
+      "tags": ["JBOD", "Ausfall", "Redundanz"]
     },
     {
-      "question": "Welches Merkmal garantiert das Singleton-Entwurfsmuster?",
-      "choices": ["Eine Instanz", "Kein Zustand", "Immer thread-sicher", "Vererbung"],
+      "question": "Welches RAID‑Level implementiert Spiegelung (Mirroring)?",
+      "choices": ["RAID 1", "RAID 0", "RAID 5", "RAID 10"],
       "correct_index": 0,
-      "hint": "Globaler Zugriffspunkt auf exakt eine Instanz."
+      "hint": "RAID 1 speichert identische Kopien.",
+      "topic": "Speicher & RAID",
+      "tags": ["RAID 1", "Mirroring", "Redundanz"]
     },
     {
-      "question": "Was wird typischerweise mit einem Unit-Test überprüft?",
-      "choices": ["Eine kleine Einheit", "Systemende-zu-Ende", "UI-Layout", "Backup-Prozess"],
+      "question": "Welches RAID‑Level kann den Ausfall von zwei Festplatten verkraften?",
+      "choices": ["RAID 6", "RAID 0", "RAID 1", "RAID 5"],
       "correct_index": 0,
-      "hint": "Funktionalität isolierter Funktionen/Klassen."
+      "hint": "RAID 6 verwendet doppelte Parität.",
+      "topic": "Speicher & RAID",
+      "tags": ["RAID 6", "Parität", "Ausfallsicherheit"]
     },
     {
-      "question": "Worauf zielt ein Integrationstest im Vergleich zu einem Unit-Test ab?",
-      "choices": ["Zusammenspiel", "Nur GUI", "Nur Datenbank", "Nur API-Doku"],
+      "question": "Wie viele Bits hat eine IPv4‑Adresse?",
+      "choices": ["32", "64", "16", "128"],
       "correct_index": 0,
-      "hint": "Schnittstellen, Interaktion mehrerer Komponenten."
+      "hint": "Vier Bytes = 32 Bit.",
+      "topic": "IP‑Adressierung",
+      "tags": ["IPv4", "32‑Bit", "Adresse"]
     },
     {
-      "question": "Worum handelt es sich bei einem Mock-Objekt im Testen?",
-      "choices": ["Objekt mit Erwartungen", "Echter Service", "Daten-Dump", "UI-Theme"],
+      "question": "Welcher Bereich ist ein privater IPv4‑Adressbereich?",
+      "choices": ["10.0.0.0/8", "11.0.0.0/8", "172.32.0.0/16", "1.0.0.0/8"],
       "correct_index": 0,
-      "hint": "Simuliert Abhängigkeiten und verifiziert Aufrufe."
+      "hint": "Private: 10/8, 172.16/12, 192.168/16.",
+      "topic": "IP‑Adressierung",
+      "tags": ["IPv4", "privat", "RFC1918"]
     },
     {
-      "question": "Wie legst du in Git über die Kommandozeile einen neuen Branch an und wechselst direkt hinein?",
-      "choices": ["git switch -c name", "git push origin", "git tag v1.0", "git rm"],
+      "question": "Warum wurde IPv6 eingeführt?",
+      "choices": [
+        "IPv4‑Adressknappheit und neue Features",
+        "Um die Latenz zu halbieren",
+        "Weil IPv4 unsicher ist",
+        "Nur um WLAN zu beschleunigen"
+      ],
       "correct_index": 0,
-      "hint": "Alternativ: git checkout -b <name>."
+      "hint": "Größerer Adressraum, Autokonfiguration u. a.",
+      "topic": "IP‑Adressierung",
+      "tags": ["IPv6", "Adressraum", "Motivation"]
     },
     {
-      "question": "Nach SemVer: Wann wird die Minor-Version eines Releases erhöht?",
-      "choices": ["Neue Features ohne Breaking Changes", "Nur Bugfixes", "Bei Breaking Changes", "Bei Build-Metadaten"],
+      "question": "Welche Aussage zu IPv4‑Adressklassen ist korrekt?",
+      "choices": [
+        "Klasse C: 192.0.0.0 – 223.255.255.255",
+        "Klasse A: 128.0.0.0 – 191.255.255.255",
+        "Klasse B: 1.0.0.0 – 126.255.255.255",
+        "Klasse D: 10.0.0.0 – 10.255.255.255"
+      ],
       "correct_index": 0,
-      "hint": "Kompatible Erweiterungen erhöhen Minor."
+      "hint": "A: 1–126, B: 128–191, C: 192–223.",
+      "topic": "IP‑Adressierung",
+      "tags": ["IPv4", "Klassen", "Netzwerke"]
     }
   ]
 }
-

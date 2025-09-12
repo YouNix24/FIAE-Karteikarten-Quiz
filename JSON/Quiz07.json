@@ -1,77 +1,155 @@
 {
   "cards": [
     {
-      "question": "Wann kommt nach BGB ein Kaufvertrag rechtswirksam zustande?",
-      "choices": ["Angebot und Annahme", "Bestellung", "Rechnung", "Lieferung"],
+      "question": "Welche Hauptaufgabe hat ein Router im Netzwerk?",
+      "choices": [
+        "Vernetzen unterschiedlicher Netze und Weiterleitung per IP (Layer 3)",
+        "Signale verstärken, um Reichweite zu erhöhen",
+        "Daten an alle Ports senden (Broadcast)",
+        "WLAN-Endgeräte direkt miteinander koppeln"
+      ],
       "correct_index": 0,
-      "hint": "Zwei übereinstimmende Willenserklärungen."
+      "hint": "Router arbeiten auf OSI-Schicht 3 (Vermittlung).",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Router", "Layer 3", "Routing"]
     },
     {
-      "question": "Zwischen welchen Parteien werden Tarifverträge üblicherweise abgeschlossen?",
-      "choices": ["Gewerkschaften & Arbeitgeberverbände", "Betriebsrat & Chef", "Bundestag", "IHK"],
+      "question": "Wodurch unterscheidet sich ein Switch von einem Hub?",
+      "choices": [
+        "Switch leitet gezielt per MAC an den richtigen Port, Hub sendet an alle",
+        "Switch arbeitet auf Layer 1, Hub auf Layer 2",
+        "Switch erzeugt WLAN, Hub verbindet WAN",
+        "Es gibt keinen Unterschied"
+      ],
       "correct_index": 0,
-      "hint": "Koalitionen der Arbeitnehmer- und Arbeitgeberseite."
+      "hint": "Switch: Schicht 2, MAC-Tabellen; Hub: einfache Verteilung an alle Ports.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Switch", "Hub", "MAC", "Layer 2"]
     },
     {
-      "question": "Welchem Zweck dient die Abschreibung (AfA) in der Buchführung?",
-      "choices": ["Wertminderung verteilen", "Gewinn erhöhen", "Umsatz steigern", "Steuern umgehen"],
+      "question": "Welche Aufgabe hat ein Access Point (AP)?",
+      "choices": [
+        "Aufbau eines WLAN und Anbindung an ein kabelgebundenes LAN",
+        "Adressumsetzung zwischen IPv4 und IPv6",
+        "Datenverkehr zwischen VLANs routen",
+        "Datenpakete verschlüsseln auf Layer 3"
+      ],
       "correct_index": 0,
-      "hint": "Planmäßige Verteilung über Nutzungsdauer."
+      "hint": "AP verbindet Funk-Clients mit dem kabelgebundenen Netz.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Access Point", "WLAN", "LAN"]
     },
     {
-      "question": "Ein Skonto von z. B. 2% soll typischerweise welches Verhalten beim Käufer fördern?",
-      "choices": ["Frühzeitige Zahlung", "Mengenabnahme", "Fehlerausgleich", "Treuebonus"],
+      "question": "Wofür wird ein Repeater eingesetzt?",
+      "choices": [
+        "Signale regenerieren/verlängern für größere Reichweiten",
+        "Pakete zwischen Netzen routen",
+        "WLAN-Clients authentifizieren",
+        "MAC-Adressen filtern"
+      ],
       "correct_index": 0,
-      "hint": "Zahlung vor Fälligkeit gegen Nachlass."
+      "hint": "Bekannt als WLAN-Repeater zur Reichweitenerhöhung.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Repeater", "Signal", "Reichweite"]
     },
     {
-      "question": "Was bedeutet der Begriff Liquidität im kaufmännischen Kontext?",
-      "choices": ["Zahlungsfähigkeit", "Gewinnhöhe", "Lagerbestand", "Kapitalstruktur"],
+      "question": "Welche Funktion erfüllt eine Bridge?",
+      "choices": [
+        "Verbindet zwei LAN-Segmente auf Schicht 2",
+        "Vergibt IP-Adressen per DHCP",
+        "Bildet VPN-Tunnel zwischen Standorten",
+        "Terminiert TLS-Verbindungen"
+      ],
       "correct_index": 0,
-      "hint": "Kurzfristige Verpflichtungen begleichen können."
+      "hint": "Layer-2-Kopplung, z. B. Punkt-zu-Punkt-Verbindung.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Bridge", "Layer 2", "Segment"]
     },
     {
-      "question": "Was bedeutet der Grundsatz der Zweckbindung gemäß DSGVO?",
-      "choices": ["Daten nur für festgelegte Zwecke", "Daten immer anonymisieren", "Daten frei teilen", "Nie Einwilligung nötig"],
+      "question": "Was macht ein Modem im Heimnetz typischerweise?",
+      "choices": [
+        "Wandelt Leitungs-/Trägersignale (z. B. DSL, Kabel, Glasfaser)",
+        "Stellt IP-Routing zwischen Subnetzen bereit",
+        "Verteilt Frames anhand MAC-Tabellen",
+        "Erstellt VLANs für Segmentierung"
+      ],
       "correct_index": 0,
-      "hint": "Zweck vor Erhebung festlegen und einhalten."
+      "hint": "Oft in Routern integriert (Kombi-Geräte).",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Modem", "Signalwandlung", "Zugang"]
     },
     {
-      "question": "Wann geht beim einfachen Eigentumsvorbehalt das Eigentum an der Ware auf den Käufer über?",
-      "choices": ["Bei voller Zahlung", "Bei Bestellung", "Bei Lieferung", "Bei Rechnung"],
+      "question": "Welche Aufgabe hat eine Firewall?",
+      "choices": [
+        "Regelt Netzwerkverkehr nach definierten Regeln",
+        "Erhöht ausschließlich die Bandbreite",
+        "Vergibt Hostnamen im LAN",
+        "Misst ausschließlich Latenzen"
+      ],
       "correct_index": 0,
-      "hint": "Bis zur Zahlung bleibt der Verkäufer Eigentümer."
+      "hint": "Filterung/Regeln, z. B. Ports/Protokolle/Zonen.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Firewall", "Filter", "Sicherheit"]
     },
     {
-      "question": "Wie haften Gesellschafter einer OHG für Verbindlichkeiten der Gesellschaft?",
-      "choices": ["Unbeschränkt, solidarisch", "Nur mit Einlage", "Nur Gesellschaftsvermögen", "Gar nicht"],
+      "question": "Wofür dient ein VPN-Gateway?",
+      "choices": [
+        "Verschlüsseln und tunneln von Verbindungen",
+        "Broadcasts in VLANs verteilen",
+        "MAC-Adressen lernen und speichern",
+        "WLAN-Reichweite erhöhen"
+      ],
       "correct_index": 0,
-      "hint": "Auch mit Privatvermögen."
+      "hint": "Stellt Site-to-Site oder Remote-Zugänge bereit.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["VPN", "Gateway", "Tunneling"]
     },
     {
-      "question": "Wie hoch ist das gesetzliche Mindeststammkapital einer GmbH in Deutschland?",
-      "choices": ["25.000 €", "1 €", "50.000 €", "5.000 €"],
+      "question": "Welche SemVer-Ziffer wird bei inkompatiblen Änderungen erhöht?",
+      "choices": ["MAJOR", "MINOR", "PATCH", "BUILD"],
       "correct_index": 0,
-      "hint": "GmbHG § 5."
+      "hint": "SemVer: MAJOR.MINOR.PATCH.",
+      "topic": "Versionierung",
+      "tags": ["SemVer", "Version", "MAJOR"]
     },
     {
-      "question": "Welche Dimensionen umfasst das 'magische Dreieck' des Projektmanagements?",
-      "choices": ["Zeit, Kosten, Qualität", "Marketing, Vertrieb, HR", "CPU, RAM, Disk", "Make, Buy, Rent"],
+      "question": "Welche Aussage zu Git-Branching ist korrekt?",
+      "choices": [
+        "main ist die stabile Hauptlinie; Feature-Branches für neue Funktionen",
+        "Alle Änderungen direkt auf main commiten",
+        "Hotfix-Branches sind verboten",
+        "Branches speichern keine Historie"
+      ],
       "correct_index": 0,
-      "hint": "Zielkonflikt zwischen drei Parametern."
+      "hint": "Trennung von stabiler Linie und Entwicklungszweigen.",
+      "topic": "Versionierung",
+      "tags": ["Git", "Branching", "main"]
     },
     {
-      "question": "Was wird im Rahmen einer Inventur erfasst?",
-      "choices": ["Vermögen & Schulden", "Nur Erlöse", "Nur Anlagen", "Nur Kasse"],
+      "question": "Wofür wird Tagging im Release-Management verwendet?",
+      "choices": [
+        "Markieren eines definierten Stands (Release)",
+        "Automatisches Mergen von Branches",
+        "Erzwingen von Code-Reviews",
+        "Löschen alter Commits"
+      ],
       "correct_index": 0,
-      "hint": "Stichtagsbezogene Bestandsaufnahme."
+      "hint": "Erleichtert das Zurückspringen auf eine Version.",
+      "topic": "Versionierung",
+      "tags": ["Git", "Tag", "Release"]
     },
     {
-      "question": "Wann wird der betriebswirtschaftliche Break-even-Punkt erreicht?",
-      "choices": ["Erlöse = Kosten", "Gewinn maximal", "Umsatz = 0", "Kosten = 0"],
+      "question": "Wozu dient ein Pull Request (PR)/Merge Request (MR)?",
+      "choices": [
+        "Änderungen zur Review und Integration vorschlagen",
+        "Commits lokal signieren",
+        "Git-Server konfigurieren",
+        "Releases automatisch deployen"
+      ],
       "correct_index": 0,
-      "hint": "Gewinn gleich Null."
+      "hint": "Code-Review, Diskussion, Tests vor dem Merge.",
+      "topic": "Versionierung",
+      "tags": ["PR", "MR", "Code Review"]
     }
   ]
 }
-

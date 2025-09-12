@@ -1,77 +1,153 @@
 {
   "cards": [
     {
-      "question": "Im Kontext der Informationssicherheit: Was bedeutet Vertraulichkeit (Confidentiality)?",
-      "choices": ["Zugriff nur für Berechtigte", "Daten stets verfügbar", "Unveränderte Daten", "Offene Lizenzen"],
+      "question": "Worum geht es im Lastenheft vorrangig?",
+      "choices": [
+        "WAS erreicht werden soll (Anforderungen)",
+        "WIE die Lösung technisch umgesetzt wird",
+        "Welche Programmiersprache genutzt wird",
+        "Wie der Betrieb organisiert wird"
+      ],
       "correct_index": 0,
-      "hint": "CIA-Trias: C = Confidentiality."
+      "hint": "Lastenheft = fachliche Anforderungen des Auftraggebers.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Lastenheft", "WAS", "Anforderungen"]
     },
     {
-      "question": "Was zeichnet eine kryptografische Hashfunktion aus?",
-      "choices": ["Einwegabbildung", "Beidseitig reversibel", "Verschlüsselung", "Kompression"],
+      "question": "Wer erstellt typischerweise das Pflichtenheft?",
+      "choices": ["Auftragnehmer", "Auftraggeber", "Endnutzer", "Behörden"],
       "correct_index": 0,
-      "hint": "Vorbild: f(x) ≠ leicht invertierbar."
+      "hint": "Pflichtenheft = technische Ausgestaltung der Lösung.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Pflichtenheft", "Ersteller", "Auftragnehmer"]
     },
     {
-      "question": "Warum schützt das Verwenden eines individuellen Salts Passworthashes wirksam gegen bestimmte Angriffe?",
-      "choices": ["Rainbow-Tables", "TLS", "Backups", "DMZ"],
+      "question": "Welcher Rechtscharakter trifft auf das Pflichtenheft üblicherweise zu?",
+      "choices": ["Vertragsbestandteil", "Unverbindliche Skizze", "Nur interner Entwurf", "Nur Marketingdokument"],
       "correct_index": 0,
-      "hint": "Einzigartige Hashes erschweren Vorberechnung."
+      "hint": "Nach Abstimmung wird es Teil des Vertrags.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Pflichtenheft", "Vertrag", "Rechtscharakter"]
     },
     {
-      "question": "Welche Faktoren werden bei einer Zwei-Faktor-Authentifizierung (2FA) typischerweise kombiniert?",
-      "choices": ["Wissen + Besitz", "Wissen + Wissen", "Besitz + Besitz", "Ort + Zeit"],
+      "question": "Zu welchem Zeitpunkt entsteht das Pflichtenheft?",
+      "choices": ["Nach Beauftragung in der Ausarbeitungsphase", "Vor der Ausschreibung", "Parallel zur Abnahme", "Erst im Betrieb"],
       "correct_index": 0,
-      "hint": "Beispiel: Passwort + Token/App."
+      "hint": "Nach Auswahl des Anbieters wird die Lösung detailliert.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Pflichtenheft", "Zeitpunkt", "Projektphase"]
     },
     {
-      "question": "Welches der folgenden Verfahren ist ein asymmetrisches Kryptosystem?",
-      "choices": ["RSA", "AES", "ChaCha20", "3DES"],
+      "question": "Welcher typische Fehler in Lastenheften wird genannt?",
+      "choices": [
+        "Zu technisch (statt WAS zu beschreiben)",
+        "Zu viele Unit‑Tests",
+        "Zu viele UML‑Diagramme",
+        "Zu viele Team‑Meetings"
+      ],
       "correct_index": 0,
-      "hint": "Public/Private Key-Verfahren."
+      "hint": "Fokus auf ‚WAS‘, nicht ‚WIE‘.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Lastenheft", "Fehler", "WAS vs. WIE"]
     },
     {
-      "question": "Welches Ziel verfolgt TLS bei der Absicherung von Netzwerkverbindungen?",
-      "choices": ["Transportverschlüsselung", "Virenschutz", "Backup", "Patchen"],
+      "question": "Welche Best Practice für Lastenhefte wird empfohlen?",
+      "choices": [
+        "Messbare, priorisierte und iterative Anforderungen",
+        "Alle Features als ‚kritisch‘ markieren",
+        "Nur technische Details aufnehmen",
+        "Tests weglassen"
+      ],
       "correct_index": 0,
-      "hint": "Vertraulichkeit + Integrität + Authentizität."
+      "hint": "User‑zentriert, überprüfbar, priorisiert, iterativ.",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Best Practices", "Messbar", "Priorisierung"]
     },
     {
-      "question": "Was enthält ein X.509-Zertifikat unter anderem?",
-      "choices": ["Öffentlichen Schlüssel", "Privaten Schlüssel", "Passwort", "Hash-Salt"],
+      "question": "Welche Kennzahl beschreibt in SLAs, wie lange ein Dienst pro Monat maximal ausfallen darf?",
+      "choices": ["Verfügbarkeit (z. B. 99,5% ≈ 3,6h/Monat)", "Reaktionszeit", "Durchsatz", "CPU‑Auslastung"],
       "correct_index": 0,
-      "hint": "Identität + öffentlicher Schlüssel + Signatur."
+      "hint": "99,5% entspricht grob 3,6 Stunden Downtime/Monat.",
+      "topic": "SLA & Betrieb",
+      "tags": ["SLA", "Verfügbarkeit", "Downtime"]
     },
     {
-      "question": "Eine Web Application Firewall (WAF) schützt primär welche Schicht/Komponente?",
-      "choices": ["Anwendungsschicht", "Leitungsschicht", "Sicherungsschicht", "Vermittlung"],
+      "question": "Was bezeichnet die Reaktionszeit in einem SLA?",
+      "choices": [
+        "Zeit bis zur Bearbeitung/Antwort bei Störung",
+        "Zeit bis zum vollständigen Fix",
+        "Maximal erlaubte CPU‑Last",
+        "Durchschnittliche Bandbreite"
+      ],
       "correct_index": 0,
-      "hint": "HTTP/HTTPS-Traffic analysieren/filtern."
+      "hint": "Beispiel: 1h für Severity‑1‑Tickets.",
+      "topic": "SLA & Betrieb",
+      "tags": ["SLA", "Reaktionszeit", "Support"]
     },
     {
-      "question": "Was zeichnet ein Intrusion Prevention System (IPS) im Vergleich zu einem IDS aus?",
-      "choices": ["Blockiert aktiv", "Nur melden", "Scant offline", "Patcht Systeme"],
+      "question": "Was ist Ziel eines Lasttests?",
+      "choices": [
+        "Verhalten unter realistischen Lasten prüfen (z. B. 1000 gleichzeitige Nutzer)",
+        "Nur UI‑Design bewerten",
+        "Nur Sicherheitslücken finden",
+        "Nur die Datenbankstruktur testen"
+      ],
       "correct_index": 0,
-      "hint": "Inline und präventiv eingreifen."
+      "hint": "Abgrenzung: Stresstest treibt über die Ziel‑Last hinaus.",
+      "topic": "Qualität & Prozesse",
+      "tags": ["Lasttest", "Leistung", "Skalierung"]
     },
     {
-      "question": "Worum handelt es sich bei ISO/IEC 27001 im Kontext der Informationssicherheit?",
-      "choices": ["ISMS-Managementnorm", "Pen-Test-Standard", "Crypto-Norm", "Router-Profil"],
+      "question": "Wozu dienen Lessons‑Learned‑Workshops?",
+      "choices": [
+        "Kontinuierliche Verbesserung durch Reflexion",
+        "Release‑Tagging in Git",
+        "Budgetfreigabe",
+        "Einführung neuer Hardware"
+      ],
       "correct_index": 0,
-      "hint": "Zertifizierbarer Standard für Managementsysteme."
+      "hint": "Erfahrungen sichern und Prozesse verbessern.",
+      "topic": "Qualität & Prozesse",
+      "tags": ["Lessons Learned", "KVP", "Retrospektive"]
     },
     {
-      "question": "Welche Anforderungen stellt die DSGVO an eine wirksame Einwilligung?",
-      "choices": ["Freiwillig, informiert", "Immer schriftlich", "Nie widerrufbar", "Zeitlich unbegrenzt"],
+      "question": "Welchen Zweck erfüllt ein Unternehmensleitbild?",
+      "choices": [
+        "Orientierung und Identifikation durch Werte/Ziele",
+        "Nur gesetzliche Compliance dokumentieren",
+        "Reine Marketing‑Botschaft",
+        "Nur die IT‑Architektur beschreiben"
+      ],
       "correct_index": 0,
-      "hint": "Freiwillig, spezifisch, informiert, widerrufbar."
+      "hint": "Leitplanken für Handeln und Kultur.",
+      "topic": "Organisation & Führung",
+      "tags": ["Leitbild", "Werte", "Orientierung"]
     },
     {
-      "question": "Wie lautet die 3-2-1-Backup-Regel für robuste Datensicherungen?",
-      "choices": ["3 Kopien, 2 Medien, 1 Offsite", "3 Kopien lokal", "2 Kopien, 1 Medium", "1 Kopie Offsite"],
+      "question": "Was ist ein ERP‑System?",
+      "choices": [
+        "Integrierte Plattform für Geschäftsprozesse",
+        "Nur ein Buchhaltungs‑Tool",
+        "Ein Webserver",
+        "Ein mobiles Betriebssystem"
+      ],
       "correct_index": 0,
-      "hint": "Diversifizieren von Speicher und Ort."
+      "hint": "Integration von z. B. Einkauf, Lager, Vertrieb, Finanzen.",
+      "topic": "ERP",
+      "tags": ["ERP", "Integration", "Prozesse"]
+    },
+    {
+      "question": "Welche Aussage zu Lasten‑ vs. Pflichtenheft trifft zu?",
+      "choices": [
+        "Lastenheft: WAS; Pflichtenheft: WIE",
+        "Beide: nur WIE",
+        "Beide: nur WAS",
+        "Pflichtenheft vor Ausschreibung, Lastenheft nach Beauftragung"
+      ],
+      "correct_index": 0,
+      "hint": "WAS (Anforderungen) vs. WIE (Umsetzung).",
+      "topic": "Anforderungsmanagement",
+      "tags": ["Lastenheft", "Pflichtenheft", "Vergleich"]
     }
   ]
 }
-

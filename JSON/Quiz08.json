@@ -1,77 +1,100 @@
 {
   "cards": [
     {
-      "question": "Bei den POSIX-Dateirechten: Welche Rechte erhalten 'Others' bei der Einstellung chmod 754?",
-      "choices": ["nur Lesen", "keine Rechte", "Lesen+Ausführen", "nur Schreiben"],
+      "question": "Wofür steht die Abkürzung DDR bei Arbeitsspeicher?",
+      "choices": ["Double Data Rate", "Direct Data Read", "Dynamic Data Routing", "Dual Disk Redundancy"],
       "correct_index": 0,
-      "hint": "7=rwx (Owner), 5=rx (Group), 4=r (Others)."
+      "hint": "Datenübertragung auf steigender und fallender Taktflanke.",
+      "topic": "DDR-RAM",
+      "tags": ["DDR", "RAM", "Taktflanke"]
     },
     {
-      "question": "Was bewirkt der Befehl 'chown user:group datei' unter Linux?",
-      "choices": ["Besitzer & Gruppe ändern", "Rechte ändern", "Datei kopieren", "User löschen"],
+      "question": "Welche Eigenschaft beschreibt flüchtigen Speicher (RAM)?",
+      "choices": ["Inhalte gehen ohne Strom verloren", "Inhalte bleiben ohne Strom erhalten", "Nur Lesen, kein Schreiben möglich", "Nur im BIOS sichtbar"],
       "correct_index": 0,
-      "hint": "Ownership der Datei neu setzen."
+      "hint": "RAM verliert Daten bei Stromverlust.",
+      "topic": "DDR-RAM",
+      "tags": ["RAM", "flüchtig", "Speicher"]
     },
     {
-      "question": "Welcher Scheduling-Algorithmus arbeitet mit festen Zeitscheiben (Time Slices) pro Prozess?",
-      "choices": ["Round Robin", "FIFO", "SJF", "LIFO"],
+      "question": "Welche Betriebsspannung nutzt DDR5 typischerweise?",
+      "choices": ["1,1 V", "1,8 V", "2,5 V", "1,5 V"],
       "correct_index": 0,
-      "hint": "Zeitscheibe je Prozess in zyklischer Reihenfolge."
+      "hint": "DDR: 2,5V → DDR2:1,8V → DDR3:1,5V → DDR4:1,2V → DDR5:1,1V.",
+      "topic": "DDR-RAM",
+      "tags": ["DDR5", "Spannung", "Energie"]
     },
     {
-      "question": "Mit welchem Tool lässt sich die Prozessliste in Echtzeit interaktiv anzeigen?",
-      "choices": ["top", "ps aux", "who", "last"],
+      "question": "Welchen Effekt hat Dual-/Quad-Channel-Betrieb?",
+      "choices": ["Erhöht die Speicherbandbreite durch parallele Kanäle", "Verringert die Kapazität pro Modul", "Erhöht die Latenzzeiten deutlich", "Ersetzt die Grafikkarte"],
       "correct_index": 0,
-      "hint": "Interaktive Anzeige und Sortierung."
+      "hint": "Mehr Kanäle = mehr Durchsatz (Bandbreite).",
+      "topic": "DDR-RAM",
+      "tags": ["Dual Channel", "Bandbreite", "Parallelität"]
     },
     {
-      "question": "Wie startest du unter systemd einen Dienst, z. B. den Webserver nginx?",
-      "choices": ["systemctl start nginx", "service stop", "init 6", "killall"],
+      "question": "Welche architektonische Neuerung bringt DDR5 auf Modul-Ebene?",
+      "choices": ["Zwei unabhängige 32‑Bit‑Kanäle pro DIMM", "Drei 16‑Bit‑Kanäle pro DIMM", "Ein einzelner 128‑Bit‑Kanal", "Integrierte CPU‑Kerne im DIMM"],
       "correct_index": 0,
-      "hint": "systemctl <Aktion> <Dienstname>."
+      "hint": "DDR4 hatte effektiv einen 64‑Bit‑Kanal pro Modul.",
+      "topic": "DDR-RAM",
+      "tags": ["DDR5", "Kanäle", "Architektur"]
     },
     {
-      "question": "Welcher Befehl zeigt aktuell offene/lauschede TCP/UDP-Ports und zugehörige Sockets an?",
-      "choices": ["ss -tuln", "ip a", "ping", "df -h"],
+      "question": "Welche Aussage zur Kompatibilität der DDR‑Generationen ist korrekt?",
+      "choices": ["DDR‑Generationen sind nicht abwärtskompatibel", "DDR5 ist abwärtskompatibel zu DDR4", "DDR4 läuft in DDR3‑Slots", "Alle DDR‑Typen sind gegenseitig kompatibel"],
       "correct_index": 0,
-      "hint": "'ss' ist der moderne Ersatz für netstat."
+      "hint": "Mechanik/Signalpegel unterscheiden sich pro Generation.",
+      "topic": "DDR-RAM",
+      "tags": ["Kompatibilität", "DDR4", "DDR5"]
     },
     {
-      "question": "Welcher Windows-Befehl zeigt die aktuelle IP-Konfiguration an?",
-      "choices": ["ipconfig", "ifconfig", "nmcli", "route"],
+      "question": "Welche Hauptaufgabe hat ein Router im Netzwerk?",
+      "choices": ["Vernetzen unterschiedlicher Netze und Weiterleitung per IP (Layer 3)", "Signale verstärken, um Reichweite zu erhöhen", "Daten an alle Ports senden (Broadcast)", "WLAN‑Endgeräte direkt miteinander koppeln"],
       "correct_index": 0,
-      "hint": "Kommandozeilentool für Windows-Netzwerke."
+      "hint": "Router arbeiten auf OSI‑Schicht 3 (Vermittlung).",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Router", "Layer 3", "Routing"]
     },
     {
-      "question": "Wie erstellst du in Git einen Commit mit einer passenden Nachricht in einem Schritt?",
-      "choices": ["git commit -m", "git push -m", "git add -m", "git tag -m"],
+      "question": "Wodurch unterscheidet sich ein Switch von einem Hub?",
+      "choices": ["Switch leitet gezielt per MAC an den richtigen Port, Hub sendet an alle", "Switch arbeitet auf Layer 1, Hub auf Layer 2", "Switch erzeugt WLAN, Hub verbindet WAN", "Es gibt keinen Unterschied"],
       "correct_index": 0,
-      "hint": "-m übergibt die Commit-Nachricht."
+      "hint": "Switch: Schicht 2, MAC‑Tabellen; Hub: einfache Verteilung an alle Ports.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Switch", "Hub", "MAC", "Layer 2"]
     },
     {
-      "question": "Wie fügst du in Git ein neues Remote-Repository unter dem Namen 'origin' hinzu?",
-      "choices": ["git remote add origin URL", "git origin set URL", "git add remote URL", "git push URL"],
+      "question": "Welche Aufgabe hat ein Access Point (AP)?",
+      "choices": ["Aufbau eines WLAN und Anbindung an ein kabelgebundenes LAN", "Adressumsetzung zwischen IPv4 und IPv6", "Datenverkehr zwischen VLANs routen", "Datenpakete verschlüsseln auf Layer 3"],
       "correct_index": 0,
-      "hint": "Remote-Name und URL definieren."
+      "hint": "AP verbindet Funk‑Clients mit dem kabelgebundenen Netz.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Access Point", "WLAN", "LAN"]
     },
     {
-      "question": "Welcher Docker-Befehl listet die aktuell laufenden Container auf?",
-      "choices": ["docker ps", "docker run", "docker images", "docker exec"],
+      "question": "Wofür wird ein Repeater eingesetzt?",
+      "choices": ["Signale regenerieren/verlängern für größere Reichweiten", "Pakete zwischen Netzen routen", "WLAN‑Clients authentifizieren", "MAC‑Adressen filtern"],
       "correct_index": 0,
-      "hint": "Prozessliste der Container anzeigen."
+      "hint": "Bekannt als WLAN‑Repeater zur Reichweitenerhöhung.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Repeater", "Signal", "Reichweite"]
     },
     {
-      "question": "Was kennzeichnet einen Hypervisor des Typs 1 (Bare-Metal)?",
-      "choices": ["Bare-Metal", "Host-basiert", "Container", "BIOS"],
+      "question": "Was macht ein Modem im Heimnetz typischerweise?",
+      "choices": ["Wandelt Leitungs-/Trägersignale (z. B. DSL, Kabel, Glasfaser)", "Stellt IP‑Routing zwischen Subnetzen bereit", "Verteilt Frames anhand MAC‑Tabellen", "Erstellt VLANs für Segmentierung"],
       "correct_index": 0,
-      "hint": "Läuft direkt auf der Hardware."
+      "hint": "Oft in Routern integriert (Kombi‑Geräte).",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Modem", "Signalwandlung", "Zugang"]
     },
     {
-      "question": "Was bedeutet RAID 1 im Kontext von Datenspeicherung?",
-      "choices": ["Spiegelung", "Striping+Parität", "Keine Redundanz", "Deduplizierung"],
+      "question": "Welche Aufgabe hat eine Firewall?",
+      "choices": ["Regelt Netzwerkverkehr nach definierten Regeln", "Erhöht ausschließlich die Bandbreite", "Vergibt Hostnamen im LAN", "Misst ausschließlich Latenzen"],
       "correct_index": 0,
-      "hint": "Daten werden auf zwei Platten identisch gespiegelt."
+      "hint": "Filterung/Regeln, z. B. Ports/Protokolle/Zonen.",
+      "topic": "Netzwerkgeräte",
+      "tags": ["Firewall", "Filter", "Sicherheit"]
     }
   ]
 }
-

@@ -1,77 +1,140 @@
 {
   "cards": [
     {
-      "question": "Was bedeutet der HTTP-Statuscode 404 im Kontext einer Webanfrage?",
-      "choices": ["Not Found", "Unauthorized", "OK", "Created"],
+      "question": "Was kennzeichnet das Wasserfallmodell am besten?",
+      "choices": [
+        "Sequenzielles Vorgehen mit strikt aufeinander folgenden Phasen",
+        "Kurze Sprints mit iterativen Inkrementen",
+        "Ausschließliche Ad-hoc-Bearbeitung ohne Planung",
+        "Nur prototypische Umsetzung ohne Tests"
+      ],
       "correct_index": 0,
-      "hint": "Angeforderte Ressource wurde nicht gefunden."
+      "hint": "Phasen nacheinander, kaum Überschneidung.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Wasserfall", "sequenziell", "Phasen"]
     },
     {
-      "question": "Welche HTTP-Methode ist typischerweise nicht idempotent (mehrfaches Senden verändert den Zustand)?",
-      "choices": ["POST", "GET", "PUT", "DELETE"],
+      "question": "Welche Reihenfolge entspricht den Phasen im Wasserfallmodell?",
+      "choices": [
+        "Analyse → Design → Implementierung → Test → Inbetriebnahme",
+        "Design → Analyse → Implementierung → Inbetriebnahme → Test",
+        "Implementierung → Analyse → Test → Design → Inbetriebnahme",
+        "Analyse → Implementierung → Design → Test → Betrieb"
+      ],
       "correct_index": 0,
-      "hint": "Wird oft zum Erzeugen verwendet."
+      "hint": "Erst Anforderungen klären, dann entwerfen, bauen, prüfen, einführen.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Wasserfall", "Phasen", "Reihenfolge"]
     },
     {
-      "question": "Welche Technik nutzt HTTPS, um Verbindungen zu sichern?",
-      "choices": ["TLS", "SSH", "IPsec", "WEP"],
+      "question": "Welche Aussage zur Dokumentation im Wasserfall trifft zu?",
+      "choices": [
+        "Dokumentenintensiv mit klaren Ergebnissen je Phase",
+        "Nur mündliche Absprachen, keine Dokumente",
+        "Dokumentation ausschließlich nach Projektende",
+        "Dokumentation ist in Scrum umfangreicher"
+      ],
       "correct_index": 0,
-      "hint": "Transport Layer Security."
+      "hint": "Für jede Phase gibt es definierte Artefakte/Ergebnisse.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Wasserfall", "Dokumentation"]
     },
     {
-      "question": "Wodurch werden Ressourcen in REST üblicherweise eindeutig identifiziert?",
-      "choices": ["URI", "MAC", "PID", "Port"],
+      "question": "Welcher Vorteil des Wasserfallmodells wird genannt?",
+      "choices": [
+        "Klarheit/Struktur bei stabilen Anforderungen",
+        "Maximale Flexibilität für späte Änderungen",
+        "Kunde erhält in jedem Sprint ein Inkrement",
+        "Keine Planung notwendig"
+      ],
       "correct_index": 0,
-      "hint": "Eindeutige Adressen im Web."
+      "hint": "Geeignet, wenn Ziele/Anforderungen stabil sind.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Wasserfall", "Vorteile", "Planung"]
     },
     {
-      "question": "Was beschränkt die Same-Origin Policy im Browser?",
-      "choices": ["Cross-Origin Zugriffe", "Datenbankzugriff", "CPU-Last", "Speicherbedarf"],
+      "question": "Welcher Nachteil des Wasserfalls ist typisch?",
+      "choices": [
+        "Geringe Flexibilität für Änderungen",
+        "Zu wenig Dokumentation",
+        "Hoher Kommunikationszwang durch Daily Meetings",
+        "Fehlende Phasen für Test und Einführung"
+      ],
       "correct_index": 0,
-      "hint": "Nur gleiches Schema+Host+Port erlaubt."
+      "hint": "Änderungen nach Phasenabschluss sind teuer.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Wasserfall", "Nachteile", "Änderungen"]
     },
     {
-      "question": "Welches Cookie-Flag verhindert das Auslesen eines Cookies durch JavaScript?",
-      "choices": ["HttpOnly", "CSRF", "DDOS", "Caching"],
+      "question": "Welche Scrum-Rolle verwaltet das Product Backlog?",
+      "choices": ["Product Owner", "Scrum Master", "Entwicklerteam", "Stakeholder"],
       "correct_index": 0,
-      "hint": "Schützt vor XSS-getriggertem Auslesen."
+      "hint": "Verantwortlich für Wert/Order der Anforderungen.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Rollen", "Product Owner"]
     },
     {
-      "question": "Welcher Header erlaubt einem Server, Cross-Origin-Anfragen gezielt freizugeben?",
-      "choices": ["Access-Control-Allow-Origin", "Server-Token", "User-Agent", "Referrer"],
+      "question": "Welche Aussage beschreibt das Scrum-Artefakt ‚Inkrement‘?",
+      "choices": [
+        "Funktionierender Produktteil, am Sprintende lieferbar",
+        "Liste künftiger Anforderungen",
+        "Plan für den nächsten Sprint",
+        "Dokument zur Architektur"
+      ],
       "correct_index": 0,
-      "hint": "Teil von CORS."
+      "hint": "Ergebnis der Arbeit des Scrum-Teams pro Sprint.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Artefakte", "Inkrement"]
     },
     {
-      "question": "Aus welchen Bestandteilen setzt sich ein JSON Web Token (JWT) zusammen?",
-      "choices": ["Header.Payload.Signature", "User.Passwort", "Key.Value", "Tag.Inhalt"],
+      "question": "Wie lange dauert das Daily Scrum typischerweise?",
+      "choices": ["15 Minuten", "5 Minuten", "30 Minuten", "60 Minuten"],
       "correct_index": 0,
-      "hint": "Drei Teile, Base64URL-kodiert."
+      "hint": "Kurzes, fokussiertes Team-Event.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Events", "Daily"]
     },
     {
-      "question": "Wie lässt sich das Risiko von CSRF bei Cookies reduzieren?",
-      "choices": ["SameSite=Lax/Strict", "Mehr POST", "Mehr GET", "Mehr Cookies"],
+      "question": "Welches Event dient der kontinuierlichen Verbesserung im Team?",
+      "choices": ["Retrospektive", "Sprint Review", "Sprint Planning", "Backlog Refinement"],
       "correct_index": 0,
-      "hint": "Cookie-Attribut steuert Mitgabe."
+      "hint": "Nachbesprechung zur Ableitung von Verbesserungen.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Events", "Retrospektive"]
     },
     {
-      "question": "Welcher Vorteil wird typischerweise mit HTTP/2 erreicht?",
-      "choices": ["Multiplexing", "Nur neue Statuscodes", "Kein TLS nötig", "Weniger Header"],
+      "question": "Welcher Wert gehört zu den Scrum-Werten?",
+      "choices": ["Fokus", "Hierarchie", "Zurückhaltung", "Beliebigkeit"],
       "correct_index": 0,
-      "hint": "Mehrere Streams je Verbindung."
+      "hint": "Scrum-Werte: Engagement, Mut, Fokus, Offenheit, Respekt.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Werte", "Fokus"]
     },
     {
-      "question": "Welcher Content-Type wird für JSON-Nutzdaten korrekt verwendet?",
-      "choices": ["application/json", "text/html", "text/plain", "multipart/form-data"],
+      "question": "Welcher Vorteil von Scrum wird genannt?",
+      "choices": [
+        "Hohe Flexibilität und schnelle Reaktion auf Veränderungen",
+        "Geringer Kommunikationsaufwand ohne Meetings",
+        "Kein Kundenfeedback erforderlich",
+        "Starre Phasenabfolge"
+      ],
       "correct_index": 0,
-      "hint": "MIME-Type für JSON."
+      "hint": "Iterative Sprints ermöglichen schnelle Anpassungen.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Vorteile", "Flexibilität"]
     },
     {
-      "question": "Welcher Security-Header hilft maßgeblich, Cross-Site Scripting (XSS) im Browser zu reduzieren?",
-      "choices": ["Content-Security-Policy", "Strict-Transport-Security", "X-Frame-Options", "Referrer-Policy"],
+      "question": "Welcher Nachteil kann bei Scrum auftreten?",
+      "choices": [
+        "Benötigt hohes Team-Commitment und viele Abstimmungen",
+        "Fehlende Transparenz",
+        "Keine Iterationen möglich",
+        "Kunde hat bis zum Ende keinen Einblick"
+      ],
       "correct_index": 0,
-      "hint": "Erlaubt nur definierte Quellen/Policies für Inhalte."
+      "hint": "Meetings/Transparenz kosten Zeit; Commitment entscheidend.",
+      "topic": "Vorgehensmodelle",
+      "tags": ["Scrum", "Nachteile", "Commitment"]
     }
   ]
 }
-

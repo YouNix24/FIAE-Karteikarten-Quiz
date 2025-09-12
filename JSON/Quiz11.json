@@ -1,0 +1,218 @@
+{
+  "cards": [
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION Zutrittsentscheidung(temp: ZAHL, hatAusweis: BOOLEAN, istBegleitet: BOOLEAN, maxTemp: ZAHL) → TEXT\n    VAR text: TEXT\n\n    WENN temp > maxTemp DANN\n        text ← \"Zutritt GESPERRT: Temperatur über Grenzwert.\"\n    SONST\n        WENN hatAusweis = WAHR DANN\n            text ← \"Zutritt ERLAUBT: Ausweis geprüft.\"\n        SONST\n            WENN istBegleitet = WAHR DANN\n                text ← \"Zutritt ERLAUBT: Begleitung ohne Ausweis.\"\n            SONST\n                text ← \"Zutritt VERWEIGERT: kein Ausweis, keine Begleitung.\"\n            ENDEWENN\n        ENDEWENN\n    ENDEWENN\n\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE Zutrittsentscheidung(29; WAHR; FALSCH; 30)",
+      "choices": [
+        "Zutritt GESPERRT: Temperatur über Grenzwert.",
+        "Zutritt ERLAUBT: Ausweis geprüft.",
+        "Zutritt ERLAUBT: Begleitung ohne Ausweis.",
+        "Zutritt VERWEIGERT: kein Ausweis, keine Begleitung."
+      ],
+      "correct_index": 1,
+      "hint": "Unter Grenzwert und Ausweis vorhanden → erlaubt.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "If/Else",
+        "Zutritt"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION Zutrittsentscheidung(temp: ZAHL, hatAusweis: BOOLEAN, istBegleitet: BOOLEAN, maxTemp: ZAHL) → TEXT\n    VAR text: TEXT\n\n    WENN temp > maxTemp DANN\n        text ← \"Zutritt GESPERRT: Temperatur über Grenzwert.\"\n    SONST\n        WENN hatAusweis = WAHR DANN\n            text ← \"Zutritt ERLAUBT: Ausweis geprüft.\"\n        SONST\n            WENN istBegleitet = WAHR DANN\n                text ← \"Zutritt ERLAUBT: Begleitung ohne Ausweis.\"\n            SONST\n                text ← \"Zutritt VERWEIGERT: kein Ausweis, keine Begleitung.\"\n            ENDEWENN\n        ENDEWENN\n    ENDEWENN\n\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE Zutrittsentscheidung(32; FALSCH; WAHR; 30)",
+      "choices": [
+        "Zutritt GESPERRT: Temperatur über Grenzwert.",
+        "Zutritt ERLAUBT: Ausweis geprüft.",
+        "Zutritt ERLAUBT: Begleitung ohne Ausweis.",
+        "Zutritt VERWEIGERT: kein Ausweis, keine Begleitung."
+      ],
+      "correct_index": 0,
+      "hint": "Über Grenzwert → gesperrt.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "If/Else",
+        "Zutritt"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION TransaktionsFreigabe(betrag: ZAHL, hat2FA: BOOLEAN, istVertrauterEmpfaenger: BOOLEAN, limit: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN betrag > limit DANN\n        WENN hat2FA = WAHR DANN\n            text ← \"FREIGEGEBEN: Über Limit, 2FA erfolgreich.\"\n        SONST\n            text ← \"ABGELEHNT: Über Limit ohne 2FA.\"\n        ENDEWENN\n    SONST\n        WENN istVertrauterEmpfaenger = WAHR DANN\n            text ← \"FREIGEGEBEN: Unter Limit an vertrauenswürdigen Empfänger.\"\n        SONST\n            text ← \"MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE TransaktionsFreigabe(1200; FALSCH; WAHR; 1000)",
+      "choices": [
+        "FREIGEGEBEN: Über Limit, 2FA erfolgreich.",
+        "ABGELEHNT: Über Limit ohne 2FA.",
+        "FREIGEGEBEN: Unter Limit an vertrauenswürdigen Empfänger.",
+        "MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt."
+      ],
+      "correct_index": 1,
+      "hint": "Über Limit ohne 2FA → abgelehnt.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "2FA",
+        "Threshold"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION TransaktionsFreigabe(betrag: ZAHL, hat2FA: BOOLEAN, istVertrauterEmpfaenger: BOOLEAN, limit: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN betrag > limit DANN\n        WENN hat2FA = WAHR DANN\n            text ← \"FREIGEGEBEN: Über Limit, 2FA erfolgreich.\"\n        SONST\n            text ← \"ABGELEHNT: Über Limit ohne 2FA.\"\n        ENDEWENN\n    SONST\n        WENN istVertrauterEmpfaenger = WAHR DANN\n            text ← \"FREIGEGEBEN: Unter Limit an vertrauenswürdigen Empfänger.\"\n        SONST\n            text ← \"MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE TransaktionsFreigabe(300; FALSCH; FALSCH; 1000)",
+      "choices": [
+        "FREIGEGEBEN: Über Limit, 2FA erfolgreich.",
+        "ABGELEHNT: Über Limit ohne 2FA.",
+        "FREIGEGEBEN: Unter Limit an vertrauenswürdigen Empfänger.",
+        "MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt."
+      ],
+      "correct_index": 3,
+      "hint": "Unter/gleich Limit und unbekannter Empfänger → manuelle Prüfung.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Business-Rule"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION AutoScalingEntscheidung(aktuelleLast: ZAHL, istGeschaeftszeit: BOOLEAN, hatIncident: BOOLEAN, schwellwert: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN aktuelleLast > schwellwert DANN\n        WENN hatIncident = WAHR DANN\n            text ← \"BLOCKIERT: Incident aktiv, kein automatisches Scaling.\"\n        SONST\n            text ← \"SCALE-UP: Last über Schwellwert.\"\n        ENDEWENN\n    SONST\n        WENN istGeschaeftszeit = FALSCH DANN\n            text ← \"SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert.\"\n        SONST\n            text ← \"STABIL: Keine Änderung erforderlich.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE AutoScalingEntscheidung(82; WAHR; WAHR; 75)",
+      "choices": [
+        "BLOCKIERT: Incident aktiv, kein automatisches Scaling.",
+        "SCALE-UP: Last über Schwellwert.",
+        "SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert.",
+        "STABIL: Keine Änderung erforderlich."
+      ],
+      "correct_index": 0,
+      "hint": "Über Schwellwert und Incident aktiv → blockiert.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Scaling",
+        "Incident"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION AutoScalingEntscheidung(aktuelleLast: ZAHL, istGeschaeftszeit: BOOLEAN, hatIncident: BOOLEAN, schwellwert: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN aktuelleLast > schwellwert DANN\n        WENN hatIncident = WAHR DANN\n            text ← \"BLOCKIERT: Incident aktiv, kein automatisches Scaling.\"\n        SONST\n            text ← \"SCALE-UP: Last über Schwellwert.\"\n        ENDEWENN\n    SONST\n        WENN istGeschaeftszeit = FALSCH DANN\n            text ← \"SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert.\"\n        SONST\n            text ← \"STABIL: Keine Änderung erforderlich.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE AutoScalingEntscheidung(43; FALSCH; FALSCH; 60)",
+      "choices": [
+        "BLOCKIERT: Incident aktiv, kein automatisches Scaling.",
+        "SCALE-UP: Last über Schwellwert.",
+        "SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert.",
+        "STABIL: Keine Änderung erforderlich."
+      ],
+      "correct_index": 2,
+      "hint": "Unter Schwellwert und außerhalb der Geschäftszeit → Scale-Down.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Scaling",
+        "Zeitfenster"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION Urlaubsfreigabe(resttage: ZAHL, hatVertretung: BOOLEAN, projektKritisch: BOOLEAN, mindestResttage: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN resttage > mindestResttage DANN\n        WENN projektKritisch = WAHR DANN\n            text ← \"PRÜFUNG: Projekt kritischer Zustand – Entscheidung durch Leitung.\"\n        SONST\n            WENN hatVertretung = WAHR DANN\n                text ← \"GENEHMIGT: Genug Resttage und Vertretung vorhanden.\"\n            SONST\n                text ← \"RÜCKFRAGE: Genug Resttage, aber keine Vertretung organisiert.\"\n            ENDEWENN\n        ENDEWENN\n    SONST\n        WENN hatVertretung = WAHR DANN\n            text ← \"ABGELEHNT: Zu wenig Resttage – Vertretung hilft hier nicht.\"\n        SONST\n            text ← \"ABGELEHNT: Zu wenig Resttage.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE Urlaubsfreigabe(15; WAHR; FALSCH; 10)",
+      "choices": [
+        "GENEHMIGT: Genug Resttage und Vertretung vorhanden.",
+        "RÜCKFRAGE: Genug Resttage, aber keine Vertretung organisiert.",
+        "PRÜFUNG: Projekt kritischer Zustand – Entscheidung durch Leitung.",
+        "ABGELEHNT: Zu wenig Resttage."
+      ],
+      "correct_index": 0,
+      "hint": "Mehr Resttage und Vertretung → genehmigt.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Urlaub",
+        "Bedingungen"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION Urlaubsfreigabe(resttage: ZAHL, hatVertretung: BOOLEAN, projektKritisch: BOOLEAN, mindestResttage: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN resttage > mindestResttage DANN\n        WENN projektKritisch = WAHR DANN\n            text ← \"PRÜFUNG: Projekt kritischer Zustand – Entscheidung durch Leitung.\"\n        SONST\n            WENN hatVertretung = WAHR DANN\n                text ← \"GENEHMIGT: Genug Resttage und Vertretung vorhanden.\"\n            SONST\n                text ← \"RÜCKFRAGE: Genug Resttage, aber keine Vertretung organisiert.\"\n            ENDEWENN\n        ENDEWENN\n    SONST\n        WENN hatVertretung = WAHR DANN\n            text ← \"ABGELEHNT: Zu wenig Resttage – Vertretung hilft hier nicht.\"\n        SONST\n            text ← \"ABGELEHNT: Zu wenig Resttage.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE Urlaubsfreigabe(8; FALSCH; WAHR; 10)",
+      "choices": [
+        "GENEHMIGT: Genug Resttage und Vertretung vorhanden.",
+        "RÜCKFRAGE: Genug Resttage, aber keine Vertretung organisiert.",
+        "ABGELEHNT: Zu wenig Resttage – Vertretung hilft hier nicht.",
+        "ABGELEHNT: Zu wenig Resttage."
+      ],
+      "correct_index": 3,
+      "hint": "Zu wenig Resttage → abgelehnt (Vertretung hilft hier nicht).",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Urlaub"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION TicketRouting(warteMin: ZAHL, istSicherheitsvorfall: BOOLEAN, istVIP: BOOLEAN, slaGrenze: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN warteMin > slaGrenze DANN\n        WENN istSicherheitsvorfall = WAHR DANN\n            text ← \"PRIO 1: Security-Incident – direkt an Incident Response.\"\n        SONST\n            WENN istVIP = WAHR DANN\n                text ← \"PRIO 1: VIP-Eskalation an Teamleitung.\"\n            SONST\n                text ← \"PRIO 1: Eskalation an Bereitschaft.\"\n            ENDEWENN\n        ENDEWENN\n    SONST\n        WENN istSicherheitsvorfall = WAHR DANN\n            text ← \"PRIO 2: Security-Check einleiten.\"\n        SONST\n            WENN istVIP = WAHR DANN\n                text ← \"PRIO 2: Bevorzugte Bearbeitung (VIP-Queue).\"\n            SONST\n                text ← \"PRIO 3: Normale Queue.\"\n            ENDEWENN\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE TicketRouting(65; FALSCH; WAHR; 60)",
+      "choices": [
+        "PRIO 1: Security-Incident – direkt an Incident Response.",
+        "PRIO 1: VIP-Eskalation an Teamleitung.",
+        "PRIO 1: Eskalation an Bereitschaft.",
+        "PRIO 2: Security-Check einleiten."
+      ],
+      "correct_index": 1,
+      "hint": "Über SLA und VIP → PRIO 1 an Teamleitung.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "SLA",
+        "Priorität"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "FUNKTION TicketRouting(warteMin: ZAHL, istSicherheitsvorfall: BOOLEAN, istVIP: BOOLEAN, slaGrenze: ZAHL) → TEXT\n    VAR text: TEXT\n    WENN warteMin > slaGrenze DANN\n        WENN istSicherheitsvorfall = WAHR DANN\n            text ← \"PRIO 1: Security-Incident – direkt an Incident Response.\"\n        SONST\n            WENN istVIP = WAHR DANN\n                text ← \"PRIO 1: VIP-Eskalation an Teamleitung.\"\n            SONST\n                text ← \"PRIO 1: Eskalation an Bereitschaft.\"\n            ENDEWENN\n        ENDEWENN\n    SONST\n        WENN istSicherheitsvorfall = WAHR DANN\n            text ← \"PRIO 2: Security-Check einleiten.\"\n        SONST\n            WENN istVIP = WAHR DANN\n                text ← \"PRIO 2: Bevorzugte Bearbeitung (VIP-Queue).\"\n            SONST\n                text ← \"PRIO 3: Normale Queue.\"\n            ENDEWENN\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE TicketRouting(20; WAHR; FALSCH; 30)",
+      "choices": [
+        "PRIO 1: Security-Incident – direkt an Incident Response.",
+        "PRIO 1: VIP-Eskalation an Teamleitung.",
+        "PRIO 2: Security-Check einleiten.",
+        "PRIO 3: Normale Queue."
+      ],
+      "correct_index": 2,
+      "hint": "Innerhalb SLA + Sicherheitsvorfall → PRIO 2 Security-Check.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "SLA",
+        "Security"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "KONSTANTEN:\n    PREIS_STANDARD ← 0,35   // €/kWh\n    PREIS_NACHT    ← 0,28   // €/kWh\n    UMWELTABGABE   ← 0,02   // €/kWh\n    UST_SATZ       ← 0,19   // 19 %\n\nFUNKTION StromAbrechnung(verbrauchKWh: ZAHL, nachtTarif: BOOLEAN, sparplan: BOOLEAN, freiKWh: ZAHL) → TEXT\n    VAR text: TEXT\n    VAR basisVerbrauch, tarif, rabatt, arbeitspreisNetto, abgabe, netto, steuer, brutto: ZAHL\n    WENN verbrauchKWh > freiKWh DANN\n        basisVerbrauch ← verbrauchKWh - freiKWh\n        WENN nachtTarif = WAHR DANN tarif ← PREIS_NACHT SONST tarif ← PREIS_STANDARD ENDEWENN\n        WENN sparplan = WAHR DANN rabatt ← 0,05 SONST rabatt ← 0,00 ENDEWENN\n        arbeitspreisNetto ← basisVerbrauch * tarif * (1 - rabatt)\n        abgabe            ← basisVerbrauch * UMWELTABGABE\n        netto             ← arbeitspreisNetto + abgabe\n        steuer            ← netto * UST_SATZ\n        brutto            ← netto + steuer\n        AUSGABE ... (Zwischenwerte)\n        text ← \"Rechnung erstellt.\"\n    SONST\n        WENN sparplan = WAHR DANN\n            text ← \"0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben.\"\n        SONST\n            text ← \"0,00 €: Freimenge deckt Verbrauch.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE StromAbrechnung(350; WAHR; WAHR; 100)",
+      "choices": [
+        "Rechnung erstellt.",
+        "0,00 €: Freimenge deckt Verbrauch.",
+        "0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben.",
+        "Abrechnung nicht möglich."
+      ],
+      "correct_index": 0,
+      "hint": "Über Freimenge → Rechnung mit Beträgen, Rückgabewert = \"Rechnung erstellt.\"",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Abrechnung",
+        "Berechnung"
+      ]
+    },
+    {
+      "question": "Welche Textausgabe liefert der Funktionsaufruf?",
+      "code": "KONSTANTEN:\n    PREIS_STANDARD ← 0,35   // €/kWh\n    PREIS_NACHT    ← 0,28   // €/kWh\n    UMWELTABGABE   ← 0,02   // €/kWh\n    UST_SATZ       ← 0,19   // 19 %\n\nFUNKTION StromAbrechnung(verbrauchKWh: ZAHL, nachtTarif: BOOLEAN, sparplan: BOOLEAN, freiKWh: ZAHL) → TEXT\n    VAR text: TEXT\n    VAR basisVerbrauch, tarif, rabatt, arbeitspreisNetto, abgabe, netto, steuer, brutto: ZAHL\n    WENN verbrauchKWh > freiKWh DANN\n        basisVerbrauch ← verbrauchKWh - freiKWh\n        WENN nachtTarif = WAHR DANN tarif ← PREIS_NACHT SONST tarif ← PREIS_STANDARD ENDEWENN\n        WENN sparplan = WAHR DANN rabatt ← 0,05 SONST rabatt ← 0,00 ENDEWENN\n        arbeitspreisNetto ← basisVerbrauch * tarif * (1 - rabatt)\n        abgabe            ← basisVerbrauch * UMWELTABGABE\n        netto             ← arbeitspreisNetto + abgabe\n        steuer            ← netto * UST_SATZ\n        brutto            ← netto + steuer\n        AUSGABE ... (Zwischenwerte)\n        text ← \"Rechnung erstellt.\"\n    SONST\n        WENN sparplan = WAHR DANN\n            text ← \"0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben.\"\n        SONST\n            text ← \"0,00 €: Freimenge deckt Verbrauch.\"\n        ENDEWENN\n    ENDEWENN\n    GIB text ZURÜCK\nENDE FUNKTION\n\nAUSGABE StromAbrechnung(80; FALSCH; WAHR; 100)",
+      "choices": [
+        "Rechnung erstellt.",
+        "0,00 €: Freimenge deckt Verbrauch.",
+        "0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben.",
+        "Abrechnung nicht möglich."
+      ],
+      "correct_index": 2,
+      "hint": "Unter Freimenge + Sparplan → 0,00 € mit Bonus.",
+      "topic": "Programmlogik",
+      "tags": [
+        "Pseudocode",
+        "Abrechnung",
+        "Freimenge"
+      ]
+    }
+  ]
+}

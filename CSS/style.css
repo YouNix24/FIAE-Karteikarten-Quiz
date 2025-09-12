@@ -74,6 +74,11 @@ body {
 .progressbar { height: 8px; background: #262a44; border-radius: 999px; overflow: hidden; }
 .progressbar > div { height: 100%; width: 0%; background: linear-gradient(90deg, #5b76ff, #19c37d); transition: width .25s ease; }
 .question { font-size: 20px; font-weight: 650; margin-top: 6px; }
+.question pre.code { margin-top: 8px; padding: 12px; border-radius: 10px; border: 1px solid #2a3055; background: #101633; color: #e8ebf3; overflow: auto; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; white-space: pre; }
+.ui-logs { position: fixed; left: 12px; right: 12px; bottom: 12px; max-height: 38vh; overflow: auto; background: rgba(13,16,33,.92); border: 1px solid #2a3055; border-radius: 10px; box-shadow: var(--shadow); padding: 8px 10px; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #b9c2e5; }
+.ui-logs.hidden { display: none; }
+.ui-logs .entry { white-space: pre-wrap; border-bottom: 1px dashed #2a3055; padding: 4px 0; }
+.ui-logs .entry:last-child { border-bottom: 0; }
 .choices { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
 .choice { text-align: left; padding: 12px; border-radius: 12px; border: 1px solid #2a3055; background: #1b2141; color: var(--fg); cursor: pointer; }
 .choice.correct { border-color: #1fbf80; background: rgba(31,191,128,.12); }

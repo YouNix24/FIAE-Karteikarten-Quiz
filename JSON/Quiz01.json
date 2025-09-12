@@ -1,76 +1,150 @@
-{
+﻿{
   "cards": [
     {
-      "question": "In welchem Layer des OSI-Schichtenmodells arbeitet ein Netzwerkswitch überwiegend?",
-      "choices": ["Schicht 2", "Schicht 1", "Schicht 3", "Schicht 7"],
+      "question": "Wie lautet die korrekte Abfolge im DHCP-Prozess (DORA)?",
+      "choices": [
+        "Discover → Offer → Request → ACK",
+        "Offer → Discover → ACK → Request",
+        "Request → Offer → Discover → ACK",
+        "ACK → Offer → Request → Discover"
+      ],
       "correct_index": 0,
-      "hint": "Schicht 2: Vermittlung über MAC-Adressen."
+      "hint": "Merksatz: D‑O‑R‑A.",
+      "topic": "DHCP",
+      "tags": ["DHCP", "DORA", "Ablauf"]
     },
     {
-      "question": "Bei einem RAID-5-Verbund: Wie viele Festplatten dürfen gleichzeitig ausfallen, ohne dass Daten verloren gehen?",
-      "choices": ["1", "0", "2", "3"],
+      "question": "Auf welchem UDP‑Port lauscht ein DHCP‑Server typischerweise?",
+      "choices": ["67", "68", "53", "80"],
       "correct_index": 0,
-      "hint": "Eine Platte darf ausfallen (eine Parität)."
+      "hint": "Client 68, Server 67 (UDP).",
+      "topic": "DHCP",
+      "tags": ["Port", "UDP", "67/68"]
     },
     {
-      "question": "Welches Cloud-Bereitstellungsmodell stellt vollständig nutzbare Anwendungen inklusive Betrieb und Wartung bereit, sodass kein eigenes Deployment nötig ist?",
-      "choices": ["SaaS", "PaaS", "IaaS", "FaaS"],
+      "question": "Wozu dient ein DHCP Relay Agent?",
+      "choices": [
+        "Leitet DHCP‑Broadcasts über Subnetzgrenzen an den Server weiter",
+        "Vergibt statische IPs per ARP",
+        "Übersetzt Adressen für ausgehenden Verkehr (NAT)",
+        "Beantwortet DNS‑Anfragen lokal"
+      ],
       "correct_index": 0,
-      "hint": "Bereitstellung fertiger Anwendungen als Service."
+      "hint": "Oft per ‚ip helper‑address‘ auf Routern konfiguriert.",
+      "topic": "DHCP",
+      "tags": ["Relay", "Broadcast", "Subnetz"]
     },
     {
-      "question": "Was bedeutet ein statisches VLAN in der Praxis hinsichtlich der Zuordnung von Endgeräten zu Switch-Ports?",
-      "choices": ["Ports fix zugeordnet", "MAC-basiert", "802.1X Login", "DHCP-Option"],
+      "question": "Was beschreibt die ‚Lease Time‘ in DHCP?",
+      "choices": [
+        "Gültigkeitsdauer der zugewiesenen IP‑Adresse",
+        "Zeit für den Drei‑Wege‑Handshake",
+        "Timeout für DNS‑Caching",
+        "Zeit bis zur ARP‑Alterung"
+      ],
       "correct_index": 0,
-      "hint": "VLAN-Zuordnung erfolgt manuell pro Port."
+      "hint": "Nach Ablauf muss erneuert werden (Renew/Rebind).",
+      "topic": "DHCP",
+      "tags": ["Lease", "Gültigkeit", "Erneuerung"]
     },
     {
-      "question": "Wie lautet die korrekte Abfolge der Nachrichten im DHCP-Prozess (DORA)?",
-      "choices": ["Discover > Offer > Request > ACK", "Offer > Discover > ACK > Request", "Request > Offer > Discover > ACK", "ACK > Offer > Request > Discover"],
+      "question": "Was bewirkt eine DHCP‑Reservierung?",
+      "choices": [
+        "Feste Zuordnung einer IP zu einer MAC‑Adresse",
+        "Nur die Verkürzung der Lease Time",
+        "Zuweisung nur von öffentlichen IPs",
+        "Erzwingt ausschließlich statische Konfiguration"
+      ],
       "correct_index": 0,
-      "hint": "Merksatz: D-O-R-A."
+      "hint": "Gleiche IP für ein bekanntes Gerät (MAC).",
+      "topic": "DHCP",
+      "tags": ["Reservierung", "MAC", "feste IP"]
     },
     {
-      "question": "Welches Verfahren ermöglicht IPv6-Hosts die automatische Adressbildung ohne einen DHCPv6-Server?",
-      "choices": ["SLAAC", "Stateless NAT64", "PPPoE", "ARP"],
+      "question": "Welche DHCP‑Option übermittelt typischerweise das Standard‑Gateway (Router)?",
+      "choices": ["Option 3", "Option 6", "Option 15", "Option 51"],
       "correct_index": 0,
-      "hint": "Router Advertisements enthalten Präfix und Flags."
+      "hint": "Option 6=DNS; 15=Domain‑Name; 51=Lease‑Time.",
+      "topic": "DHCP",
+      "tags": ["Option 3", "Gateway", "Router"]
     },
     {
-      "question": "Was bedeutet die «include»-Beziehung in einem UML-Use-Case-Diagramm in Bezug auf obligatorische Teilabläufe?",
-      "choices": ["Ablauf A schließt B immer ein", "B ist optional", "A erweitert B", "Selbstinklusion erlaubt"],
+      "question": "Was ist die Hauptaufgabe eines Betriebssystems?",
+      "choices": [
+        "Verwaltung von Ressourcen (CPU, Speicher, I/O) und Bereitstellung von Diensten",
+        "Nur das Starten der Hardware ermöglichen",
+        "Nur Netzwerkverkehr routen",
+        "Nur Benutzeroberflächen anzeigen"
+      ],
       "correct_index": 0,
-      "hint": "Ein Use Case bindet einen anderen verpflichtend ein."
+      "hint": "Abstraktion und Verwaltung der Hardware‑Ressourcen.",
+      "topic": "Betriebssysteme",
+      "tags": ["OS", "Ressourcenverwaltung", "Dienste"]
     },
     {
-      "question": "Welche der folgenden Adressbereiche ist ein privater IPv4-Adressbereich gemäß RFC 1918?",
-      "choices": ["10.0.0.0/8", "172.32.0.0/16", "11.0.0.0/8", "1.0.0.0/8"],
+      "question": "Worin besteht der Unterschied zwischen Prozess und Thread?",
+      "choices": [
+        "Prozess hat eigenen Adressraum; Threads teilen den eines Prozesses",
+        "Thread hat eigenen Adressraum; Prozesse teilen",
+        "Beides ist identisch",
+        "Threads sind nur Kernel‑Module"
+      ],
       "correct_index": 0,
-      "hint": "Private Bereiche: 10/8, 172.16/12, 192.168/16."
+      "hint": "Threads sind leichtgewichtige Ausführungseinheiten im Prozess.",
+      "topic": "Betriebssysteme",
+      "tags": ["Prozess", "Thread", "Adressraum"]
     },
     {
-      "question": "Welche Netzwerkfunktion wird eingesetzt, um DHCP-Anfragen über Subnetzgrenzen hinweg an einen entfernten Server weiterzuleiten?",
-      "choices": ["DHCP Relay Agent", "NAT-Gateway", "DNS-Resolver", "Proxy ARP"],
+      "question": "Wozu dient der Scheduler im Betriebssystem?",
+      "choices": [
+        "Zuteilung von CPU‑Zeit an Prozesse/Threads",
+        "Zuteilung von IP‑Adressen",
+        "Zuweisung von Dateirechten",
+        "Verteilung von Stromversorgung"
+      ],
       "correct_index": 0,
-      "hint": "Auf Routern oft per 'ip helper-address' konfiguriert."
+      "hint": "Plant Ausführungsreihenfolge nach Algorithmus/Priorität.",
+      "topic": "Betriebssysteme",
+      "tags": ["Scheduler", "CPU", "Priorität"]
     },
     {
-      "question": "Was unterscheidet eine zustandsbehaftete (stateful) von einer zustandslosen (stateless) Firewall?",
-      "choices": ["Stateful trackt Verbindungszustände", "Stateless ist immer schneller", "Stateful arbeitet nur auf Layer 1", "Stateless benötigt keine Regeln"],
+      "question": "Was beschreibt virtuelle Speicherverwaltung (Paging)?",
+      "choices": [
+        "Abbildung virtueller Adressen auf physische Seiten",
+        "Nur Verschlüsselung des RAMs",
+        "Nur Zwischenspeichern im CPU‑Cache",
+        "Nur Defragmentierung von Festplatten"
+      ],
       "correct_index": 0,
-      "hint": "Rückkanal-Erlaubnis anhand bestehender Sessions."
+      "hint": "Ermöglicht größeren Adressraum, Isolation, Swapping.",
+      "topic": "Betriebssysteme",
+      "tags": ["Virtueller Speicher", "Paging", "MMU"]
     },
     {
-      "question": "Wozu dient DNSSEC im Domain Name System?",
-      "choices": ["Signierte Antworten sichern Integrität/Authentizität", "Erhöht die Auflösungsgeschwindigkeit", "Verschlüsselt den gesamten DNS-Verkehr", "Ermöglicht Lastverteilung"],
+      "question": "Wofür dienen Systemaufrufe (System Calls)?",
+      "choices": [
+        "Schnittstelle von User‑Mode Programmen zum Kernel",
+        "Nur für Grafiktreiber",
+        "Nur für Netzwerkprotokolle",
+        "Ersetzen Interrupts vollständig"
+      ],
       "correct_index": 0,
-      "hint": "Kryptografische Signaturen für Resource Records."
+      "hint": "Z. B. Datei‑/Prozess‑/Netzwerk‑Operationen.",
+      "topic": "Betriebssysteme",
+      "tags": ["Syscall", "Kernel", "User‑Mode"]
     },
     {
-      "question": "Welches HTTP-Header-Paar ermöglicht konditionelle Abrufe auf Basis eines Inhaltsfingerabdrucks?",
-      "choices": ["ETag / If-None-Match", "Last-Modified / If-Modified-Since", "Cache-Control / Pragma", "Authorization / WWW-Authenticate"],
+      "question": "Was ist der Unterschied zwischen Kernel‑ und User‑Mode?",
+      "choices": [
+        "Kernel‑Mode hat volle Hardware‑Privilegien; User‑Mode eingeschränkt",
+        "User‑Mode hat volle Privilegien; Kernel‑Mode eingeschränkt",
+        "Beide haben gleiche Rechte",
+        "Nur Treiber laufen im User‑Mode"
+      ],
       "correct_index": 0,
-      "hint": "Server vergleicht Client-ETag mit aktuellem ETag."
+      "hint": "Schutzring‑Modell (z. B. Ring 0 vs. Ring 3).",
+      "topic": "Betriebssysteme",
+      "tags": ["Kernel‑Mode", "User‑Mode", "Privilegien"]
     }
   ]
 }

@@ -3,6 +3,9 @@ const STORAGE_KEY = 'fiaeq_progress_v1';
 function log(msg){
   try {
     const ts = new Date().toISOString();
+    // UI log
+    try { uiLog(`[${ts}] ${msg}`); } catch(_){}
+    // Server log
     fetch('/log', { method: 'POST', headers: { 'Content-Type': 'text/plain' }, body: `[${ts}] ${msg}` }).catch(()=>{});
   } catch(_) {}
 }
@@ -67,6 +70,7 @@ function prepareCard(card){
     const choices = perm.map(i => card.choices[i]);
     const correct_index = perm.indexOf(card.correct_index);
     const copy = { question: card.question, choices, correct_index, hint: card.hint };
+    if (card.code) copy.code = card.code; // optional code block for code comprehension
     if (card.topic) copy.topic = card.topic;
     if (card.tags) copy.tags = card.tags;
     return copy;
@@ -139,8 +143,27 @@ function mergeTopicStats(base, add){
 async function discoverQuizzes(max = 200){
   const found = [];
   let missStreak = 0;
-  // Scan sequentially without directory listing
-  // Try fast path via /list if available
+  // Helper: limited concurrency pool
+  async function runPool(items, limit, worker){
+    const ret = new Array(items.length);
+    let idx = 0;
+    let active = 0;
+    return await new Promise((resolve) => {
+      function next(){
+        if (idx >= items.length && active === 0){ resolve(ret); return; }
+        while (active < limit && idx < items.length){
+          const my = idx++;
+          active++;
+          Promise.resolve(worker(items[my], my))
+            .then(v=> ret[my]=v)
+            .catch(()=>{})
+            .finally(()=>{ active--; next(); });
+        }
+      }
+      next();
+    });
+  }
+  // Fast path via /list (authoritative on server)
   try {
     if (location.protocol !== 'file:'){
       const rList = await fetch('/list', { cache:'no-store' });
@@ -148,40 +171,33 @@ async function discoverQuizzes(max = 200){
         const names = await rList.json();
         if (Array.isArray(names) && names.length){
           log(`Fast-Scan via /list: ${names.length} Datei(en)`);
-          for (const nameOnly of names){
+          log(`Liste: ${names.join(', ')}`);
+          const items = await runPool(names, 8, async (nameOnly)=>{
             const url = `${JSON_DIR}/${nameOnly}`;
             try{
               const txt = await (await fetch(url, { cache:'no-store' })).text();
-              try{
-                const data = JSON.parse(txt);
-                const cards = getCards(data);
-                if (!cards || !cards.length) { log(`${nameOnly}: JSON ok, aber keine Karten gefunden`); continue; }
-                const m = nameOnly.match(/^Quiz(\d{1,})\.json$/i);
-                const num = m ? m[1] : null; const id = num ? (`Quiz${pad2(Number(num))}`) : nameOnly.replace(/\.json$/i,'');
-                const title = num ? (`Quiz ${pad2(Number(num))}`) : id;
-                const item = { id, file: url, title, count: cards.length, cards };
-                found.push(item);
-                log(`${nameOnly}: OK (${cards.length} Karten)`);
-                // Inkrementell: upsert in bestehende Liste (nicht überschreiben)
-                try {
-                  const byId = new Map(state.quizzes.map(q=>[q.id,q]));
-                  byId.set(item.id, item);
-                  state.quizzes = Array.from(byId.values()).sort((a,b)=> a.id.localeCompare(b.id,'de',{numeric:true}));
-                  renderGrid();
-                } catch(_){}
-              } catch(e){ log(`${nameOnly}: JSON-Fehler: ${e.message}`); }
-            } catch(e){ log(`${nameOnly}: Fetch-Fehler: ${e.message}`); }
-          }
-          { const byId = new Map(state.quizzes.map(q=>[q.id,q])); for (const it of found){ byId.set(it.id, it); } state.quizzes = Array.from(byId.values()).sort((a,b)=> a.id.localeCompare(b.id,'de',{numeric:true})); }
+              const data = JSON.parse(txt);
+              const cards = getCards(data);
+              if (!cards || !cards.length) { log(`${nameOnly}: JSON ok, aber keine Karten gefunden`); return null; }
+              const m = nameOnly.match(/^Quiz(\d{1,})\.json$/i);
+              const num = m ? m[1] : null; const id = num ? (`Quiz${pad2(Number(num))}`) : nameOnly.replace(/\.json$/i,'');
+              const title = num ? (`Quiz ${pad2(Number(num))}`) : id;
+              log(`${nameOnly}: OK (${cards.length} Karten)`);
+              return { id, file: url, title, count: cards.length, cards };
+            } catch(e){ log(`${nameOnly}: Fehler: ${e && e.message}`); return null; }
+          });
+          const filtered = items.filter(Boolean);
+          state.quizzes = filtered.sort((a,b)=> a.id.localeCompare(b.id,'de',{numeric:true}));
           try { renderGrid(); } catch(_){}
           log(`Fast-Scan beendet. Gefunden: ${state.quizzes.length} Quiz-Datei(en).`);
-          return;
+          return; // Verlasse hier: /list ist maßgeblich und schnell
         }
       }
     }
   } catch(e){ /* ignore and fall back */ }
 
-  log(`Scan starte: JSON/Quiz01.json .. Quiz${pad2(max)}.json`);
+  max = Math.min(max, 40); // Limit sequentiellen Scan für Geschwindigkeit
+  log(`Scan starte (Fallback): JSON/Quiz01.json .. Quiz${pad2(max)}.json`);
   const envNote = document.getElementById('envNote');
   for (let i=1;i<=max;i++){
     const name = `Quiz${pad2(i)}.json`;
@@ -191,7 +207,7 @@ async function discoverQuizzes(max = 200){
       if (!res.ok) {
         missStreak++; log(`${name}: ${res.status} ${res.statusText}`);
         if (envNote) envNote.textContent = `Scanne … ${name}: ${res.status}. Gefunden: ${found.length}`;
-        if (found.length>0 && missStreak>=5) { log(`Frühes Ende nach ${missStreak} Fehlversuchen.`); break; }
+        if (found.length>0 && missStreak>=2) { log(`Frühes Ende nach ${missStreak} Fehlversuchen.`); break; }
         continue;
       }
       missStreak = 0;
@@ -200,11 +216,8 @@ async function discoverQuizzes(max = 200){
         const data = JSON.parse(txt);
         const cards = getCards(data);
         if (!cards || !cards.length) { missStreak++; log(`${name}: JSON ok, aber keine Karten gefunden`); if (found.length>0 && missStreak>=5) { break; } continue; }
-        found.push({ id: `Quiz${pad2(i)}`, file: url, title: `Quiz ${pad2(i)}`, count: cards.length, cards });
-        log(`${name}: OK (${cards.length} Karten)`);
-        // Incrementell rendern
-        state.quizzes = found.slice().sort((a,b)=> a.id.localeCompare(b.id,'de',{numeric:true}));
-        try { renderGrid(); } catch(_){}
+         found.push({ id: `Quiz${pad2(i)}`, file: url, title: `Quiz ${pad2(i)}`, count: cards.length, cards });
+         log(`${name}: OK (${cards.length} Karten)`);
         if (envNote) envNote.textContent = `Gefunden: ${found.length} (zuletzt ${name})`;
       } catch (e) {
         missStreak++; log(`${name}: JSON-Fehler: ${e.message}`);
@@ -212,6 +225,7 @@ async function discoverQuizzes(max = 200){
     } catch(e){ missStreak++; log(`${name}: Fetch-Fehler: ${e.message}`); }
   }
   { const byId = new Map(state.quizzes.map(q=>[q.id,q])); for (const it of found){ byId.set(it.id, it); } state.quizzes = Array.from(byId.values()).sort((a,b)=> a.id.localeCompare(b.id,'de',{numeric:true})); }
+  try { renderGrid(); } catch(_){}
   log(`Scan beendet. Gefunden: ${found.length} Quiz-Datei(en).`);
 }
 
@@ -397,7 +411,20 @@ function startRun(q){
 function renderRun(){
   const r = state.run; if (!r) return;
   const c = r.cards[r.idx];
-  document.getElementById('questionText').textContent = `Frage ${r.idx+1}/${r.cards.length}: ${c.question}`;
+  (function(){
+    const qEl = document.getElementById('questionText');
+    while (qEl.firstChild) qEl.removeChild(qEl.firstChild);
+    const prompt = document.createElement('div');
+    const label = `Frage ${r.idx+1}/${r.cards.length}: ${c.question ? c.question : ''}`;
+    prompt.textContent = label.trim();
+    qEl.appendChild(prompt);
+    if (c.code) {
+      const pre = document.createElement('pre');
+      pre.className = 'code';
+      pre.textContent = String(c.code);
+      qEl.appendChild(pre);
+    }
+  })();
   document.getElementById('hintText').textContent = '';
   const wrap = document.getElementById('choices'); wrap.innerHTML='';
   c.choices.forEach((txt, i)=>{
@@ -574,6 +601,19 @@ function boot(){
 
   // Init
   (async function init(){
+    // Hook Logs button
+    try {
+      const btn = document.getElementById('btnToggleLogs');
+      if (btn){ btn.addEventListener('click', ()=>{ const b=document.getElementById('uiLogs'); if(b) b.classList.toggle('hidden'); }); }
+    } catch(_){ }
+    // Hook Rescan button
+    try {
+      const btnR = document.getElementById('btnRescan');
+      if (btnR){ btnR.addEventListener('click', async ()=>{ try{ setLoading('Scanne JSON neu …'); }catch(_){}
+        try { await discoverQuizzes(200); } catch(e){ log(`Rescan Fehler: ${e && e.message}`); }
+        try { renderGrid(); } catch(_){}
+        clearLoading(); }); }
+    } catch(_){ }
     updateDashboard();
     log(`Seite geladen. Modus: ${location.protocol} Host: ${location.host}`);
     setLoading('Lade JSON in die Karteikarten …');
@@ -599,6 +639,15 @@ if (document.readyState === 'loading') {
   document.addEventListener('DOMContentLoaded', boot);
 } else {
   boot();
+}
+
+// Simple in-page log panel
+function uiLog(message){
+  try{
+    const box = document.getElementById('uiLogs'); if (!box) return;
+    const row = document.createElement('div'); row.className = 'entry'; row.textContent = String(message);
+    box.appendChild(row); box.scrollTop = box.scrollHeight;
+  }catch(_){ }
 }
 
 

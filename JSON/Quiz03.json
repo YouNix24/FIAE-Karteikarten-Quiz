@@ -1,77 +1,130 @@
 {
   "cards": [
     {
-      "question": "Wie viele nutzbare IPv4-Hostadressen stehen in einem /27-Subnetz zur Verfügung?",
-      "choices": ["30", "62", "14", "126"],
+      "question": "Welche drei Hauptschutzziele umfasst das CIA‑Triad?",
+      "choices": [
+        "Vertraulichkeit, Integrität, Verfügbarkeit",
+        "Authentizität, Datenschutz, Skalierbarkeit",
+        "Verbindlichkeit, Nachvollziehbarkeit, Datenschutz",
+        "Resilienz, Effizienz, Kompatibilität"
+      ],
       "correct_index": 0,
-      "hint": "2^5 - 2 = 30 Hosts."
+      "hint": "Merksatz: Confidentiality, Integrity, Availability.",
+      "topic": "IT-Sicherheit",
+      "tags": ["CIA", "Schutzziele", "Security"]
     },
     {
-      "question": "Auf welcher Ebene des OSI-Modells wird ARP (Address Resolution Protocol) typischerweise verortet?",
-      "choices": ["Schicht 2", "Schicht 1", "Schicht 3", "Schicht 7"],
+      "question": "Welches erweiterte Schutzziel stellt sicher, dass ein Kommunikationspartner echt ist?",
+      "choices": ["Authentizität", "Verfügbarkeit", "Anonymität", "Skalierbarkeit"],
       "correct_index": 0,
-      "hint": "ARP verknüpft IP mit MAC."
+      "hint": "Z. B. durch TLS‑Zertifikate sichergestellt.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Authentizität", "TLS", "Zertifikat"]
     },
     {
-      "question": "Welcher IEEE-Standard definiert VLAN-Tagging innerhalb von Ethernet-Frames?",
-      "choices": ["802.1Q", "802.3", "802.11", "802.1X"],
+      "question": "Wofür steht Verbindlichkeit (Non‑Repudiation) im IT‑Sicherheitskontext?",
+      "choices": [
+        "Handlungen/Transaktionen können nicht abgestritten werden",
+        "Daten sind jederzeit verfügbar",
+        "Nur berechtigte Personen haben Zugriff",
+        "Nur verschlüsselte Übertragung ist erlaubt"
+      ],
       "correct_index": 0,
-      "hint": "Tag-Feld im Ethernet-Frame."
+      "hint": "Digitale Signaturen und Logging unterstützen Verbindlichkeit.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Non-Repudiation", "Signatur", "Logging"]
     },
     {
-      "question": "Welches Ziel verfolgt das Spanning Tree Protocol (STP) in geswitchten Netzwerken?",
-      "choices": ["Schleifen verhindern", "Bandbreite erhöhen", "QoS erzwingen", "VLANs trennen"],
+      "question": "Welche Komponente dient in Netzwerken primär dem Erkennen von Angriffen?",
+      "choices": ["IDS (Intrusion Detection System)", "DMZ", "Proxy", "Load Balancer"],
       "correct_index": 0,
-      "hint": "Blockiert redundante Links bei Loops."
+      "hint": "Erkennen ≠ Verhindern (IPS wäre präventiv).",
+      "topic": "IT-Sicherheit",
+      "tags": ["IDS", "Erkennung", "Netzwerk"]
     },
     {
-      "question": "Welche Mechanik nutzt traceroute, um den Pfad zu einem Zielhost zu ermitteln?",
-      "choices": ["TTL & ICMP Time Exceeded", "TCP Port 80", "ARP Broadcast", "DHCP DORA"],
+      "question": "Was beschreibt eine DMZ (Demilitarisierte Zone) am besten?",
+      "choices": [
+        "Abgeschirmtes Netzwerksegment für öffentlich erreichbare Dienste",
+        "Ein VPN‑Tunnel zwischen zwei Standorten",
+        "Ein VLAN für Drucker",
+        "Ein privates Subnetz hinter NAT"
+      ],
       "correct_index": 0,
-      "hint": "Abnehmendes Hop-Limit provoziert Antworten."
+      "hint": "Zwischen Internet und internem Netz platziert.",
+      "topic": "IT-Sicherheit",
+      "tags": ["DMZ", "Perimeter", "Server"]
     },
     {
-      "question": "Welche Information liefert ein DNS-AAAA-Resource-Record?",
-      "choices": ["IPv6-Adresse", "Mailserver", "Alias", "Reverse Lookup"],
+      "question": "Welche Maßnahme gehört zur Systemhärtung?",
+      "choices": [
+        "Nicht benötigte Dienste/Software deaktivieren",
+        "Standardpasswörter wiederverwenden",
+        "SSH nach außen ohne Firewall öffnen",
+        "Patch‑Management ignorieren"
+      ],
       "correct_index": 0,
-      "hint": "Nicht MX, nicht CNAME."
+      "hint": "Ziel: Angriffsfläche reduzieren.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Hardening", "Patch", "Dienste"]
     },
     {
-      "question": "Welche NAT-Variante eignet sich, um viele interne Clients über eine öffentliche IPv4-Adresse ins Internet zu bringen?",
-      "choices": ["PAT (NAPT)", "Static NAT", "1:1 NAT", "DNAT nur"],
+      "question": "Welche Backup‑Art sichert alle Änderungen seit dem letzten Vollbackup?",
+      "choices": ["Differenzielles Backup", "Inkrementelles Backup", "Vollbackup", "Spiegelung (RAID1)"],
       "correct_index": 0,
-      "hint": "Port-Multiplexing."
+      "hint": "Inkrementell: seit letztem Backup; differenziell: seit Vollbackup.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Backup", "differenziell", "Recovery"]
     },
     {
-      "question": "Wie wird das Routing-Protokoll OSPF klassifiziert?",
-      "choices": ["Link-State IGP", "Distance-Vector EGP", "Path-Vector IGP", "Schicht-7-Protokoll"],
+      "question": "Welche Aussage trifft auf symmetrische Verschlüsselung zu?",
+      "choices": [
+        "Ein Schlüssel für Ver‑ und Entschlüsselung",
+        "Schlüsselpaare (privat/öffentlich) werden genutzt",
+        "Immer langsamer als asymmetrische Verfahren",
+        "Nur für Signaturen geeignet"
+      ],
       "correct_index": 0,
-      "hint": "Dijkstra-Algorithmus, Areas."
+      "hint": "Schnell, aber Schlüsselverteilung ist herausfordernd.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Kryptografie", "symmetrisch", "Schlüssel"]
     },
     {
-      "question": "Welches Präfix kennzeichnet IPv6-Link-Local-Adressen?",
-      "choices": ["fe80::/10", "fc00::/7", "2001::/16", "::1/128"],
+      "question": "Was beschreibt eine hybride Verschlüsselung korrekt?",
+      "choices": [
+        "Asymmetrisch tauscht Sitzungsschlüssel, Datenübertragung symmetrisch",
+        "Nur asymmetrische Verfahren werden verwendet",
+        "Nur symmetrische Verfahren werden verwendet",
+        "Es wird ohne Schlüssel gearbeitet"
+      ],
       "correct_index": 0,
-      "hint": "Automatisch je Interface vorhanden."
+      "hint": "Öffentlicher Schlüssel verschlüsselt den symmetrischen Schlüssel.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Hybrid", "asymmetrisch", "symmetrisch"]
     },
     {
-      "question": "Welches Verfahren nutzt WPA3 zur Authentifizierung im WLAN?",
-      "choices": ["SAE", "WEP", "Nur TKIP", "CHAP"],
+      "question": "Welches Beispiel gehört zu Social Engineering?",
+      "choices": ["Phishing‑E‑Mail", "ARP‑Spoofing", "Buffer Overflow", "Portscan"],
       "correct_index": 0,
-      "hint": "Dragonfly/SAE."
+      "hint": "Täuschung von Menschen statt Technik.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Social Engineering", "Phishing", "Awareness"]
     },
     {
-      "question": "Welcher DNS-Record-Typ stellt einen Alias auf einen kanonischen Namen dar?",
-      "choices": ["CNAME", "MX", "NS", "TXT"],
+      "question": "Welche Angriffsmethode zielt darauf ab, Dienste durch Überlastung nicht verfügbar zu machen?",
+      "choices": ["DoS/DDoS", "SQL‑Injection", "Man‑in‑the‑Middle", "DNS‑Spoofing"],
       "correct_index": 0,
-      "hint": "Alias auf echten Hostnamen."
+      "hint": "Betroffenes Schutzziel: Verfügbarkeit.",
+      "topic": "IT-Sicherheit",
+      "tags": ["DoS", "DDoS", "Verfügbarkeit"]
     },
     {
-      "question": "Auf welchem TCP-Standardport lauschen HTTPS-Dienste typischerweise?",
-      "choices": ["443", "80", "22", "53"],
+      "question": "Welches Prinzip beschreibt, dass Nutzer nur unbedingt nötige Rechte erhalten sollen?",
+      "choices": ["Least Privilege", "Need to Share", "Open by Default", "Best Effort"],
       "correct_index": 0,
-      "hint": "TLS über TCP 443."
+      "hint": "Teil von Berechtigungskonzepten/Access Control.",
+      "topic": "IT-Sicherheit",
+      "tags": ["Least Privilege", "Access Control", "Rechte"]
     }
   ]
 }
-

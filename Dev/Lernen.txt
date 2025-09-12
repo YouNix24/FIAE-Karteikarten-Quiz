@@ -1,0 +1,1210 @@
+IT & Business Kompendium: Von Stakeholdern bis zum
+Pflichtenheft
+
+1. Stakeholder
+
+Definition
+
+Stakeholder (deutsch: Anspruchsgruppen, Interessensgruppen) sind alle Personen, Gruppen oder
+Institutionen, die ein berechtigtes Interesse am Verlauf oder Ergebnis eines Projektes oder Unternehmens
+
+haben und davon betroffen sind oder es beeinflussen kénnen.
+
+Arten von Stakeholdern
+Interne Stakeholder
+
+e Mitarbeiter: Erwarten sichere Arbeitsplatze, faire Bezahlung, gute Arbeitsbedingungen
+e Management/Fiihrungskrafte: Streben nach Unternehmenserfolg, Karriereentwicklung
+
+e Eigentiimer/Aktionare: Wollen Gewinnmaximierung und Wertsteigerung
+
+Externe Stakeholder
+
+e Kunden: Erwarten qualitativ hochwertige Produkte zu fairen Preisen
+
+Lieferanten: Brauchen zuverlassige, zahlungsfahige Partner
+
+Investoren/Banken: Erwarten Rendite und Ruickzahlung
+
+Gesellschaft/Offentlichkeit: Interesse an nachhaltigen, ethischen Geschaftspraktiken
+
+Staat/BehGrden: Erwarten Gesetzeseinhaltung und Steuereinnahmen
+
+Stakeholder-Management
+Das systematische Identifizieren, Analysieren und Einbeziehen aller relevanten Anspruchsgruppen zur
+Sicherung des Projekterfolgs. Beinhaltet:
+
+e Stakeholder-Analyse (Einfluss vs. Interesse-Matrix)
+
+¢ Kommunikationsstrategien entwickeln
+
+e RegelmaBige Abstimmung und Feedback
+
+2. JBOD (Just a Bunch of Disks) und RAID
+
+JBOD Definition
+
+JBOD bedeutet "Just a Bunch of Disks" - eine Speicherkonfiguration, bei der mehrere Festplatten zu
+einem logischen Volume kombiniert werden, ohne Redundanz oder Performance-Verbesserungen.
+JBOD Funktionsweise
+
+e Einzelne Festplatten werden linear aneinandergereiht ("Spanning")
+
+e Daten werden nacheinander auf die Festplatten geschrieben
+
+e Jede Festplatte behalt ihre Individualitat
+
+e Bei Ausfall einer Festplatte gehen nur die Daten dieser Platte verloren
+
+RAID vs. JBOD
+
+RAID (Redundant Array of Independent Disks)
+
+Hauptziel: Verbesserung von Leistung und/oder Datensicherheit
+
+Wichtige RAID-Level:
+
+e RAID 0 (Striping): Daten werden auf mehrere Festplatten verteilt + hdhere Geschwindigkeit, keine
+
+Redundanz
+
+e RAID 1 (Mirroring): Daten werden identisch auf zwei Festplatten gespeichert — hohe Sicherheit
+
+e RAID 5: Daten plus Paritatsinformationen auf mindestens 3 Festplatten — Ausfallsicherheit +
+
+Performance
+
+e RAID 6: Wie RAID 5, aber mit doppelter Paritat > kann Ausfall von 2 Festplatten verkraften
+
+Hauptunterschiede JBOD vs. RAID
+
+Aspekt JBOD
+
+RAID
+Redundanz Keine Je nach Level vorhanden
+Performance Keine Verbesserung Kann verbessert werden
+Komplexitat Sehr einfach Komplex, abhangig vom Level
+Kosten Niedrig Hoher
+Einsatz Archivierung, unkritische Daten Produktive Systeme, kritische Daten
+
+3. IPv4 und IPv6 Adressierung
+
+IPv4 (Internet Protocol Version 4)
+Eigenschaften
+e 32-Bit-Adressen (4 Bytes)
+
+© Format: 000xx%.00.xxx (z.B. 192.168.178.1)
+
+e Adressraum: ~4,3 Milliarden Adressen
+
+e Status: Seit 2011 sind die Adressen weitgehend aufgebraucht
+
+IPv4-Adressklassen
+
+e Klasse A: 1.0.0.0 - 126.255.255.255 (groBe Netzwerke)
+e Klasse B: 128.0.0.0 - 191.255.255.255 (mittlere Netzwerke)
+e Klasse C: 192.0.0.0 - 223.255.255.255 (kleine Netzwerke)
+
+Private IPv4-Bereiche
+
+e 10.0.0.0 - 10.255.255.255
+e 172.16.0.0 - 172.31.255.255
+© 192.168.0.0 - 192.168.255.255
+
+IPv6 (Internet Protocol Version 6)
+
+Eigenschaften
+e 128-Bit-Adressen (16 Bytes)
+© Format: 00K Q0OCKXXXXXOXXIOKXXKXXXXXXXKX (Z.B. 2001:0db8:85a3:0000:0000:8a2e:0370:7334)
+e Adressraum: ~340 Quintilliarden Adressen
+
+e Vereinfachungen: Fuhrende Nullen kinnen weggelassen werden, aufeinanderfolgende Null-Blécke
+durch :: ersetzt
+
+Hauptvorteile von IPv6
+
+e Riesiger Adressraum: Praktisch unerschdpflich
+
+Integrierte Sicherheit: |PSec ist Pflicht
+
+Vereinfachtes Routing: Hierarchische Adressstruktur
+
+Bessere Performance: Optimierter Header
+
+Quality of Service: Eingebaute QoS-Unterstiitzung
+
+e Ende-zu-Ende-Konnektivitat: Kein NAT mehr ndétig
+
+Unterschiede im Uberblick
+
+Feature IPv4 IPv6
+Adresslange 32 Bit 128 Bit
+Notation Dezimal mit Punkten Hexadezimal mit Doppelpunkten
+Adressraum ~4,3 Milliarden ~340 Quintilliarden
+Sicherheit Optional (IPSec) Integriert (IPSec)
+NAT Notwendig Nicht erforderlich
+Konfiguration Manuell/DHCP Automatisch méglich
+
+4. RFID (Radio Frequency Identification)
+
+Definition
+
+RFID ist eine Technologie zur berihrungslosen Identifikation und Datentbertragung mittels
+elektromagnetischer Wellen zwischen einem Transponder (RFID-Tag/Chip) und einem Lesegerat.
+
+Komponenten eines RFID-Systems
+RFID-Transponder (Tag/Chip)
+e Chip: Speicher fiir Daten und Steuerlogik
+e Antenne: Empfang/Sendung der Signale
+
+e Gehdause: Schutz der Elektronik (Karte, Aufkleber, Implantat, etc.)
+
+RFID-Lesegerat (Reader)
+
+e Erzeugt elektromagnetisches Feld
+e Versorgt passive Tags mit Energie
+e Liest/schreibt Daten
+
+e Ubertragen Informationen an nachgelagerte Systeme
+
+RFID-Tag Typen
+Passive Tags
+e Energieversorgung: Durch Lesegerat
+e Reichweite: Wenige cm bis mehrere Meter
+e Kosten: Niedrig (~0,20€)
+e Lebensdauer: 10+ Jahre
+
+e Einsatz: Warensicherung, Zugangskontrollen
+
+Aktive Tags
+
+e Energieversorgung: Eingebaute Batterie
+
+e Reichweite: Bis 100+ Meter
+
+e Kosten: Hoch (10€+)
+
+e Lebensdauer:. Batterielebensdauer (2-10 Jahre)
+
+e Einsatz Fahrzeugverfolgung, Containermanagement
+
+Semi-passive Tags
+
+e Batterie nur fur Chip-Betrieb
+e Kommunikation Uber Lesegerat-Energie
+
+e Kompromiss zwischen passiv und aktiv
+
+RFID-Frequenzbereiche
+
+Frequenz Bezeichnung Reichweite Anwendungen
+125-134 kHz Low Frequency (LF) < 10cm Tierkennzeichnung, Zugang
+13,56 MHz High Frequency (HF/NFC) <1m Bezahlkarten, Personalausweise
+865-960 MHz Ultra High Frequency (UHF) <10m Logistik, Warenwirtschaft
+Anwendungsbereiche
+Logistik & Handel
+
+e Bestandsverwaltung und Inventur
+e Supply Chain Management
+e Warensicherung (EAS - Electronic Article Surveillance)
+
+e Kassensysteme
+
+Zugangskontrollen
+
+e Firmenausweise und Schlusselkarten
+e Fahrzeugzugang und Wegfahrsperre
+e Hotelzimmerkarten
+
+Medizin & Gesundheit
+
+e Patientenarmbander mit medizinischen Daten
+e Medikamentenverfolgung gegen Falschungen
+e Blutspendeausweise
+
+e Implantierte Chips fur medizinische Uberwachung
+
+Identifikation
+
+e Personalausweise und Reisepdsse (ePass)
+e Tierkennzeichnung (Haustiere, Nutztiere)
+
+e Produktauthentifizierung
+
+Vorteile vs. Nachteile
+
+Vorteile
+
+e Beriihrungslose Erkennung
+
+e Mehrere Tags gleichzeitig lesbar
+e Robust gegen Umwelteinfliisse
+e Durchdringung verschiedener Materialien
+
+e Schnelle Datenerfassung
+
+Nachteile
+
+e Stérungen durch Metall und Flissigkeiten
+e Begrenzte Speicherkapazitat
+e Datenschutz- und Sicherheitsbedenken
+
+e Kosten bei groBen Mengen
+
+5. Unternehmensleitbilder
+
+Definition
+
+Ein Unternehmensleitbild ist die schriftliche Darstellung der Grundprinzipien, Werte, Ziele und der
+angestrebten Unternehmenskultur. Es beschreibt die Mission, Vision und Philosophie einer Organisation.
+
+Bestandteile eines Leitbilds
+1. Mission (Zweck)
+
+e Frage: "Warum existiert unser Unternehmen?”
+e Inhalt: Beschreibt den Grundauftrag und Sinn
+
+e Beispiel: "Wir verbinden Menschen weltweit durch innovative Kommunikationsl6sungen"
+
+2. Vision (Zukunftsbild)
+
+e Frage: "Wo wollen wir in Zukunft stehen?"
+e Inhalt: Langfristige, inspirerende Zielvorstellung
+
+¢ Beispiel: "Bis 2030 sind wir der flhrende Anbieter nachhaltiger Technologieldsungen in Europa"
+
+3. Werte und Grundsiatze
+
+e Frage: "Nach welchen Prinzipien handeln wir?"
+e Inhalt: Ethische Grundlagen und Verhaltensnormen
+
+e Beispiele: Integritat, Innovation, Kundenorientierung, Nachhaltigkeit
+
+4. Motto/Slogan
+
+e Pragnante Zusammenfassung der Unternehmensidentitat
+e Leicht merkbar und kommunizierbar
+
+e Beispiel: "Innovation fiir eine bessere Welt"
+
+Funktionen des Leitbilds
+Interne Wirkung
+
+e Orientierung: Handlungsleitfaden fiir Mitarbeiter
+
+e Motivation: Sinnstiftung und Identifikation
+
+e Integration: Gemeinsame Unternehmenskultur
+
+e Entscheidungshilfe: Rahmen fir schwierige Situationen
+
+Externe Wirkung
+
+e Positionierung: Differenzierung vom Wettbewerb
+e Vertrauen: Glaubwirdigkeit bei Stakeholdern
+e Anziehung: Gewinnung von Kunden und Talenten
+
+e Legitimation: Rechtfertigung unternehmerischen Handelns
+
+Beispiele erfolgreicher Leitbilder
+Tesla
+
+Mission: "Die Beschleunigung des Ubergangs der Welt zu nachhaltiger Energie"
+
+e Klar und visionar
+
+© Gesellschaftlicher Mehrwert erkennbar
+
+e Handlungsleitend fur alle Aktivitaten
+IKEA
+
+Vision: "Einen besseren Alltag fir die vielen Menschen schaffen" Werte: Einfachheit, Kostenbewusstsein,
+
+Zusammengehérigkeit
+
+e Kundenorientiert und zuganglich
+
+e Werte spiegeln sich in Produkten wider
+Entwicklungsprozess
+
+1. Analyse-Phase
+
+e Ist-Zustand der Unternehmenskultur erfassen
+
+e Stakeholder-Erwartungen analysieren
+
+e Marktposition und Wettbewerb bewerten
+2. Entwicklungs-Phase
+
+e Partizipative Erarbeitung mit allen Ebenen
+e Workshops und Diskussionsrunden
+
+e Formulierung von Mission, Vision und Werten
+
+3. Implementierungs-Phase
+
+e Kommunikation im gesamten Unternehmen
+e Schulungen und Change Management
+
+e Integration in Prozesse und Systeme
+
+4. Controlling-Phase
+
+e RegelmaBige Uberpriifung der Umsetzung
+e Mitarbeiterbefragungen zur Verankerung
+
+e Anpassung bei Bedarf
+
+6. Lessons-Learned-Workshops
+
+Definition
+
+Lessons-Learned-Workshops sind strukturierte Reflexionssitzungen, in denen Projektbeteiligte
+systematisch Erfahrungen aus abgeschlossenen Projekten oder Projektphasen sammeln, analysieren und
+dokumentieren, um zukinftige Projekte zu verbessern.
+
+Ziele von Lessons-Learned-Workshops
+
+Primare Ziele
+
+e Wissenstransfer: Erfahrungen fiir andere Projekte verftigbar machen
+e Fehlerpravention: Wiederholung bekannter Probleme vermeiden
+e Best Practices: Erfolgreiche Ansatze identifizieren und standardisieren
+
+e Kontinuierliche Verbesserung: Systematische Optimierung der Projektarbeit
+
+Sekundire Ziele
+
+e¢ Team-Reflexion: Gemeinsame Betrachtung des Projektverlaufs
+e Motivation: Wertschatzung der geleisteten Arbeit
+e Kommunikation: Verbesserung der Zusammenarbeit
+
+e Organisationslernen: Aufbau einer lernenden Organisation
+Ablauf eines Lessons-Learned-Workshops
+Vorbereitung (1-2 Wochen vor Workshop)
+1. Teilnehmer identifizieren
+e Projektteam und Schltisselpersonen
+
+e Auftraggeber und wichtige Stakeholder
+
+e Externe Beteiligte falls relevant
+
+2. Materialien sammeln
+e Projektdokumentation
+
+e Zeitplane und Meilensteine
+e Protokolle und Berichte
+
+e Lessons-Learned-Logbuch (falls geftihrt)
+
+3. Workshop planen
+e Moderator bestimmen (idealerweise projektextern)
+
+e Raumlichkeiten und Technik organisieren
+e Agenda erstellen
+
+e Vorbereitungsaufgaben kommunizieren
+Workshop-Durchfiihrung (2-4 Stunden)
+
+Phase 1: Eréffnung (15 min)
+
+e BegriiBung und Vorstellung der Teilnehmer
+e Ziele und Agenda erldutern
+e Regeln fiir die Diskussion festlegen
+
+e Erwartungen abfragen
+Phase 2: Projektiiberblick (30 min)
+
+e Kurze Rekapitulation der Projektziele
+e Wichtigste Meilensteine und Ergebnisse
+e Zeitplan und Budget-Verlauf
+
+e Teilnehmer-Rollen im Projekt
+Phase 3: Strukturierte Analyse (90-120 min)
+3a) Was lief gut? (Positives sammeln)
+
+e Erfolge und Highlights identifizieren
+e Grund fiir den Erfolg analysieren
+e Best Practices ableiten
+
+e Methoden: Brainstorming, Sticky Notes, Mindmap
+3b) Was lief schlecht? (Probleme analysieren)
+
+e Schwierigkeiten und Hindernisse sammeln
+e Ursachen-Analyse durchftihren
+e Auswirkungen bewerten
+
+e Methoden: Fishbone-Diagramm, 5-Why-Technik
+3c) Was wiirden wir anders machen?
+
+e Verbesserungsvorschlage entwickeln
+e Alternative L6sungsansatze diskutieren
+
+e Konkrete Handlungsempfehlungen formulieren
+Phase 4: Priorisierung und MaBnahmen (30 min)
+
+e Wichtigste Erkenntnisse priorisieren
+e Konkrete MaBnahmen fiir zuktnftige Projekte ableiten
+e Verantwortlichkeiten festlegen
+
+e Umsetzung planen
+Phase 5: Abschluss und Feedback (15 min)
+
+e Zusammenfassung der Ergebnisse
+e Feedback zum Workshop-Prozess
+e Ndachste Schritte kommunizieren
+
+e Dank an alle Beteiligten
+
+Nachbereitung (1 Woche nach Workshop)
+
+e Dokumentation erstellen: Ausfihrlicher Ergebnisbericht
+e Verteilung: An alle Teilnehmer und relevante Stakeholder
+e Ablage: In Projektdatenbank oder Wissensmanagement-System
+
+e Follow-Up: Umsetzung der MaBnahmen verfolgen
+
+Erfolgsfaktoren
+
+Strukturelle Faktoren
+
+e Zeitpunkt: 2-6 Wochen nach Projektabschluss (emotionale Distanz, aber noch gute Erinnerung)
+e Moderation: Neutrale, erfahrene Moderation
+e Dauer: Ausreichend Zeit einplanen, aber nicht zu lange (Konzentration)
+
+e Umgebung: Stérungsfreie, offene Atmosphare
+
+Kulturelle Faktoren
+
+e Offenheit: Ehrliche Kommunikation ohne Schuldzuweisungen
+e Lernorientierung: Fokus auf Verbesserung, nicht auf Bewertung
+e Psychologische Sicherheit: Vertrauen in der Gruppe
+
+e Management-Unterstiitzung: Sichtbare Wertschatzung des Lernprozesses
+
+Haufige Methoden und Tools
+
+Retrospektive-Methoden
+
+e Start-Stop-Continue: Was anfangen, aufhéren, weitermachen?
+e Keep-Drop-Start: Was beibehalten, lassen, beginnen?
+e 4lLs: Liked, Learned, Lacked, Longed for
+
+e Mad-Sad-Glad: Emotionale Bewertung der Erfahrungen
+
+Analyse-Tools
+
+e Timeline: Chronologische Ereignis-Aufarbeitung
+e Force Field Analysis: Férder- und Hindernisfaktoren
+e Root Cause Analysis: Ursachen-Analyse mit Fishbone oder 5-Why
+
+e Impact-Effort-Matrix: Priorisierung von VerbesserungsmaBnahmen
+
+7. ERP (Enterprise Resource Planning)
+Definition
+
+ERP (Enterprise Resource Planning) ist ein integriertes Softwaresystem, das alle wesentlichen
+Geschaftsprozesse eines Unternehmens in einer einheitlichen Plattform zusammenfihrt und Uber eine
+
+gemeinsame Datenbank miteinander verbindet.
+
+Kernfunktionen eines ERP-Systems
+Zentrale Datenverwaltung
+e Eine gemeinsame Datenbank fiir alle Geschaftsbereiche
+
+e Eliminierung von Datenredundanzen
+
+e Konsistente Datenhaltung unternehmensweit
+e Real-Time-Datenzugriff fir alle berechtigten Nutzer
+
+Prozessintegration
+
+e Nahtlose Verbindung aller Geschaftsprozesse
+e Automatisierte Workflows zwischen Abteilungen
+e Durchgangige Informationsfltisse
+
+e Standardisierte Arbeitsablaufe
+
+Wichtige ERP-Module
+Finanzwesen & Rechnungswesen
+
+e Hauptbuchhaltung: Allgemeine Buchhaltung und Bilanzierung
+
+Kreditorenbuchhaltung: Verwaltung von Lieferantenrechnungen
+
+Debitorenbuchhaltung: Kundenforderungen und Zahlungseingange
+
+Controlling: Kostenrechnung und Management-Reporting
+
+Anlagenbuchhaltung: Abschreibungen und Anlagenverwaltung
+
+Logistik & Supply Chain
+
+e Materialwirtschaft: Bestandsfiihrung und Beschaffung
+
+e Lagerverwaltung: Ein- und Auslagerung, Inventur
+
+Einkauf: Lieferantenverwaltung und Bestellabwicklung
+
+Vertrieb: Kundenverwaltung und Auftragsbearbeitung
+
+Versand: Logistik und Speditionsabwicklung
+
+Produktion & Fertigung
+
+e Produktionsplanung: Kapazitats- und Terminplanung
+
+e Materialbedarfsplanung (MRP): Berechnung von Materialbedarf
+
+e Fertigungssteuerung: Werkstattsteuerung und Maschinenbelegung
+e Qualitaétsmanagement: Priifplanung und Qualitatskontrolle
+
+e Instandhaltung: Wartungsplanung fiir Anlagen
+
+Personalwesen (HR)
+
+e Personalverwaltung: Stammdaten und Personalakte
+e Entgeltabrechnung: Lohn- und Gehaltsabrechnung
+e Zeitwirtschaft: Arbeitszeiterfassung und Urlaubsverwaltung
+
+e Personalentwicklung: Schulungen und Karriereplanung
+e Recruiting: Bewerbermanagement
+
+Customer Relationship Management (CRM)
+
+e Kundenverwaltung: Kundenstammdaten und -historie
+e Verkaufschancen: Sales Pipeline Management
+e Marketing: Kampagnenmanagement und Lead-Generierung
+
+e Service: Beschwerdemanagement und Kundensupport
+
+ERP-Bereitstellungsmodelle
+On-Premises ERP
+e Installation: Auf eigenen Servern im Unternehmen
+e Kontrolle: Vollstandige Datenkontrolle und -sicherheit
+e Kosten: Hohe Anfangsinvestition, aber langfristig planbar
+e Wartung: Eigenverantwortlich durch interne IT
+
+e Eignung: Grobe Unternehmen mit eigener IT-Abteilung
+
+Cloud ERP (SaaS)
+
+e Installation: Beim Anbieter in der Cloud
+
+Zugriff. Uber Internet und Webbrowser
+
+Kosten: Niedrige Anfangskosten, monatliche/jahrliche Gebthren
+
+Wartung: Durch Cloud-Anbieter
+
+e Eignung: KMU und Start-ups mit begrenzten IT-Ressourcen
+
+Hybrid ERP
+
+e Kombination: On-Premises und Cloud-Komponenten
+
+e Flexibilitat: Sensible Daten lokal, andere Bereiche in Cloud
+e Kosten: Mittlere Anfangsinvestition
+
+e Komplexitat: Héher aufgrund gemischter Architektur
+
+e Eignung: Unternehmen mit spezifischen Compliance-Anforderungen
+
+Vorteile von ERP-Systemen
+Effizienzsteigerung
+e Automatisierung: Reduktion manueller Arbeitsschritte
+
+e Prozessoptimierung: Standardisierte und optimierte Ablaufe
+
+e Zeitersparnis: Weniger Suchzeiten und Doppelarbeit
+e Fehlerreduktion: Vermeidung von Ubertragungsfehlern
+
+Bessere Datenqualitat
+
+e Konsistenz: Einheitliche Datenhaltung
+e Aktualitat. Real-Time-Datenverarbeitung
+e Vollstandigkeit: Alle Informationen an einem Ort
+
+e Integritat: Automatische Datenvalidierung
+
+Verbessertes Reporting
+
+e Real-Time-Berichte: Aktuelle Kennzahlen jederzeit verftigbar
+e Standardreports: Vorkonfigurierte Auswertungen
+
+e Ad-hoc-Analysen: Flexible Datenabfragen
+
+e Dashboards: Grafische Aufbereitung wichtiger KPls
+
+Compliance und Kontrolle
+
+e Nachvollziehbarkeit: Vollstandige Audit-Trails
+e Berechtigungskonzepte: Rollenbasierte Zugriffskontrolle
+e Archivierung: Gesetzeskonforme Dokumentenaufbewahrung
+
+e Reporting: Automatische Compliance-Berichte
+
+Bekannte ERP-Systeme
+
+Fir GroBunternehmen
+
+e SAP S/4HANA: Marktfihrer fiir Enterprise-L6sungen
+e Oracle ERP Cloud: Umfassende Cloud-Lésung
+e Microsoft Dynamics 365: Integriert mit Office-Produkten
+
+Fur KMU
+
+e SAP Business One: Speziell fiir kleinere Unternehmen
+e Microsoft Dynamics NAV/Business Central: Mittelstand-fokussiert
+e Sage: Modulare Lésungen verschiedener GréBen
+
+e Infor CloudSuite: Branchenspezifische L6sungen
+
+ERP-Einfiihrung: Erfolgsfaktoren
+Projektplanung
+
+e Zielsetzung: Klare Definition der Projektziele
+¢ Projektteam: Gemischte Teams aus IT und Fachabteilungen
+e Zeitplanung: Realistische Meilensteine und Puffer
+
+e Budget: Ausreichende Finanzierung inklusive Contingency
+
+Change Management
+
+e Kommunikation: Transparente Information aller Beteiligten
+e Schulung: Umfassende Anwendertrainings
+
+e Support: Unterstiitzung wahrend der Umstellungsphase
+
+e Quick Wins: Frithe Erfolge sichtbar machen
+
+Technische Umsetzung
+
+e Datenqualitat: Bereinigung der Stammdaten vor Migration
+e Integration: Anbindung bestehender Systeme
+e Testing: Umfangreiche Tests vor Produktionsstart
+
+e Rollback-Plan: Notfallstrategie bei Problemen
+
+8. Organisationsformen
+
+Definition
+
+Organisationsformen beschreiben die strukturierte Aufteilung von Aufgaben, Kompetenzen und
+Verantwortlichkeiten innerhalb eines Unternehmens. Sie legen fest, wie Mitarbeiter gefthrt,
+Informationen weitergegeben und Entscheidungen getroffen werden.
+
+Kategorien von Organisationsformen
+Aufbauorganisation
+Definition: Beschreibt die hierarchische Struktur und statische Gliederung des Unternehmens
+
+Inhalte:
+
+e Hierarchieebenen und Fuhrungsspannen
+e Abteilungsstruktur und Zustandigkeiten
+e Weisungsbefugnisse und Berichtswege
+
+e Stellen- und Funktionsbeschreibungen
+
+Ablauforganisation
+
+Definition: Beschreibt die zeitlichen und sachlichen Arbeitsablaufe
+Inhalte:
+
+e Geschaftsprozesse und Workflows
+e Reihenfolge und Timing von Aufgaben
+e Schnittstellen zwischen Bereichen
+
+e Kommunikations- und Informationsfltisse
+
+Klassische Organisationsformen
+
+1. Einlinienorganisation
+Prinzip: Jeder Mitarbeiter hat genau einen Vorgesetzten
+
+Struktur.:
+
+la
+
+\.
+
+Vorteile:
+
+e Klare Hierarchie und Verantwortlichkeiten
+e Eindeutige Weisungsbefugnisse
+e Einfache Kommunikationswege
+
+e Geringe Koordinationsprobleme
+Nachteile:
+
+e Langsame Entscheidungsprozesse
+e Uberlastung der Fihrungskrafte
+
+e Mangelnde Flexibilitat
+
+e "Stille Post"-Effekte
+
+Eignung: Kleine bis mittlere Unternehmen, stabile Umfelder, klare Hierarchien erforderlich
+
+2. Mehrlinienorganisation
+
+Prinzip: Mitarbeiter k6nnen mehreren Vorgesetzten unterstellt sein
+
+Charakteristika:
+e Mitarbeiter erhalten Weisungen von mehreren Stellen
+e Uberschneidende Kompetenzbereiche
+
+e Komplexere Kommunikationsstrukturen
+Vorteile:
+
+e Nutzung von Spezialistenwissen
+e Flexiblere Ressourcennutzung
+
+e Kdrzere Kommunikationswege fiir Fachfragen
+Nachiteile:
+
+e Mégliche Kompetenzstreitigkeiten
+e Uberlastung der Mitarbeiter durch mehrfache Weisungen
+e Unklare Verantwortlichkeiten
+e Koordinationsprobleme
+3. Stablinienorganisation
+
+Prinzip: Kombination aus Linienorganisation mit beratenden Stabsstellen
+
+Struktur.
+
+la
+
+\.
+
+Stabsstellen-Aufgaben:
+
+e Beratung der Fuhrungsebene
+e Vorbereitung von Entscheidungen
+e Uberwachung und Kontrolle
+
+¢ Spezialaufgaben (IT, Recht, Personal)
+Vorteile:
+
+e Entlastung der Linienfiihrung
+
+e Nutzung von Expertenwissen
+e Bessere Entscheidungsqualitat
+
+e Klare Linienverantwortung bleibt bestehen
+Nachteile:
+
+e Mégliche Konflikte zwischen Stab und Linie
+e Hdhere Personalkosten
+e Komplexere Kommunikation
+e Gefahr der "Parallelorganisation"
+4. Matrixorganisation
+
+Prinzip: Zweidimensionale Struktur mit funktionaler und projekt-/produktbezogener Gliederung
+
+Struktur.
+
+Charakteristika:
+
+e Mitarbeiter sind zwei Fuhrungskraften unterstellt
+e Funktions- und Projektverantwortung
+
+e Komplexe Kommunikationsmatrix
+Vorteile:
+
+e QOptimale Ressourcennutzung
+@ Hohe Flexibilitat
+e Interdisziplinare Zusammenarbeit
+
+e Kurze Abstimmungswege
+Nachteile:
+
+e Komplexe Fuhrungsstruktur
+e Mégliche Rollenunklarheiten
+e Hdhere Koordinationsaufwande
+
+e Konfliktpotential zwischen Dimensionen
+
+Eignung: Projektorganisationen, Beratungsunternehmen, R&D-intensive Branchen
+Moderne Organisationsformen
+5. Divisionale Organisation
+Prinzip: Gliederung nach Produkten, Markten oder Regionen
+
+Arten:
+
+e Produktdivisionen: z.B. BMW (‘er, 3er, Ser, X-Serie)
+e Marktdivisionen: z.B. B2B vs. B2C
+
+e Geografische Divisionen: z.B. Europa, Asien, Amerika
+Vorteile:
+
+e Spezialisierung auf Markte/Produkte
+e Schnelle Marktreaktionen
+e Klare Ergebnisverantwortung
+
+e Unternehmerisches Denken
+Nachteile:
+
+e Mégliche Doppelstrukturen
+e Schwierigere Synergien
+e Hdédhere Kosten
+
+e Koordinationsprobleme zwischen Divisionen
+
+6. Teamorientierte Organisation
+Prinzip: Selbstorganisierte Teams mit hoher Eigenverantwortung
+Charakteristika:
+
+e Flache Hierarchien
+e Selbstverantwortliche Teams
+e Flexible Rollenzuteilung
+
+e \|nterdisziplinare Zusammenarbeit
+Beispiele:
+
+e Scrum-Teams: Agile Softwareentwicklung
+e Cross-functional Teams: Produktentwicklung
+
+e Selbststeuernde Arbeitsgruppen: Produktion
+
+7. Netzwerkorganisation
+Prinzip: Flexibles Netzwerk aus internen und externen Partnern
+Charakteristika:
+
+e Kernkompetenzen intern
+e Externe Partner flir Spezialaufgaben
+e Projekt-basierte Zusammenarbeit
+
+e Dynamische Strukturen
+
+Faktoren fiir die Wahl der Organisationsform
+UnternehmensgrdéBe
+
+e Start-ups: Flache, flexible Strukturen
+e KMU: Einlinien- oder Stablinienorganisation
+
+e GroBunternehmen: Divisionale oder Matrixstrukturen
+
+Branche und Umfeld
+
+e Stabile Branchen: Klassische Hierarchien
+e Dynamische Markte: Agile, flexible Strukturen
+
+e Projektbusiness: Matrix- oder Projektorganisation
+
+Unternehmensstrategie
+
+e Effizienzfokus: Funktionale Organisation
+e Innovationsfokus: Team- oder Matrixorganisation
+
+e Marktfokus: Divisionale Organisation
+
+Unternehmenskultur
+
+e Hierarchisch gepragt: Einlinienorganisation
+e Teamorientiert: Flache Strukturen
+
+e Ergebnisorientiert: Divisionale Strukturen
+
+9. Pflichtenheft vs. Lastenheft
+
+Grundlegende Unterscheidung
+
+Das Lastenheft und das Pflichtenheft sind zwei fundamentale, aber unterschiedliche Dokumente im
+Projektmanagement, die oft falschlicherweise synonym verwendet werden.
+Lastenheft
+Definition
+
+Das Lastenheft ist ein Dokument, das die Anforderungen und Erwartungen des Auftraggebers an ein
+Projekt detailliert beschreibt. Es definiert das "WAS" - also was erreicht werden soll.
+
+Charakteristika
+
+e Ersteller: Auftraggeber/Kunde
+
+e Perspektive: Sicht des Problems
+
+e Fokus: Anforderungen und Ziele
+
+e Status: Wunsch-/Soll-Konzeption
+
+e Rechtscharakter: Nicht bindend (nur Grundlage)
+
+Inhalte eines Lastenhefts
+1. Projektiiberblick
+
+e Projektziele: Was soll erreicht werden?
+e Motivation: Warum wird das Projekt durchgefiihrt?
+e Abgrenzung: Was ist NICHT Teil des Projekts?
+
+e Erfolgskriterien: Woran wird der Erfolg gemessen?
+2. Ist-Zustand Analyse
+
+e Aktuelle Situation: Wie sieht der Status Quo aus?
+e Problembeschreibung: Welche Probleme bestehen?
+
+e Schwachstellenanalyse: Was funktioniert nicht optimal?
+3. Soll-Zustand Definition
+
+e Zielbild: Wie soll die Situation nach dem Projekt aussehen?
+e Funktionale Anforderungen: Welche Funktionen sind erforderlich?
+
+e Nicht-funktionale Anforderungen: Performance, Sicherheit, Usability
+4, Rahmenbedingungen
+
+e Budget: Verfiigbare finanzielle Ressourcen
+e Zeitrahmen: Projekt-Timeline und Meilensteine
+e Ressourcen: Verfiigbare interne Kapazitaten
+
+e Schnittstellen: Integration in bestehende Systeme
+5. Stakeholder und Nutzer
+
+e Zielgruppen: Wer wird das System nutzen?
+e Benutzerrollen: Verschiedene Nutzergruppen und deren Bediirfnisse
+
+e Stakeholder. Alle betroffenen und einflussreichen Parteien
+
+Beispiel Lastenheft (E-Commerce)
+
+la
+
+\.
+
+Pflichtenheft
+
+Definition
+Das Pflichtenheft ist ein Dokument, das beschreibt, wie der Auftragnehmer die im Lastenheft definierten
+Anforderungen technisch und organisatorisch umsetzen wird. Es definiert das "WIE".
+
+Charakteristika
+
+e Ersteller: Auftragnehmer/Dienstleister
+
+e Perspektive: Sicht der Losung
+
+e Fokus: Technische Umsetzung und Methodik
+
+e Status: Verbindliche Spezifikation
+
+e Rechtscharakter: Vertragsbestandieil, rechtlich bindend
+
+Inhalte eines Pflichtenhefts
+1. Lésungskonzept
+
+e Technische Architektur: Wie wird das System aufgebaut?
+e Technologie-Stack: Welche Technologien werden eingesetzt?
+e Systemdesign: Detaillierte technische Spezifikationen
+
+e Sicherheitskonzept: Wie werden Sicherheitsanforderungen erfillt?
+2. Funktionale Spezifikation
+
+e Feature-Beschreibungen: Detaillierte Umsetzung jeder Funktion
+e User Stories: Konkrete Anwendungsfalle
+e Datenmodell: Struktur und Beziehungen der Daten
+
+e Schnittstellen: APIs und Integration-Points
+3. Technische Spezifikation
+
+e Systemarchitektur: Hardware- und Software-Komponenten
+e Performance-Spezifikation: Konkrete Leistungswerte
+e Skalierungskonzept: Wie wird Wachstum bewéltigt?
+
+e Backup- und Recovery: Datensicherungskonzept
+4. Projektdurchftihrung
+
+e Methodik: Vorgehensmodell (Wasserfall, Agil, etc.)
+¢ Projektplan: Detaillierte Zeitplanung mit Meilensteinen
+e Team und Rollen: Wer macht was wann?
+
+® Qualitatssicherung: Test-Strategie und QS-Prozesse
+
+5. Service und Support
+Wartung: Wie wird das System gepflegt?
+
+Support: Verfiigbarkeiten und Reaktionszeiten
+
+Dokumentation: User-Handbiicher und technische Dokumentation
+
+Schulungen: Anwender-Training und Change Management
+
+Beispiel Pflichtenheft (E-Commerce)
+PFLICHTENHEFT: Online-Shop Umsetzung
+
+1, LOSUNGSARCHITEKTUR
+
+- Frontend: Reactjs mit Nextjs Framework
+- Backend: Node,js mit Express,js
+
+- Datenbank: PostgreSQL mit Redis Cache
+- Hosting: AWS Cloud Infrastructure
+
+- CDN: CloudFront fur statische Inhalte
+
+2, TECHNISCHE UMSETZUNG
+
+2.1 Produktkatalog
+
+~ Elasticsearch fur Such-/Filterfunktionalitat
+
+- Automatische Produktimporte via SAP RFC
+
+~ Bildoptimierung durch ImageKit CDN
+
+- Performance: < 1 Sek Suchzeit bei 1000+ Produkten
+
+2,2 Checkout-Prozess
+
+- Stripe Payment Gateway Integration
+- PayPal Express Checkout
+
+- Klarna Ratenkauf-Widget
+
+- §SL-verschlisselter Zahlungsprozess
+
+2.3 ERP-Integration
+
+- Real-time Bestandsabfrage via SAP OData
+
+- Automatische Bestellubertragung alle 5 Minuten
+- Fehlerbehandlung mit Retry-Mechanismus
+
+3, PROJEKTPLAN
+
+Phase 1 (Wochen 1-4): Setup & Grundfunktionen
+Phase 2 (Wochen 5-8): Shop-Funktionen & Payment
+Phase 3 (Wochen 9-10): Integration & Testing
+
+Phase 4 (Wochen 11-12): Go-Live & Support
+
+4, QUALITATSSICHERUNG
+
+- Unit Tests: 90%+ Code Coverage
+
+- Integration Tests fur alle Schnittstellen
+
+- Load Testing mit 1000 concurrent Users
+- Security Audit durch externe Experten
+
+5, SERVICE LEVEL AGREEMENTS
+
+- Verfiigbarkeit: 99.5% (max. 3.6h Downtime/Monat)
+- Support: 24/7 fur kritische Probleme
+
+- Reaktionszeit: 1h fur Severity-1-Tickets
+
+- Wartungsfenster: Sonntag 02:00-06:00 Uhr
+
+Vergleich: Lastenheft vs. Pflichtenheft
+
+Aspekt Lastenheft Pflichtenheft
+
+Ersteller Auftraggeber Auftragnehmer
+
+Zweck Problem definieren Lésung beschreiben
+
+Fokus WAS soll erreicht werden? WIE wird es umgesetzt?
+
+Detailgrad Anforderungen Technische Spezifikation
+
+Zeitpunkt Vor Ausschreibung Nach Beauftragung
+
+Rechtscharakter Unverbindlich Vertragsbestandteil
+
+Anderungen Haufiger méglich Change-Request-Verfahren
+
+Zielgruppe Fachliche Stakeholder Technische Umsetzer
+Entwicklungsprozess
+
+1. Lastenheft- Entwicklung
+
+1. Anforderungsworkshops mit Fachbereichen
+
+2. Stakeholder-Interviews zur Bedarfsanalyse
+
+3. Ist-Analyse der aktuellen Situation
+
+4, Soll-Konzeption der Zielarchitektur
+
+5, Review und Freigabe durch Auftraggeber
+
+2. Ausschreibung/Angebotsphase
+
+e Lastenheft als Basis fr Anbieter-Briefing
+
+e Anbieter entwickeln L6sungskonzepte
+
+e Bewertung nach fachlichen und technischen Kriterien
+
+e Auswahl des besten Angebots
+
+3. Pflichtenheft-Entwicklung
+
+1, Lésungsworkshops zwischen Auftraggeber und -nehmer
+
+2. Detaillierung der technischen Umsetzung
+
+3. Abstimmung der Spezifikationen
+
+4, Finalisierung und Vertragsintegration
+
+5. Baseline fiir die Projektumsetzung
+
+Haufige Fehler und Probleme
+
+Bei Lastenheften
+
+e Zu technisch: Focus auf WAS, nicht WIE
+e Zu unspezifisch: Vage Anforderungen fiihren zu Missverstandnissen
+e Fehlende Priorisierung: Alle Anforderungen sind "kritisch"
+
+e Unrealistische Erwartungen: Budget/Zeit vs. Scope-Konflikt
+
+Bei Pflichtenheften
+
+e Zu oberflachlich: Unzureichende technische Details
+e Anderungsresistenz: Zu starre Spezifikation
+e Fehlende Tests: Qualitatssicherung nicht mitgedacht
+
+e Scope Creep: Erweiterungen ohne Anpassung
+
+Best Practices
+
+Fir Lastenhefte
+
+e User-zentriert Aus Anwendersicht formulieren
+e Messbar. Konkrete, Uberprtifbare Kriterien definieren
+e Priorisiert: Must-have vs. Nice-to-have unterscheiden
+
+e Iterativ: RegelmaBige Reviews und Updates
+
+Fir Pflichtenhefte
+
+e Detailliert: Ausreichende technische Tiefe
+e Verstandlich: Auch fiir Fachbereiche nachvollziehbar
+e Flexibel: Raum fir Anpassungen wahrend Umsetzung
+
+e Testbar: Klare Abnahmekriterien definieren
+
+Fazit
+
+Diese neun Themengebiete bilden wichtige Grundlagen fiir das Verstandnis moderner IT- und
+Unternehmensftihrung:
+
+e Stakeholder-Management sorgt fiir erfolgreiche Projektumsetzung durch Einbindung aller
+Beteiligten
+
+JBOD und RAID bieten verschiedene Ansatze fiir Datenspeicherung je nach Anforderung
+
+IPv4/IPv6 sind die Basis der Internetkommunikation mit unterschiedlichen Vor- und Nachteilen
+
+RFID erméglicht berihrungslose Identifikation in vielen Lebensbereichen
+
+Unternehmensleitbilder schaffen Orientierung und Identifikation in Organisationen
+e Lessons-Learned-Workshops férdern kontinuierliches Lernen und Verbesserung
+e ERP-Systeme integrieren alle Geschaftsprozesse auf einer Plattform
+e Organisationsformen strukturieren Zusammenarbeit und Verantwortlichkeiten
+
+e Lastenheft/Pflichtenheft definieren Anforderungen und Lésungen in Projekten
+
+Jedes dieser Gebiete tragt zum Erfolg moderner Unternehmen bei und sollte entsprechend der jeweiligen
+Situation und Anforderungen eingesetzt werden.

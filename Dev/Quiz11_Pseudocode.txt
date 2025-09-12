@@ -1,0 +1,244 @@
+FUNKTION Zutrittsentscheidung(temp: ZAHL, hatAusweis: BOOLEAN, istBegleitet: BOOLEAN, maxTemp: ZAHL) → TEXT
+    VAR text: TEXT
+
+    WENN temp > maxTemp DANN
+        text ← "Zutritt GESPERRT: Temperatur über Grenzwert."
+    SONST
+        WENN hatAusweis = WAHR DANN
+            text ← "Zutritt ERLAUBT: Ausweis geprüft."
+        SONST
+            WENN istBegleitet = WAHR DANN
+                text ← "Zutritt ERLAUBT: Begleitung ohne Ausweis."
+            SONST
+                text ← "Zutritt VERWEIGERT: kein Ausweis, keine Begleitung."
+            ENDEWENN
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+
+// ===== Frage 1 =====
+AUSGABE Zutrittsentscheidung(29; WAHR; FALSCH; 30)
+// Erwartete Ausgabe: "Zutritt ERLAUBT: Ausweis geprüft."
+
+Es gibt 4 text ausgaben was du auch in den Antworten dastellen sollst und man soll die richtige antwort rausfinden
+
+// ===== Frage 2 =====
+AUSGABE Zutrittsentscheidung(32; FALSCH; WAHR; 30)
+// Erwartete Ausgabe: "Zutritt GESPERRT: Temperatur über Grenzwert."
+
+
+FUNKTION TransaktionsFreigabe(betrag: ZAHL, hat2FA: BOOLEAN, istVertrauterEmpfaenger: BOOLEAN, limit: ZAHL) → TEXT
+    VAR text: TEXT
+
+    WENN betrag > limit DANN
+        // Über Limit: 2FA erforderlich
+        WENN hat2FA = WAHR DANN
+            text ← "FREIGEGEBEN: Über Limit, 2FA erfolgreich."
+        SONST
+            text ← "ABGELEHNT: Über Limit ohne 2FA."
+        ENDEWENN
+    SONST
+        // Unter/gleich Limit: Empfängerprüfung
+        WENN istVertrauterEmpfaenger = WAHR DANN
+            text ← "FREIGEGEBEN: Unter Limit an vertrauenswürdigen Empfänger."
+        SONST
+            text ← "MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt."
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+
+// ===== Frage 3 =====
+AUSGABE TransaktionsFreigabe(1200; FALSCH; WAHR; 1000)
+// Erwartet: "ABGELEHNT: Über Limit ohne 2FA."
+
+
+// ===== Frage 4 =====
+
+AUSGABE TransaktionsFreigabe(300; FALSCH; FALSCH; 1000)
+// Erwartet: "MANUELLE PRÜFUNG: Unter Limit, Empfänger unbekannt."
+
+
+FUNKTION AutoScalingEntscheidung(aktuelleLast: ZAHL, istGeschaeftszeit: BOOLEAN, hatIncident: BOOLEAN, schwellwert: ZAHL) → TEXT
+    VAR text: TEXT
+
+    WENN aktuelleLast > schwellwert DANN
+        WENN hatIncident = WAHR DANN
+            text ← "BLOCKIERT: Incident aktiv, kein automatisches Scaling."
+        SONST
+            text ← "SCALE-UP: Last über Schwellwert."
+        ENDEWENN
+    SONST
+        WENN istGeschaeftszeit = FALSCH DANN
+            text ← "SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert."
+        SONST
+            text ← "STABIL: Keine Änderung erforderlich."
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+// ===== Frage 5 =====
+AUSGABE AutoScalingEntscheidung(82; WAHR; WAHR; 75)
+// Erwartet: "BLOCKIERT: Incident aktiv, kein automatisches Scaling."
+
+// ===== Frage 6 =====
+
+AUSGABE AutoScalingEntscheidung(43; FALSCH; FALSCH; 60)
+// Erwartet: "SCALE-DOWN: Außerhalb der Geschäftszeit, Last unter Schwellwert."
+
+FUNKTION Urlaubsfreigabe(resttage: ZAHL, hatVertretung: BOOLEAN, projektKritisch: BOOLEAN, mindestResttage: ZAHL) → TEXT
+    VAR text: TEXT
+
+    WENN resttage > mindestResttage DANN
+        WENN projektKritisch = WAHR DANN
+            text ← "PRÜFUNG: Projekt kritischer Zustand – Entscheidung durch Leitung."
+        SONST
+            WENN hatVertretung = WAHR DANN
+                text ← "GENEHMIGT: Genug Resttage und Vertretung vorhanden."
+            SONST
+                text ← "RÜCKFRAGE: Genug Resttage, aber keine Vertretung organisiert."
+            ENDEWENN
+        ENDEWENN
+    SONST
+        // Nicht genügend Resttage: optionaler Blick auf Vertretung (ohne die letzte Zahl erneut zu prüfen)
+        WENN hatVertretung = WAHR DANN
+            text ← "ABGELEHNT: Zu wenig Resttage – Vertretung hilft hier nicht."
+        SONST
+            text ← "ABGELEHNT: Zu wenig Resttage."
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+// ===== Frage 7 =====
+AUSGABE Urlaubsfreigabe(15; WAHR; FALSCH; 10)
+// Erwartet: "GENEHMIGT: Genug Resttage und Vertretung vorhanden."
+
+// ===== Frage 8 =====
+
+AUSGABE Urlaubsfreigabe(8; FALSCH; WAHR; 10)
+// Erwartet: "ABGELEHNT: Zu wenig Resttage."
+
+FUNKTION TicketRouting(warteMin: ZAHL, istSicherheitsvorfall: BOOLEAN, istVIP: BOOLEAN, slaGrenze: ZAHL) → TEXT
+    VAR text: TEXT
+
+    WENN warteMin > slaGrenze DANN
+        // Über SLA: sofortige Eskalation, Details per Booleans
+        WENN istSicherheitsvorfall = WAHR DANN
+            text ← "PRIO 1: Security-Incident – direkt an Incident Response."
+        SONST
+            WENN istVIP = WAHR DANN
+                text ← "PRIO 1: VIP-Eskalation an Teamleitung."
+            SONST
+                text ← "PRIO 1: Eskalation an Bereitschaft."
+            ENDEWENN
+        ENDEWENN
+    SONST
+        // Innerhalb SLA: feinere Einordnung, ohne die letzte Zahl erneut zu prüfen
+        WENN istSicherheitsvorfall = WAHR DANN
+            text ← "PRIO 2: Security-Check einleiten."
+        SONST
+            WENN istVIP = WAHR DANN
+                text ← "PRIO 2: Bevorzugte Bearbeitung (VIP-Queue)."
+            SONST
+                text ← "PRIO 3: Normale Queue."
+            ENDEWENN
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+// ===== Frage 9 =====
+AUSGABE TicketRouting(65; FALSCH; WAHR; 60)
+// Erwartet: "PRIO 1: VIP-Eskalation an Teamleitung."
+
+// ===== Frage 10 =====
+
+AUSGABE TicketRouting(20; WAHR; FALSCH; 30)
+// Erwartet: "PRIO 2: Security-Check einleiten."
+
+
+KONSTANTEN:
+    PREIS_STANDARD ← 0,35   // €/kWh
+    PREIS_NACHT    ← 0,28   // €/kWh
+    UMWELTABGABE   ← 0,02   // €/kWh
+    UST_SATZ       ← 0,19   // 19 %
+
+FUNKTION StromAbrechnung(verbrauchKWh: ZAHL, nachtTarif: BOOLEAN, sparplan: BOOLEAN, freiKWh: ZAHL) → TEXT
+    VAR text: TEXT
+    VAR basisVerbrauch, tarif, rabatt, arbeitspreisNetto, abgabe, netto, steuer, brutto: ZAHL
+
+    WENN verbrauchKWh > freiKWh DANN
+        basisVerbrauch ← verbrauchKWh - freiKWh
+
+        // Tarifwahl
+        WENN nachtTarif = WAHR DANN
+            tarif ← PREIS_NACHT
+        SONST
+            tarif ← PREIS_STANDARD
+        ENDEWENN
+
+        // Rabatt (nur auf Arbeitspreis)
+        WENN sparplan = WAHR DANN
+            rabatt ← 0,05
+        SONST
+            rabatt ← 0,00
+        ENDEWENN
+
+        arbeitspreisNetto ← basisVerbrauch * tarif * (1 - rabatt)
+        abgabe            ← basisVerbrauch * UMWELTABGABE
+        netto             ← arbeitspreisNetto + abgabe
+        steuer            ← netto * UST_SATZ
+        brutto            ← netto + steuer
+
+        AUSGABE "Basisverbrauch (kWh): ", basisVerbrauch
+        AUSGABE "Tarif (€/kWh): ", tarif
+        AUSGABE "Rabatt (%): ", rabatt * 100
+        AUSGABE "Arbeitspreis netto (€): ", RUNDEN(arbeitspreisNetto, 2)
+        AUSGABE "Umweltabgabe (€): ", RUNDEN(abgabe, 2)
+        AUSGABE "Zwischensumme netto (€): ", RUNDEN(netto, 2)
+        AUSGABE "USt (19 %) (€): ", RUNDEN(steuer, 2)
+        AUSGABE "➡ Gesamt (brutto): ", RUNDEN(brutto, 2)
+
+        text ← "Rechnung erstellt."
+    SONST
+        // Freimenge deckt den Verbrauch; optionaler Blick auf Sparplan (ohne letzte Zahl erneut zu prüfen)
+        WENN sparplan = WAHR DANN
+            text ← "0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben."
+        SONST
+            text ← "0,00 €: Freimenge deckt Verbrauch."
+        ENDEWENN
+    ENDEWENN
+
+    GIB text ZURÜCK
+ENDE FUNKTION
+
+
+// ===== Frage 11 =====
+AUSGABE StromAbrechnung(350; WAHR; WAHR; 100)
+// Rechenergebnis (erwartet):
+// Basisverbrauch: 250 kWh
+// Tarif: 0,28 €/kWh, Rabatt 5 % → Arbeitspreis netto = 250 * 0,28 * 0,95 = 66,50 €
+// Umweltabgabe: 250 * 0,02 = 5,00 €
+// Netto: 71,50 €; USt 19 % = 13,59 €
+// ➡ Gesamt (brutto): 85,09 €
+
+// ===== Frage 12 =====
+AUSGABE StromAbrechnung(80; FALSCH; WAHR; 100)
+// Erwartet: "0,00 €: Freimenge deckt Verbrauch. Bonuspunkte gutgeschrieben."
+
+

@@ -1,81 +1,135 @@
 {
   "cards": [
     {
-      "question": "In Scrum: Wer ist verantwortlich für die Priorisierung und Pflege des Product Backlogs?",
-      "choices": ["Product Owner", "Scrum Master", "Entwicklungsteam", "Stakeholder"],
-      "correct_index": 0,
-      "hint": "Die Person für das Was und den Wert."
+      "question": "Wie viele Schichten hat das OSI-Modell?",
+      "choices": ["5", "6", "7", "8"],
+      "correct_index": 2,
+      "hint": "Von unten nach oben: Bitübertragung bis Anwendung (7).",
+      "topic": "OSI-Modell",
+      "tags": ["OSI", "Netzwerke", "Schichtenmodell"]
     },
     {
-      "question": "Wie lang ist die Timebox für das Daily Scrum gemäß Scrum Guide?",
-      "choices": ["15 Minuten", "30 Minuten", "5 Minuten", "60 Minuten"],
-      "correct_index": 0,
-      "hint": "Kurz, fokussiert und täglich."
-    },
-    {
-      "question": "Wozu dient ein Work-in-Progress-Limit (WIP) in Kanban-Systemen?",
-      "choices": ["Engpässe sichtbar machen", "Qualität prüfen", "Releases planen", "Bugs zählen"],
-      "correct_index": 0,
-      "hint": "Fluss optimieren, Überlast vermeiden."
-    },
-    {
-      "question": "Auf welcher OSI-Schicht arbeitet ein Router überwiegend, und welche Aufgabe erfüllt er dort?",
-      "choices": ["Schicht 3", "Schicht 2", "Schicht 1", "Schicht 7"],
-      "correct_index": 0,
-      "hint": "Routing auf IP/Ebene."
-    },
-    {
-      "question": "Wie viele nutzbare IPv4-Hostadressen bietet ein Subnetz mit der Präfixlänge /26?",
-      "choices": ["62", "30", "126", "14"],
-      "correct_index": 0,
-      "hint": "Formel: 2^n − 2 (für Hosts)."
-    },
-    {
-      "question": "Welches der folgenden Transportprotokolle ist verbindungsorientiert und stellt Zuverlässigkeit über einen Handshake sicher?",
-      "choices": ["TCP", "UDP", "ICMP", "ARP"],
-      "correct_index": 0,
-      "hint": "Drei-Wege-Handshake."
-    },
-    {
-      "question": "Was bedeutet der HTTP-Statuscode 201 im Kontext einer REST-API?",
-      "choices": ["Created", "OK", "No Content", "Moved Permanently"],
-      "correct_index": 0,
-      "hint": "Ressource wurde neu angelegt."
-    },
-    {
-      "question": "Was beschreibt das Liskov’sche Substitutionsprinzip (LSP) in der Objektorientierung am besten?",
+      "question": "Welche Schicht ist für Ende-zu-Ende-Transport, Segmentierung und Flusskontrolle zuständig?",
       "choices": [
-        "Abgeleitete Klassen müssen sich wie ihre Basisklasse verwenden lassen",
-        "Nur eine Instanz pro Prozess",
-        "Klassen sind nur über Interfaces erreichbar",
-        "Datenklassen dürfen keine Methoden haben"
+        "Transportschicht (Layer 4)",
+        "Vermittlungsschicht (Layer 3)",
+        "Sicherungsschicht (Layer 2)",
+        "Anwendungsschicht (Layer 7)"
       ],
       "correct_index": 0,
-      "hint": "Verhalten darf bei Spezialisierung nicht eingeschränkt werden."
+      "hint": "TCP/UDP arbeiten auf Layer 4.",
+      "topic": "OSI-Modell",
+      "tags": ["Layer 4", "Transport", "TCP", "UDP"]
     },
     {
-      "question": "Wozu dient die Definition of Done (DoD) in Scrum?",
-      "choices": ["Einheitliche Qualitätskriterien für 'fertig'", "Priorisierung des Backlogs", "Aufwandschätzung", "Stakeholder-Feedback sammeln"],
-      "correct_index": 0,
-      "hint": "Transparenz, Qualität und Abnahmefähigkeit."
+      "question": "Welche Zuordnung von Schicht zu PDU ist korrekt?",
+      "choices": [
+        "L1=Frame, L2=Segment, L3=Paket, L4=Bit",
+        "L1=Bit, L2=Frame, L3=Paket, L4=Segment",
+        "L1=Paket, L2=Bit, L3=Frame, L4=Segment",
+        "L1=Bit, L2=Paket, L3=Frame, L4=Segment"
+      ],
+      "correct_index": 1,
+      "hint": "Bit → Frame → Paket → Segment (aufwärts).",
+      "topic": "OSI-Modell",
+      "tags": ["PDU", "Bit", "Frame", "Paket", "Segment"]
     },
     {
-      "question": "Was visualisiert ein Cumulative Flow Diagram (CFD) in Kanban?",
-      "choices": ["Bestände je Status über die Zeit", "Velocity je Sprint", "Teamgröße vs. Aufwand", "Testabdeckung je Komponente"],
+      "question": "Auf welcher Schicht arbeitet ein Switch überwiegend?",
+      "choices": [
+        "Schicht 2 (Sicherung)",
+        "Schicht 3 (Vermittlung)",
+        "Schicht 1 (Bitübertragung)",
+        "Schicht 7 (Anwendung)"
+      ],
       "correct_index": 0,
-      "hint": "WIP, Wartezeiten und Fluss erkennen."
+      "hint": "MAC-Tabellen, Frames, Kollisionsdomänen.",
+      "topic": "OSI-Modell",
+      "tags": ["Switch", "Layer 2", "MAC", "Frame"]
     },
     {
-      "question": "Welche Hauptaufgabe hat der Scrum Master?",
-      "choices": ["Hindernisse beseitigen und Team coachen", "Backlog priorisieren", "Architektur entwerfen", "Deployments freigeben"],
+      "question": "Welche Adresse wird auf Schicht 2 verwendet?",
+      "choices": ["MAC-Adresse", "IP-Adresse", "Portnummer", "URL"],
       "correct_index": 0,
-      "hint": "Servant Leader, Prozessverantwortlicher."
+      "hint": "Physische Adresse (48-Bit, z. B. 00:1A:...).",
+      "topic": "OSI-Modell",
+      "tags": ["MAC", "Layer 2", "Adresse"]
     },
     {
-      "question": "Wozu dient eine Risiko-Matrix im Projektmanagement?",
-      "choices": ["Bewertet Risiken nach Eintrittswahrscheinlichkeit und Auswirkung", "Zeigt Abhängigkeiten als Netzplan", "Visualisiert Kapazitäten je Rolle", "Listet Kostenarten"],
+      "question": "Welches Protokoll löst IPv4-Adressen zu MAC-Adressen auf?",
+      "choices": ["ARP", "ICMP", "DNS", "DHCP"],
       "correct_index": 0,
-      "hint": "Priorisierung von Gegenmaßnahmen."
+      "hint": "Request/Reply zur Zuordnung von IP ↔ MAC.",
+      "topic": "OSI-Modell",
+      "tags": ["ARP", "Layer 2", "Auflösung"]
+    },
+    {
+      "question": "Wo ist IP angesiedelt und was ist die Hauptaufgabe?",
+      "choices": [
+        "Schicht 3; logische Adressierung und Routing",
+        "Schicht 2; Fehlererkennung und Medienzugriff",
+        "Schicht 4; Ende-zu-Ende-Verbindungen",
+        "Schicht 7; Anwendungsdienste"
+      ],
+      "correct_index": 0,
+      "hint": "IP = Network Layer (Vermittlung).",
+      "topic": "OSI-Modell",
+      "tags": ["IP", "Layer 3", "Routing"]
+    },
+    {
+      "question": "Welches Protokoll gehört zur Anwendungsschicht (Layer 7)?",
+      "choices": ["HTTP", "TCP", "IP", "Ethernet"],
+      "correct_index": 0,
+      "hint": "TCP/UDP=Layer 4, IP=Layer 3, Ethernet=Layer 2.",
+      "topic": "OSI-Modell",
+      "tags": ["HTTP", "Layer 7", "Anwendung"]
+    },
+    {
+      "question": "Welches Gerät trennt Broadcast-Domänen?",
+      "choices": ["Router", "Switch", "Hub", "Repeater"],
+      "correct_index": 0,
+      "hint": "Router arbeiten auf Layer 3 und filtern Broadcasts.",
+      "topic": "OSI-Modell",
+      "tags": ["Router", "Broadcast", "Layer 3"]
+    },
+    {
+      "question": "Welche Aufgabe hat die Darstellungsschicht (Layer 6)?",
+      "choices": [
+        "Übersetzung, Verschlüsselung, Kompression",
+        "Routing zwischen Netzen",
+        "Fehlererkennung und Rahmung",
+        "Ports und Flusskontrolle"
+      ],
+      "correct_index": 0,
+      "hint": "Syntax/Format-Wandlung zwischen Anwendungen.",
+      "topic": "OSI-Modell",
+      "tags": ["Layer 6", "Darstellung", "Verschlüsselung", "Kompression"]
+    },
+    {
+      "question": "Welche Aufgabe gehört zur Sicherungsschicht (Layer 2)?",
+      "choices": [
+        "Rahmenbildung und Fehlererkennung (z. B. CRC)",
+        "Leitungscodierung und Spannungspegel",
+        "Ende-zu-Ende-Flusskontrolle",
+        "Sitzungsaufbau und -steuerung"
+      ],
+      "correct_index": 0,
+      "hint": "LLC/MAC, FCS, Medienzugriff.",
+      "topic": "OSI-Modell",
+      "tags": ["Layer 2", "Sicherung", "CRC"]
+    },
+    {
+      "question": "In welcher Reihenfolge erfolgt die Kapselung beim Senden (oben→unten)?",
+      "choices": [
+        "Daten → Segment → Paket → Frame → Bits",
+        "Daten → Paket → Segment → Bits → Frame",
+        "Bits → Frame → Paket → Segment → Daten",
+        "Segment → Daten → Paket → Frame → Bits"
+      ],
+      "correct_index": 0,
+      "hint": "Jede Schicht fügt ihren Header (und ggf. Trailer) hinzu.",
+      "topic": "OSI-Modell",
+      "tags": ["Kapselung", "PDU", "Reihenfolge"]
     }
   ]
 }
