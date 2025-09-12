@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>FIAE Karteikarten Quiz</title>
+  <link rel="stylesheet" href="CSS/style.css" />
+  <noscript>
+    <style>.noscript-warn{margin:12px}</style>
+    <div class="card noscript-warn"><div class="meta">JavaScript ist deaktiviert. Bitte aktivieren oder einen modernen Browser verwenden.</div></div>
+  </noscript>
+  <script>
+    (function(){
+      function logX(msg){
+        try{
+          var xhr = new XMLHttpRequest();
+          xhr.open('POST','/log',true);
+          xhr.setRequestHeader('Content-Type','text/plain;charset=UTF-8');
+          xhr.send('['+new Date().toISOString()+'] '+msg);
+        }catch(_){/* ignore */}
+      }
+      window.__diagLog = logX;
+      try{ logX('HTML geladen. UA='+navigator.userAgent); }catch(_){ }
+      window.addEventListener('error', function(e){
+        try{ logX('window.onerror: '+(e && e.message ? e.message : (e && e.error && e.error.message) || String(e))); }catch(_){ }
+      });
+      window.addEventListener('unhandledrejection', function(e){
+        try{ var r=e && e.reason; logX('unhandledrejection: '+(r && (r.message||r) || 'unknown')); }catch(_){ }
+      });
+      document.addEventListener('DOMContentLoaded', function(){ try{ logX('DOMContentLoaded'); }catch(_){ } });
+    })();
+  </script>
+</head>
+<body>
+  <div id="loadingOverlay" class="loading-overlay">
+    <div class="loading-card">
+      <div class="spinner" aria-hidden="true"></div>
+      <div class="loading-title">Lade Karteikarten …</div>
+      <div id="loadingMsg" class="loading-msg">Lade JSON in die Karteikarten …</div>
+      <div class="actions" style="margin-top:8px;">
+        <button class="btn ghost" id="btnSkipLoading" type="button">Überspringen</button>
+        <button class="btn" id="btnLoadManual" type="button">Manuell laden</button>
+      </div>
+    </div>
+  </div>
+  <header class="topbar">
+    <h1>FIAE Karteikarten Quiz</h1>
+    <div class="actions">
+      <a class="link" href="./Zusammenfassung_Abschlussprufung_Fast alle Themen.pdf" target="_blank">Zusammenfassung öffnen</a>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="dashboard">
+      <div class="stat"><div class="label">Abgeschlossene Quizze</div><div class="value" id="statCompleted">0</div></div>
+      <div class="stat"><div class="label">Versuche gesamt</div><div class="value" id="statAttempts">0</div></div>
+      <div class="stat"><div class="label">Durchschnitt</div><div class="value" id="statAvg">0%</div></div>
+      <div class="stat"><div class="label">Beste Note</div><div class="value" id="statBest">0,0</div></div>
+      <div class="stat"><div class="label">Schlechteste Note</div><div class="value" id="statWorst">0,0</div></div>
+      <div class="controls">
+        <button class="btn danger" id="btnReset">Verlauf löschen</button>
+        <button class="btn" id="btnExport">INI exportieren</button>
+        <label class="btn ghost" for="fileImport">INI importieren<input id="fileImport" type="file" accept=".ini,text/plain" style="display:none"></label>
+      </div>
+    </section>
+
+    <section class="quiz-list">
+      <h2>Verfügbare Quizze</h2>
+      <div class="actions" style="margin:6px 4px 12px 4px; gap: 6px;">
+        <label class="btn ghost" for="fileJson">JSON-Dateien laden…</label>
+        <label class="btn ghost" for="dirJson">JSON-Ordner wählen…</label>
+        <span class="meta" id="envNote"></span>
+        <input id="fileJson" type="file" accept="application/json,.json" multiple style="display:none" />
+        <input id="dirJson" type="file" webkitdirectory directory multiple style="display:none" />
+      </div>
+      <div id="quizGrid" class="grid"></div>
+    </section>
+
+    <section class="topics">
+      <h2>Problemthemen</h2>
+      <div class="actions" style="margin:6px 4px 12px 4px; gap: 6px;">
+        <button class="btn ghost" id="btnResetTopics" type="button">Themen-Statistik zurücksetzen</button>
+      </div>
+      <div id="topicsList" class="list"></div>
+    </section>
+  </main>
+
+  <div id="overlay" class="overlay hidden" aria-hidden="true">
+    <div class="runner-card" role="dialog" aria-modal="true">
+      <div class="runner-header">
+        <button id="btnBack" class="btn ghost">← Zurück</button>
+        <div class="runner-title" id="runnerTitle"></div>
+      </div>
+      <div class="progressbar"><div id="progressFill"></div></div>
+      <div class="question" id="questionText"></div>
+      <div id="choices" class="choices"></div>
+      <div class="runner-actions">
+        <button class="btn ghost" id="btnHint">Hinweis</button>
+        <div class="spacer"></div>
+        <button class="btn ghost" id="btnPrev">Zurück</button>
+        <button class="btn ghost" id="btnNext">Weiter</button>
+        <button class="btn primary" id="btnFinish">Fertig</button>
+      </div>
+      <div class="hint" id="hintText"></div>
+      <div class="result hidden" id="resultBox">
+        <div class="score" id="resultScore"></div>
+        <div class="grade" id="resultGrade"></div>
+        <div class="bar"><div id="resultBar"></div></div>
+        <div class="actions">
+          <button class="btn" id="btnRetry">Nochmal</button>
+          <button class="btn ghost" id="btnClose">Schließen</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Kompatibilitätslader: blockt alte Browser und lädt App nur bei Unterstützung -->
+  <script>
+    (function(){
+      var compatible = true;
+      try {
+        // Syntax-Checks für ES6-Features
+        new Function('let a=1; const b=2; return a+b;');
+        new Function('(()=>{})()');
+        if (!('fetch' in window) || !('Promise' in window)) compatible = false;
+      } catch(e){ compatible = false; }
+
+      if (!compatible) {
+        try {
+          var envNote = document.getElementById('envNote');
+          if (envNote) envNote.textContent = 'Browser zu alt: Bitte Chrome/Edge/Firefox verwenden. Tipp: start_quiz_server.bat.';
+          var container = document.querySelector('.container') || document.body;
+          var warn = document.createElement('div');
+          warn.className = 'card';
+          warn.style.margin = '12px';
+          warn.innerHTML = '<div class="meta">Dieser Browser unterstützt benötigte Funktionen (fetch/ES6) nicht. Bitte in einem aktuellen Browser öffnen (Chrome, Edge, Firefox).</div>';
+          if (container.firstChild) container.insertBefore(warn, container.firstChild); else container.appendChild(warn);
+        } catch(_e) {}
+        return; // App nicht laden
+      }
+      var s = document.createElement('script');
+      s.src = 'JS/app.js';
+      s.onload = function(){ try{ __diagLog && __diagLog('app.js geladen'); }catch(_){ } };
+      s.onerror = function(){ try{ __diagLog && __diagLog('app.js Fehler beim Laden'); }catch(_){ } };
+      document.body.appendChild(s);
+    })();
+  </script>
+</body>
+</html>

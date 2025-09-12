@@ -1,0 +1,81 @@
+{
+  "cards": [
+    {
+      "question": "In Scrum: Wer ist verantwortlich für die Priorisierung und Pflege des Product Backlogs?",
+      "choices": ["Product Owner", "Scrum Master", "Entwicklungsteam", "Stakeholder"],
+      "correct_index": 0,
+      "hint": "Die Person für das Was und den Wert."
+    },
+    {
+      "question": "Wie lang ist die Timebox für das Daily Scrum gemäß Scrum Guide?",
+      "choices": ["15 Minuten", "30 Minuten", "5 Minuten", "60 Minuten"],
+      "correct_index": 0,
+      "hint": "Kurz, fokussiert und täglich."
+    },
+    {
+      "question": "Wozu dient ein Work-in-Progress-Limit (WIP) in Kanban-Systemen?",
+      "choices": ["Engpässe sichtbar machen", "Qualität prüfen", "Releases planen", "Bugs zählen"],
+      "correct_index": 0,
+      "hint": "Fluss optimieren, Überlast vermeiden."
+    },
+    {
+      "question": "Auf welcher OSI-Schicht arbeitet ein Router überwiegend, und welche Aufgabe erfüllt er dort?",
+      "choices": ["Schicht 3", "Schicht 2", "Schicht 1", "Schicht 7"],
+      "correct_index": 0,
+      "hint": "Routing auf IP/Ebene."
+    },
+    {
+      "question": "Wie viele nutzbare IPv4-Hostadressen bietet ein Subnetz mit der Präfixlänge /26?",
+      "choices": ["62", "30", "126", "14"],
+      "correct_index": 0,
+      "hint": "Formel: 2^n − 2 (für Hosts)."
+    },
+    {
+      "question": "Welches der folgenden Transportprotokolle ist verbindungsorientiert und stellt Zuverlässigkeit über einen Handshake sicher?",
+      "choices": ["TCP", "UDP", "ICMP", "ARP"],
+      "correct_index": 0,
+      "hint": "Drei-Wege-Handshake."
+    },
+    {
+      "question": "Was bedeutet der HTTP-Statuscode 201 im Kontext einer REST-API?",
+      "choices": ["Created", "OK", "No Content", "Moved Permanently"],
+      "correct_index": 0,
+      "hint": "Ressource wurde neu angelegt."
+    },
+    {
+      "question": "Was beschreibt das Liskov’sche Substitutionsprinzip (LSP) in der Objektorientierung am besten?",
+      "choices": [
+        "Abgeleitete Klassen müssen sich wie ihre Basisklasse verwenden lassen",
+        "Nur eine Instanz pro Prozess",
+        "Klassen sind nur über Interfaces erreichbar",
+        "Datenklassen dürfen keine Methoden haben"
+      ],
+      "correct_index": 0,
+      "hint": "Verhalten darf bei Spezialisierung nicht eingeschränkt werden."
+    },
+    {
+      "question": "Wozu dient die Definition of Done (DoD) in Scrum?",
+      "choices": ["Einheitliche Qualitätskriterien für 'fertig'", "Priorisierung des Backlogs", "Aufwandschätzung", "Stakeholder-Feedback sammeln"],
+      "correct_index": 0,
+      "hint": "Transparenz, Qualität und Abnahmefähigkeit."
+    },
+    {
+      "question": "Was visualisiert ein Cumulative Flow Diagram (CFD) in Kanban?",
+      "choices": ["Bestände je Status über die Zeit", "Velocity je Sprint", "Teamgröße vs. Aufwand", "Testabdeckung je Komponente"],
+      "correct_index": 0,
+      "hint": "WIP, Wartezeiten und Fluss erkennen."
+    },
+    {
+      "question": "Welche Hauptaufgabe hat der Scrum Master?",
+      "choices": ["Hindernisse beseitigen und Team coachen", "Backlog priorisieren", "Architektur entwerfen", "Deployments freigeben"],
+      "correct_index": 0,
+      "hint": "Servant Leader, Prozessverantwortlicher."
+    },
+    {
+      "question": "Wozu dient eine Risiko-Matrix im Projektmanagement?",
+      "choices": ["Bewertet Risiken nach Eintrittswahrscheinlichkeit und Auswirkung", "Zeigt Abhängigkeiten als Netzplan", "Visualisiert Kapazitäten je Rolle", "Listet Kostenarten"],
+      "correct_index": 0,
+      "hint": "Priorisierung von Gegenmaßnahmen."
+    }
+  ]
+}

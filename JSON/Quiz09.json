@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Was bedeutet der HTTP-Statuscode 404 im Kontext einer Webanfrage?",
+      "choices": ["Not Found", "Unauthorized", "OK", "Created"],
+      "correct_index": 0,
+      "hint": "Angeforderte Ressource wurde nicht gefunden."
+    },
+    {
+      "question": "Welche HTTP-Methode ist typischerweise nicht idempotent (mehrfaches Senden verändert den Zustand)?",
+      "choices": ["POST", "GET", "PUT", "DELETE"],
+      "correct_index": 0,
+      "hint": "Wird oft zum Erzeugen verwendet."
+    },
+    {
+      "question": "Welche Technik nutzt HTTPS, um Verbindungen zu sichern?",
+      "choices": ["TLS", "SSH", "IPsec", "WEP"],
+      "correct_index": 0,
+      "hint": "Transport Layer Security."
+    },
+    {
+      "question": "Wodurch werden Ressourcen in REST üblicherweise eindeutig identifiziert?",
+      "choices": ["URI", "MAC", "PID", "Port"],
+      "correct_index": 0,
+      "hint": "Eindeutige Adressen im Web."
+    },
+    {
+      "question": "Was beschränkt die Same-Origin Policy im Browser?",
+      "choices": ["Cross-Origin Zugriffe", "Datenbankzugriff", "CPU-Last", "Speicherbedarf"],
+      "correct_index": 0,
+      "hint": "Nur gleiches Schema+Host+Port erlaubt."
+    },
+    {
+      "question": "Welches Cookie-Flag verhindert das Auslesen eines Cookies durch JavaScript?",
+      "choices": ["HttpOnly", "CSRF", "DDOS", "Caching"],
+      "correct_index": 0,
+      "hint": "Schützt vor XSS-getriggertem Auslesen."
+    },
+    {
+      "question": "Welcher Header erlaubt einem Server, Cross-Origin-Anfragen gezielt freizugeben?",
+      "choices": ["Access-Control-Allow-Origin", "Server-Token", "User-Agent", "Referrer"],
+      "correct_index": 0,
+      "hint": "Teil von CORS."
+    },
+    {
+      "question": "Aus welchen Bestandteilen setzt sich ein JSON Web Token (JWT) zusammen?",
+      "choices": ["Header.Payload.Signature", "User.Passwort", "Key.Value", "Tag.Inhalt"],
+      "correct_index": 0,
+      "hint": "Drei Teile, Base64URL-kodiert."
+    },
+    {
+      "question": "Wie lässt sich das Risiko von CSRF bei Cookies reduzieren?",
+      "choices": ["SameSite=Lax/Strict", "Mehr POST", "Mehr GET", "Mehr Cookies"],
+      "correct_index": 0,
+      "hint": "Cookie-Attribut steuert Mitgabe."
+    },
+    {
+      "question": "Welcher Vorteil wird typischerweise mit HTTP/2 erreicht?",
+      "choices": ["Multiplexing", "Nur neue Statuscodes", "Kein TLS nötig", "Weniger Header"],
+      "correct_index": 0,
+      "hint": "Mehrere Streams je Verbindung."
+    },
+    {
+      "question": "Welcher Content-Type wird für JSON-Nutzdaten korrekt verwendet?",
+      "choices": ["application/json", "text/html", "text/plain", "multipart/form-data"],
+      "correct_index": 0,
+      "hint": "MIME-Type für JSON."
+    },
+    {
+      "question": "Welcher Security-Header hilft maßgeblich, Cross-Site Scripting (XSS) im Browser zu reduzieren?",
+      "choices": ["Content-Security-Policy", "Strict-Transport-Security", "X-Frame-Options", "Referrer-Policy"],
+      "correct_index": 0,
+      "hint": "Erlaubt nur definierte Quellen/Policies für Inhalte."
+    }
+  ]
+}
+

@@ -1,0 +1,127 @@
+{
+  "cards": [
+    {
+      "question": "Welche Aussage beschreibt das Single-Responsibility-Prinzip (SRP) am besten?",
+      "choices": [
+        "Eine Klasse sollte genau einen Grund zur Änderung haben",
+        "Eine Klasse darf nur eine Methode haben",
+        "Eine Klasse darf max. 100 Zeilen haben",
+        "Eine Klasse braucht nur ein Attribut"
+      ],
+      "correct_index": 0,
+      "hint": "Fokus auf eine Verantwortung je Modul/Klasse."
+    },
+    {
+      "question": "Was ist der Hauptnutzen von Continuous Integration (CI) im Entwicklungsprozess?",
+      "choices": [
+        "Fehler früh erkennen durch häufige Integration",
+        "Jede Änderung sofort produktiv schalten",
+        "Alle Tests entfallen durch Automatisierung",
+        "Code-Reviews werden obsolet"
+      ],
+      "correct_index": 0,
+      "hint": "Kleine, häufige Integrationen + automatisierte Tests."
+    },
+    {
+      "question": "Welche Aussage zu Containern (z. B. Docker) trifft zu?",
+      "choices": [
+        "Container teilen den Kernel des Host-Systems",
+        "Container sind vollständige VMs mit eigenem Kernel",
+        "Container benötigen zwingend Hypervisor Typ 1",
+        "Container ersetzen Versionskontrolle"
+      ],
+      "correct_index": 0,
+      "hint": "Isolation via Namespaces und Cgroups."
+    },
+    {
+      "question": "Wozu dient eine Pull-Request (Merge Request) in Git-gestützten Workflows?",
+      "choices": [
+        "Code-Änderungen zur Review und Integration vorschlagen",
+        "Code direkt in den Hauptbranch deployen",
+        "Commits kryptografisch signieren",
+        "Binärdateien effizienter speichern"
+      ],
+      "correct_index": 0,
+      "hint": "Diskussion, Review und Zusammenführen von Änderungen."
+    },
+    {
+      "question": "Welcher HTTP-Header steuert hauptsächlich clientseitiges Caching und Zwischenspeicherung?",
+      "choices": ["Cache-Control", "Authorization", "Origin", "Content-Type"],
+      "correct_index": 0,
+      "hint": "z. B. max-age, no-store."
+    },
+    {
+      "question": "Was beschreibt ein UML-Sequenzdiagramm?",
+      "choices": [
+        "Interaktionen von Objekten im Zeitablauf",
+        "Struktur und Beziehungen von Klassen",
+        "Zustände und Übergänge eines Systems",
+        "Verteilung von Artefakten auf Knoten"
+      ],
+      "correct_index": 0,
+      "hint": "Nachrichten entlang von Lifelines."
+    },
+    {
+      "question": "Wozu dient Netzwerksegmentierung (z. B. per VLAN) in Unternehmensnetzen hauptsächlich?",
+      "choices": [
+        "Broadcast-Domänen begrenzen und Sicherheit erhöhen",
+        "Kabelbandbreite physisch erhöhen",
+        "Firewalls überflüssig machen",
+        "IPv6 vollständig ersetzen"
+      ],
+      "correct_index": 0,
+      "hint": "Trennung von Zonen, Reduktion von Broadcasts."
+    },
+    {
+      "question": "Welchen Zweck erfüllt ein Reverse Proxy in einer Webarchitektur?",
+      "choices": [
+        "TLS terminieren und Anfragen an Backends verteilen",
+        "IP-Adressen im LAN vergeben",
+        "Namen lokal per Hosts-Datei auflösen",
+        "Datenbankabfragen effizienter ausführen"
+      ],
+      "correct_index": 0,
+      "hint": "Load Balancing, TLS-Offloading, Caching."
+    },
+    {
+      "question": "Welche Zeitkomplexität hat die binäre Suche in einem sortierten Array?",
+      "choices": ["O(log n)", "O(n)", "O(n log n)", "O(1)"],
+      "correct_index": 0,
+      "hint": "Mit jedem Schritt halbiert sich der Suchraum."
+    },
+    {
+      "question": "Was ist ein zentraler Vorteil von Infrastructure as Code (IaC)?",
+      "choices": [
+        "Reproduzierbare, versionierbare Umgebungen",
+        "Dokumentation wird überflüssig",
+        "Tests sind nicht mehr erforderlich",
+        "Nur On-Premises nutzbar"
+      ],
+      "correct_index": 0,
+      "hint": "Automatisierbar, nachvollziehbar, wiederholbar."
+    },
+    {
+      "question": "Welcher Sicherheitsgrundsatz wird mit dem Need-to-Know-Prinzip verfolgt?",
+      "choices": [
+        "Zugriff nur für Rollen mit notwendiger Berechtigung",
+        "Alle Benutzer sehen alle Daten",
+        "Zugriff nach Seniorität statt Rolle",
+        "Zugriff nur zu festgelegten Bürozeiten"
+      ],
+      "correct_index": 0,
+      "hint": "Minimalprinzip: So wenig Rechte wie nötig."
+    },
+    {
+      "question": "Wozu dient ein Feature Toggle im Auslieferungsprozess?",
+      "choices": [
+        "Funktionen zur Laufzeit gezielt ein- oder ausschalten",
+        "Quellcode automatisch dokumentieren",
+        "Datenbanken online migrieren",
+        "Builds kryptografisch signieren"
+      ],
+      "correct_index": 0,
+      "hint": "Schrittweise Aktivierung, Canary, A/B-Tests."
+    }
+  ]
+}
+

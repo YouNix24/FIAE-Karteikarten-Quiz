@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Bei den POSIX-Dateirechten: Welche Rechte erhalten 'Others' bei der Einstellung chmod 754?",
+      "choices": ["nur Lesen", "keine Rechte", "Lesen+Ausführen", "nur Schreiben"],
+      "correct_index": 0,
+      "hint": "7=rwx (Owner), 5=rx (Group), 4=r (Others)."
+    },
+    {
+      "question": "Was bewirkt der Befehl 'chown user:group datei' unter Linux?",
+      "choices": ["Besitzer & Gruppe ändern", "Rechte ändern", "Datei kopieren", "User löschen"],
+      "correct_index": 0,
+      "hint": "Ownership der Datei neu setzen."
+    },
+    {
+      "question": "Welcher Scheduling-Algorithmus arbeitet mit festen Zeitscheiben (Time Slices) pro Prozess?",
+      "choices": ["Round Robin", "FIFO", "SJF", "LIFO"],
+      "correct_index": 0,
+      "hint": "Zeitscheibe je Prozess in zyklischer Reihenfolge."
+    },
+    {
+      "question": "Mit welchem Tool lässt sich die Prozessliste in Echtzeit interaktiv anzeigen?",
+      "choices": ["top", "ps aux", "who", "last"],
+      "correct_index": 0,
+      "hint": "Interaktive Anzeige und Sortierung."
+    },
+    {
+      "question": "Wie startest du unter systemd einen Dienst, z. B. den Webserver nginx?",
+      "choices": ["systemctl start nginx", "service stop", "init 6", "killall"],
+      "correct_index": 0,
+      "hint": "systemctl <Aktion> <Dienstname>."
+    },
+    {
+      "question": "Welcher Befehl zeigt aktuell offene/lauschede TCP/UDP-Ports und zugehörige Sockets an?",
+      "choices": ["ss -tuln", "ip a", "ping", "df -h"],
+      "correct_index": 0,
+      "hint": "'ss' ist der moderne Ersatz für netstat."
+    },
+    {
+      "question": "Welcher Windows-Befehl zeigt die aktuelle IP-Konfiguration an?",
+      "choices": ["ipconfig", "ifconfig", "nmcli", "route"],
+      "correct_index": 0,
+      "hint": "Kommandozeilentool für Windows-Netzwerke."
+    },
+    {
+      "question": "Wie erstellst du in Git einen Commit mit einer passenden Nachricht in einem Schritt?",
+      "choices": ["git commit -m", "git push -m", "git add -m", "git tag -m"],
+      "correct_index": 0,
+      "hint": "-m übergibt die Commit-Nachricht."
+    },
+    {
+      "question": "Wie fügst du in Git ein neues Remote-Repository unter dem Namen 'origin' hinzu?",
+      "choices": ["git remote add origin URL", "git origin set URL", "git add remote URL", "git push URL"],
+      "correct_index": 0,
+      "hint": "Remote-Name und URL definieren."
+    },
+    {
+      "question": "Welcher Docker-Befehl listet die aktuell laufenden Container auf?",
+      "choices": ["docker ps", "docker run", "docker images", "docker exec"],
+      "correct_index": 0,
+      "hint": "Prozessliste der Container anzeigen."
+    },
+    {
+      "question": "Was kennzeichnet einen Hypervisor des Typs 1 (Bare-Metal)?",
+      "choices": ["Bare-Metal", "Host-basiert", "Container", "BIOS"],
+      "correct_index": 0,
+      "hint": "Läuft direkt auf der Hardware."
+    },
+    {
+      "question": "Was bedeutet RAID 1 im Kontext von Datenspeicherung?",
+      "choices": ["Spiegelung", "Striping+Parität", "Keine Redundanz", "Deduplizierung"],
+      "correct_index": 0,
+      "hint": "Daten werden auf zwei Platten identisch gespiegelt."
+    }
+  ]
+}
+

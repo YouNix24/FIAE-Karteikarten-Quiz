@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Wie viele nutzbare IPv4-Hostadressen stehen in einem /27-Subnetz zur Verfügung?",
+      "choices": ["30", "62", "14", "126"],
+      "correct_index": 0,
+      "hint": "2^5 - 2 = 30 Hosts."
+    },
+    {
+      "question": "Auf welcher Ebene des OSI-Modells wird ARP (Address Resolution Protocol) typischerweise verortet?",
+      "choices": ["Schicht 2", "Schicht 1", "Schicht 3", "Schicht 7"],
+      "correct_index": 0,
+      "hint": "ARP verknüpft IP mit MAC."
+    },
+    {
+      "question": "Welcher IEEE-Standard definiert VLAN-Tagging innerhalb von Ethernet-Frames?",
+      "choices": ["802.1Q", "802.3", "802.11", "802.1X"],
+      "correct_index": 0,
+      "hint": "Tag-Feld im Ethernet-Frame."
+    },
+    {
+      "question": "Welches Ziel verfolgt das Spanning Tree Protocol (STP) in geswitchten Netzwerken?",
+      "choices": ["Schleifen verhindern", "Bandbreite erhöhen", "QoS erzwingen", "VLANs trennen"],
+      "correct_index": 0,
+      "hint": "Blockiert redundante Links bei Loops."
+    },
+    {
+      "question": "Welche Mechanik nutzt traceroute, um den Pfad zu einem Zielhost zu ermitteln?",
+      "choices": ["TTL & ICMP Time Exceeded", "TCP Port 80", "ARP Broadcast", "DHCP DORA"],
+      "correct_index": 0,
+      "hint": "Abnehmendes Hop-Limit provoziert Antworten."
+    },
+    {
+      "question": "Welche Information liefert ein DNS-AAAA-Resource-Record?",
+      "choices": ["IPv6-Adresse", "Mailserver", "Alias", "Reverse Lookup"],
+      "correct_index": 0,
+      "hint": "Nicht MX, nicht CNAME."
+    },
+    {
+      "question": "Welche NAT-Variante eignet sich, um viele interne Clients über eine öffentliche IPv4-Adresse ins Internet zu bringen?",
+      "choices": ["PAT (NAPT)", "Static NAT", "1:1 NAT", "DNAT nur"],
+      "correct_index": 0,
+      "hint": "Port-Multiplexing."
+    },
+    {
+      "question": "Wie wird das Routing-Protokoll OSPF klassifiziert?",
+      "choices": ["Link-State IGP", "Distance-Vector EGP", "Path-Vector IGP", "Schicht-7-Protokoll"],
+      "correct_index": 0,
+      "hint": "Dijkstra-Algorithmus, Areas."
+    },
+    {
+      "question": "Welches Präfix kennzeichnet IPv6-Link-Local-Adressen?",
+      "choices": ["fe80::/10", "fc00::/7", "2001::/16", "::1/128"],
+      "correct_index": 0,
+      "hint": "Automatisch je Interface vorhanden."
+    },
+    {
+      "question": "Welches Verfahren nutzt WPA3 zur Authentifizierung im WLAN?",
+      "choices": ["SAE", "WEP", "Nur TKIP", "CHAP"],
+      "correct_index": 0,
+      "hint": "Dragonfly/SAE."
+    },
+    {
+      "question": "Welcher DNS-Record-Typ stellt einen Alias auf einen kanonischen Namen dar?",
+      "choices": ["CNAME", "MX", "NS", "TXT"],
+      "correct_index": 0,
+      "hint": "Alias auf echten Hostnamen."
+    },
+    {
+      "question": "Auf welchem TCP-Standardport lauschen HTTPS-Dienste typischerweise?",
+      "choices": ["443", "80", "22", "53"],
+      "correct_index": 0,
+      "hint": "TLS über TCP 443."
+    }
+  ]
+}
+

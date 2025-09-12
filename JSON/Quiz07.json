@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Wann kommt nach BGB ein Kaufvertrag rechtswirksam zustande?",
+      "choices": ["Angebot und Annahme", "Bestellung", "Rechnung", "Lieferung"],
+      "correct_index": 0,
+      "hint": "Zwei übereinstimmende Willenserklärungen."
+    },
+    {
+      "question": "Zwischen welchen Parteien werden Tarifverträge üblicherweise abgeschlossen?",
+      "choices": ["Gewerkschaften & Arbeitgeberverbände", "Betriebsrat & Chef", "Bundestag", "IHK"],
+      "correct_index": 0,
+      "hint": "Koalitionen der Arbeitnehmer- und Arbeitgeberseite."
+    },
+    {
+      "question": "Welchem Zweck dient die Abschreibung (AfA) in der Buchführung?",
+      "choices": ["Wertminderung verteilen", "Gewinn erhöhen", "Umsatz steigern", "Steuern umgehen"],
+      "correct_index": 0,
+      "hint": "Planmäßige Verteilung über Nutzungsdauer."
+    },
+    {
+      "question": "Ein Skonto von z. B. 2% soll typischerweise welches Verhalten beim Käufer fördern?",
+      "choices": ["Frühzeitige Zahlung", "Mengenabnahme", "Fehlerausgleich", "Treuebonus"],
+      "correct_index": 0,
+      "hint": "Zahlung vor Fälligkeit gegen Nachlass."
+    },
+    {
+      "question": "Was bedeutet der Begriff Liquidität im kaufmännischen Kontext?",
+      "choices": ["Zahlungsfähigkeit", "Gewinnhöhe", "Lagerbestand", "Kapitalstruktur"],
+      "correct_index": 0,
+      "hint": "Kurzfristige Verpflichtungen begleichen können."
+    },
+    {
+      "question": "Was bedeutet der Grundsatz der Zweckbindung gemäß DSGVO?",
+      "choices": ["Daten nur für festgelegte Zwecke", "Daten immer anonymisieren", "Daten frei teilen", "Nie Einwilligung nötig"],
+      "correct_index": 0,
+      "hint": "Zweck vor Erhebung festlegen und einhalten."
+    },
+    {
+      "question": "Wann geht beim einfachen Eigentumsvorbehalt das Eigentum an der Ware auf den Käufer über?",
+      "choices": ["Bei voller Zahlung", "Bei Bestellung", "Bei Lieferung", "Bei Rechnung"],
+      "correct_index": 0,
+      "hint": "Bis zur Zahlung bleibt der Verkäufer Eigentümer."
+    },
+    {
+      "question": "Wie haften Gesellschafter einer OHG für Verbindlichkeiten der Gesellschaft?",
+      "choices": ["Unbeschränkt, solidarisch", "Nur mit Einlage", "Nur Gesellschaftsvermögen", "Gar nicht"],
+      "correct_index": 0,
+      "hint": "Auch mit Privatvermögen."
+    },
+    {
+      "question": "Wie hoch ist das gesetzliche Mindeststammkapital einer GmbH in Deutschland?",
+      "choices": ["25.000 €", "1 €", "50.000 €", "5.000 €"],
+      "correct_index": 0,
+      "hint": "GmbHG § 5."
+    },
+    {
+      "question": "Welche Dimensionen umfasst das 'magische Dreieck' des Projektmanagements?",
+      "choices": ["Zeit, Kosten, Qualität", "Marketing, Vertrieb, HR", "CPU, RAM, Disk", "Make, Buy, Rent"],
+      "correct_index": 0,
+      "hint": "Zielkonflikt zwischen drei Parametern."
+    },
+    {
+      "question": "Was wird im Rahmen einer Inventur erfasst?",
+      "choices": ["Vermögen & Schulden", "Nur Erlöse", "Nur Anlagen", "Nur Kasse"],
+      "correct_index": 0,
+      "hint": "Stichtagsbezogene Bestandsaufnahme."
+    },
+    {
+      "question": "Wann wird der betriebswirtschaftliche Break-even-Punkt erreicht?",
+      "choices": ["Erlöse = Kosten", "Gewinn maximal", "Umsatz = 0", "Kosten = 0"],
+      "correct_index": 0,
+      "hint": "Gewinn gleich Null."
+    }
+  ]
+}
+

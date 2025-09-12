@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Im Kontext der Informationssicherheit: Was bedeutet Vertraulichkeit (Confidentiality)?",
+      "choices": ["Zugriff nur für Berechtigte", "Daten stets verfügbar", "Unveränderte Daten", "Offene Lizenzen"],
+      "correct_index": 0,
+      "hint": "CIA-Trias: C = Confidentiality."
+    },
+    {
+      "question": "Was zeichnet eine kryptografische Hashfunktion aus?",
+      "choices": ["Einwegabbildung", "Beidseitig reversibel", "Verschlüsselung", "Kompression"],
+      "correct_index": 0,
+      "hint": "Vorbild: f(x) ≠ leicht invertierbar."
+    },
+    {
+      "question": "Warum schützt das Verwenden eines individuellen Salts Passworthashes wirksam gegen bestimmte Angriffe?",
+      "choices": ["Rainbow-Tables", "TLS", "Backups", "DMZ"],
+      "correct_index": 0,
+      "hint": "Einzigartige Hashes erschweren Vorberechnung."
+    },
+    {
+      "question": "Welche Faktoren werden bei einer Zwei-Faktor-Authentifizierung (2FA) typischerweise kombiniert?",
+      "choices": ["Wissen + Besitz", "Wissen + Wissen", "Besitz + Besitz", "Ort + Zeit"],
+      "correct_index": 0,
+      "hint": "Beispiel: Passwort + Token/App."
+    },
+    {
+      "question": "Welches der folgenden Verfahren ist ein asymmetrisches Kryptosystem?",
+      "choices": ["RSA", "AES", "ChaCha20", "3DES"],
+      "correct_index": 0,
+      "hint": "Public/Private Key-Verfahren."
+    },
+    {
+      "question": "Welches Ziel verfolgt TLS bei der Absicherung von Netzwerkverbindungen?",
+      "choices": ["Transportverschlüsselung", "Virenschutz", "Backup", "Patchen"],
+      "correct_index": 0,
+      "hint": "Vertraulichkeit + Integrität + Authentizität."
+    },
+    {
+      "question": "Was enthält ein X.509-Zertifikat unter anderem?",
+      "choices": ["Öffentlichen Schlüssel", "Privaten Schlüssel", "Passwort", "Hash-Salt"],
+      "correct_index": 0,
+      "hint": "Identität + öffentlicher Schlüssel + Signatur."
+    },
+    {
+      "question": "Eine Web Application Firewall (WAF) schützt primär welche Schicht/Komponente?",
+      "choices": ["Anwendungsschicht", "Leitungsschicht", "Sicherungsschicht", "Vermittlung"],
+      "correct_index": 0,
+      "hint": "HTTP/HTTPS-Traffic analysieren/filtern."
+    },
+    {
+      "question": "Was zeichnet ein Intrusion Prevention System (IPS) im Vergleich zu einem IDS aus?",
+      "choices": ["Blockiert aktiv", "Nur melden", "Scant offline", "Patcht Systeme"],
+      "correct_index": 0,
+      "hint": "Inline und präventiv eingreifen."
+    },
+    {
+      "question": "Worum handelt es sich bei ISO/IEC 27001 im Kontext der Informationssicherheit?",
+      "choices": ["ISMS-Managementnorm", "Pen-Test-Standard", "Crypto-Norm", "Router-Profil"],
+      "correct_index": 0,
+      "hint": "Zertifizierbarer Standard für Managementsysteme."
+    },
+    {
+      "question": "Welche Anforderungen stellt die DSGVO an eine wirksame Einwilligung?",
+      "choices": ["Freiwillig, informiert", "Immer schriftlich", "Nie widerrufbar", "Zeitlich unbegrenzt"],
+      "correct_index": 0,
+      "hint": "Freiwillig, spezifisch, informiert, widerrufbar."
+    },
+    {
+      "question": "Wie lautet die 3-2-1-Backup-Regel für robuste Datensicherungen?",
+      "choices": ["3 Kopien, 2 Medien, 1 Offsite", "3 Kopien lokal", "2 Kopien, 1 Medium", "1 Kopie Offsite"],
+      "correct_index": 0,
+      "hint": "Diversifizieren von Speicher und Ort."
+    }
+  ]
+}
+

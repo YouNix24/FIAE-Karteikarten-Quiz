@@ -1,0 +1,76 @@
+{
+  "cards": [
+    {
+      "question": "In welchem Layer des OSI-Schichtenmodells arbeitet ein Netzwerkswitch überwiegend?",
+      "choices": ["Schicht 2", "Schicht 1", "Schicht 3", "Schicht 7"],
+      "correct_index": 0,
+      "hint": "Schicht 2: Vermittlung über MAC-Adressen."
+    },
+    {
+      "question": "Bei einem RAID-5-Verbund: Wie viele Festplatten dürfen gleichzeitig ausfallen, ohne dass Daten verloren gehen?",
+      "choices": ["1", "0", "2", "3"],
+      "correct_index": 0,
+      "hint": "Eine Platte darf ausfallen (eine Parität)."
+    },
+    {
+      "question": "Welches Cloud-Bereitstellungsmodell stellt vollständig nutzbare Anwendungen inklusive Betrieb und Wartung bereit, sodass kein eigenes Deployment nötig ist?",
+      "choices": ["SaaS", "PaaS", "IaaS", "FaaS"],
+      "correct_index": 0,
+      "hint": "Bereitstellung fertiger Anwendungen als Service."
+    },
+    {
+      "question": "Was bedeutet ein statisches VLAN in der Praxis hinsichtlich der Zuordnung von Endgeräten zu Switch-Ports?",
+      "choices": ["Ports fix zugeordnet", "MAC-basiert", "802.1X Login", "DHCP-Option"],
+      "correct_index": 0,
+      "hint": "VLAN-Zuordnung erfolgt manuell pro Port."
+    },
+    {
+      "question": "Wie lautet die korrekte Abfolge der Nachrichten im DHCP-Prozess (DORA)?",
+      "choices": ["Discover > Offer > Request > ACK", "Offer > Discover > ACK > Request", "Request > Offer > Discover > ACK", "ACK > Offer > Request > Discover"],
+      "correct_index": 0,
+      "hint": "Merksatz: D-O-R-A."
+    },
+    {
+      "question": "Welches Verfahren ermöglicht IPv6-Hosts die automatische Adressbildung ohne einen DHCPv6-Server?",
+      "choices": ["SLAAC", "Stateless NAT64", "PPPoE", "ARP"],
+      "correct_index": 0,
+      "hint": "Router Advertisements enthalten Präfix und Flags."
+    },
+    {
+      "question": "Was bedeutet die «include»-Beziehung in einem UML-Use-Case-Diagramm in Bezug auf obligatorische Teilabläufe?",
+      "choices": ["Ablauf A schließt B immer ein", "B ist optional", "A erweitert B", "Selbstinklusion erlaubt"],
+      "correct_index": 0,
+      "hint": "Ein Use Case bindet einen anderen verpflichtend ein."
+    },
+    {
+      "question": "Welche der folgenden Adressbereiche ist ein privater IPv4-Adressbereich gemäß RFC 1918?",
+      "choices": ["10.0.0.0/8", "172.32.0.0/16", "11.0.0.0/8", "1.0.0.0/8"],
+      "correct_index": 0,
+      "hint": "Private Bereiche: 10/8, 172.16/12, 192.168/16."
+    },
+    {
+      "question": "Welche Netzwerkfunktion wird eingesetzt, um DHCP-Anfragen über Subnetzgrenzen hinweg an einen entfernten Server weiterzuleiten?",
+      "choices": ["DHCP Relay Agent", "NAT-Gateway", "DNS-Resolver", "Proxy ARP"],
+      "correct_index": 0,
+      "hint": "Auf Routern oft per 'ip helper-address' konfiguriert."
+    },
+    {
+      "question": "Was unterscheidet eine zustandsbehaftete (stateful) von einer zustandslosen (stateless) Firewall?",
+      "choices": ["Stateful trackt Verbindungszustände", "Stateless ist immer schneller", "Stateful arbeitet nur auf Layer 1", "Stateless benötigt keine Regeln"],
+      "correct_index": 0,
+      "hint": "Rückkanal-Erlaubnis anhand bestehender Sessions."
+    },
+    {
+      "question": "Wozu dient DNSSEC im Domain Name System?",
+      "choices": ["Signierte Antworten sichern Integrität/Authentizität", "Erhöht die Auflösungsgeschwindigkeit", "Verschlüsselt den gesamten DNS-Verkehr", "Ermöglicht Lastverteilung"],
+      "correct_index": 0,
+      "hint": "Kryptografische Signaturen für Resource Records."
+    },
+    {
+      "question": "Welches HTTP-Header-Paar ermöglicht konditionelle Abrufe auf Basis eines Inhaltsfingerabdrucks?",
+      "choices": ["ETag / If-None-Match", "Last-Modified / If-Modified-Since", "Cache-Control / Pragma", "Authorization / WWW-Authenticate"],
+      "correct_index": 0,
+      "hint": "Server vergleicht Client-ETag mit aktuellem ETag."
+    }
+  ]
+}

@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "In UML-Klassendiagrammen: Wodurch wird eine Komposition (starke Ganz-Teil-Beziehung) am Assoziationsende dargestellt?",
+      "choices": ["Schwarzer Diamant", "Weißer Diamant", "Leere Dreieckspitze", "Kein Symbol"],
+      "correct_index": 0,
+      "hint": "Komposition: gefüllter (schwarzer) Diamant."
+    },
+    {
+      "question": "In UML-Klassendiagrammen: Wodurch wird eine Aggregation (schwache Ganz-Teil-Beziehung) dargestellt?",
+      "choices": ["Weißer Diamant", "Schwarzer Diamant", "Gefülltes Dreieck", "Punktlinie"],
+      "correct_index": 0,
+      "hint": "Aggregation: ungefüllter (weißer) Diamant."
+    },
+    {
+      "question": "Was bedeutet die «extend»-Beziehung in einem UML-Use-Case-Diagramm in Bezug auf optionale Erweiterungen?",
+      "choices": ["Optionaler Zusatzfall", "Pflichtteil", "Vererbung", "Assoziation"],
+      "correct_index": 0,
+      "hint": "Optionaler Ablauf, der einen Basisfall erweitert."
+    },
+    {
+      "question": "Welches Symbol kennzeichnet den Startzustand in einem UML-Zustandsdiagramm?",
+      "choices": ["Gefüllter Kreis", "Leerer Kreis", "Doppelkreis", "Raute"],
+      "correct_index": 0,
+      "hint": "Initial State = ausgefüllter Punkt."
+    },
+    {
+      "question": "Wofür steht der Aktivierungsbalken in einem UML-Sequenzdiagramm entlang einer Lifeline?",
+      "choices": ["Ausführung auf der Lifeline", "Nachrichtentyp", "Klassenname", "Zustandswechsel"],
+      "correct_index": 0,
+      "hint": "Zeigt aktive Ausführung/Kontrollfokus."
+    },
+    {
+      "question": "Was bedeutet das Open-Closed-Prinzip (OCP) aus den SOLID-Prinzipien in Bezug auf Änderungen und Erweiterungen?",
+      "choices": ["Offen für Erweiterung", "Nur intern testbar", "Nur OO-Sprachen", "Nur mit UML"],
+      "correct_index": 0,
+      "hint": "Gegen Änderung geschlossen, für Erweiterung offen."
+    },
+    {
+      "question": "Welches Merkmal garantiert das Singleton-Entwurfsmuster?",
+      "choices": ["Eine Instanz", "Kein Zustand", "Immer thread-sicher", "Vererbung"],
+      "correct_index": 0,
+      "hint": "Globaler Zugriffspunkt auf exakt eine Instanz."
+    },
+    {
+      "question": "Was wird typischerweise mit einem Unit-Test überprüft?",
+      "choices": ["Eine kleine Einheit", "Systemende-zu-Ende", "UI-Layout", "Backup-Prozess"],
+      "correct_index": 0,
+      "hint": "Funktionalität isolierter Funktionen/Klassen."
+    },
+    {
+      "question": "Worauf zielt ein Integrationstest im Vergleich zu einem Unit-Test ab?",
+      "choices": ["Zusammenspiel", "Nur GUI", "Nur Datenbank", "Nur API-Doku"],
+      "correct_index": 0,
+      "hint": "Schnittstellen, Interaktion mehrerer Komponenten."
+    },
+    {
+      "question": "Worum handelt es sich bei einem Mock-Objekt im Testen?",
+      "choices": ["Objekt mit Erwartungen", "Echter Service", "Daten-Dump", "UI-Theme"],
+      "correct_index": 0,
+      "hint": "Simuliert Abhängigkeiten und verifiziert Aufrufe."
+    },
+    {
+      "question": "Wie legst du in Git über die Kommandozeile einen neuen Branch an und wechselst direkt hinein?",
+      "choices": ["git switch -c name", "git push origin", "git tag v1.0", "git rm"],
+      "correct_index": 0,
+      "hint": "Alternativ: git checkout -b <name>."
+    },
+    {
+      "question": "Nach SemVer: Wann wird die Minor-Version eines Releases erhöht?",
+      "choices": ["Neue Features ohne Breaking Changes", "Nur Bugfixes", "Bei Breaking Changes", "Bei Build-Metadaten"],
+      "correct_index": 0,
+      "hint": "Kompatible Erweiterungen erhöhen Minor."
+    }
+  ]
+}
+

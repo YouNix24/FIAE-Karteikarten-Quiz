@@ -1,0 +1,77 @@
+{
+  "cards": [
+    {
+      "question": "Welche Sprintlänge wird in Scrum typischerweise empfohlen, um regelmäßig Feedback zu erhalten und Planbarkeit zu wahren?",
+      "choices": ["1–4 Wochen", "1–12 Wochen", "1–2 Tage", "6–12 Monate"],
+      "correct_index": 0,
+      "hint": "Kurze, feste Timebox."
+    },
+    {
+      "question": "Was visualisiert ein Sprint Burndown Chart während eines Sprints?",
+      "choices": ["Restaufwand über die Zeit", "Kapazität je Rolle", "Testabdeckung", "Budgetverlauf"],
+      "correct_index": 0,
+      "hint": "Abgleich mit idealer Restkurve."
+    },
+    {
+      "question": "Welche Skala wird beim Planning Poker für Aufwandsschätzungen häufig eingesetzt?",
+      "choices": ["Fibonacci-Skala", "Linear 1–10", "Alphabet", "Prozent"],
+      "correct_index": 0,
+      "hint": "1, 2, 3, 5, 8, 13, …"
+    },
+    {
+      "question": "Was bezeichnet der kritische Pfad in einem Projektstruktur-/Netzplan?",
+      "choices": ["Längster Pfad ohne Puffer", "Kürzester Pfad", "Pfad mit Kosten", "Pfad mit Risiken"],
+      "correct_index": 0,
+      "hint": "Bestimmt die minimale Projektdauer."
+    },
+    {
+      "question": "Wodurch zeichnet sich eine Bottom-up-Schätzung im Projektmanagement aus?",
+      "choices": ["Schätzt Arbeitspakete", "Schätzt nur Gesamt", "Nur nach Experten", "Nur nach Analogien"],
+      "correct_index": 0,
+      "hint": "Detaillierte Teilaufwände werden aggregiert."
+    },
+    {
+      "question": "Welche Verteilung von Testarten empfiehlt die Testpyramide?",
+      "choices": ["Viele Unit, wenige E2E", "Viele E2E, wenige Unit", "Nur Integrations", "Nur manuelle Tests"],
+      "correct_index": 0,
+      "hint": "Basis: viele schnelle Unit-Tests."
+    },
+    {
+      "question": "Was beschreibt die Größe 'Severity' (Schwere) bei einem Fehler/Bug?",
+      "choices": ["Auswirkung eines Fehlers", "Dringlichkeit", "Aufwand fix", "Verursacher"],
+      "correct_index": 0,
+      "hint": "Schaden/Impact auf System oder Nutzer."
+    },
+    {
+      "question": "Welche Kennzahl ist eine typische Metrik in Kanban zur Flussmessung?",
+      "choices": ["Cycle Time", "Velocity", "Story Points", "Lead Commitment"],
+      "correct_index": 0,
+      "hint": "Durchlaufzeit eines Items bis Fertig."
+    },
+    {
+      "question": "Wie wird der Earned Value (EV) im Projektcontrolling berechnet?",
+      "choices": ["%Fertig × Budget", "Istkosten × Zeit", "Rest × Aufwand", "Umsatz × Marge"],
+      "correct_index": 0,
+      "hint": "Leistungswert in Geldeinheiten."
+    },
+    {
+      "question": "Welches Werkzeug unterstützt die Priorisierung von Stakeholdern nach Einfluss und Interesse?",
+      "choices": ["Einfluss/Interesse-Matrix", "PERT-Netzplan", "Gantt-Chart", "S-Kurve"],
+      "correct_index": 0,
+      "hint": "Stakeholder-Klassifizierung für Maßnahmen."
+    },
+    {
+      "question": "Worum handelt es sich bei einer RACI-Matrix?",
+      "choices": ["Verantwortlichkeitsmatrix", "Kostenmodell", "Risikokatalog", "Qualitätsnorm"],
+      "correct_index": 0,
+      "hint": "R = Responsible, A = Accountable, C/I konsultiert/informiert."
+    },
+    {
+      "question": "Worin unterscheiden sich Lasten- und Pflichtenheft im Anforderungsprozess?",
+      "choices": ["Was vs. Wie", "Wie vs. Was", "Beides Wie", "Beides Was"],
+      "correct_index": 0,
+      "hint": "Kunde beschreibt 'Was', Auftragnehmer 'Wie'."
+    }
+  ]
+}
+
