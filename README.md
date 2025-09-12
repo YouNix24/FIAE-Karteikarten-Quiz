@@ -29,7 +29,7 @@ Alternative (ohne Batch): Die Datei `FIAE_Quiz.html` im Browser öffnen und oben
 
 ## Bedienung
 
-- Startseite zeigt alle verfügbaren Quizze (je 12 Karten)
+- Startseite zeigt alle verfügbaren Quizze (je 12-13 Fragen)
 - „Starten“ öffnet den Fragen-Runner
   - Navigation: Zurück/Weiter, Hinweis einblenden, „Fertig“ zum Auswerten
   - Antworten sind pro Frage zufällig angeordnet
