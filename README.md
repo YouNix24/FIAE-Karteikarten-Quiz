@@ -5,10 +5,10 @@ Ein leichtgewichtiges, lokales Lern- und Selbsttest-Tool zur Vorbereitung auf di
 
 - Fragetafeln pro Themenblock (12 Fragen je Quiz)
 - Zufällige Antwortreihenfolge (kein „oben links ist immer richtig“)
-- Ergebnisanzeige mit Prozent und Note, „Abgeschlossen“â€‘Badge in der Übersicht
+- Ergebnisanzeige mit Prozent und Note, „Abgeschlossen“-Badge in der Übersicht
 - Problemthemen: wertet Fehler über alle Versuche aus und listet nur echte Schwächen
 - Fortschritt bleibt lokal erhalten (LocalStorage) und kann als INI exportiert/importiert werden
-- Fragen liegen als JSON vor und können leicht ergänzt oder angepasst werden (keine SQLâ€‘Aufgaben enthalten)
+- Fragen liegen als JSON vor und können leicht ergänzt oder angepasst werden (keine SQL-Aufgaben enthalten)
 
 Repo: `https://github.com/YouNix24/FIAE-Karteikarten-Quiz`
 
@@ -21,31 +21,31 @@ Repo: `https://github.com/YouNix24/FIAE-Karteikarten-Quiz`
    - Git: `git clone https://github.com/YouNix24/FIAE-Karteikarten-Quiz.git`
    - Oder als ZIP von GitHub herunterladen und entpacken
 2. Ordner öffnen und starten: `start_quiz_server.bat`
-   - Der lokale Server startet und öffnet automatisch deinen Standardâ€‘Browser
+   - Der lokale Server startet und öffnet automatisch deinen Standard-Browser
    - Die App ist dann unter `http://localhost:<PORT>/FIAE_Quiz.html` erreichbar
 
-Alternative (ohne Batch): Die Datei `FIAE_Quiz.html` im Browser öffnen und oben per Button die JSONâ€‘Dateien bzw. den `JSON/`â€‘Ordner manuell laden.
+Alternative (ohne Batch): Die Datei `FIAE_Quiz.html` im Browser öffnen und oben per Button die JSON-Dateien bzw. den `JSON/`-Ordner manuell laden.
 
 ### macOS / Linux
 
-- Mit Pythonâ€‘HTTPâ€‘Server
+- Mit Python-HTTP-Server
   - In den Projektordner wechseln und starten: `python3 -m http.server 8000`
   - Browser öffnen: `http://localhost:8000/FIAE_Quiz.html`
 - Oder mit Node Serve
   - `npx serve -l 8000`
   - `http://localhost:8000/FIAE_Quiz.html`
 
-Hinweis: Im „file://“â€‘Modus (ohne Server) ist Autoâ€‘Scan der JSONâ€‘Dateien deaktiviert. Lade die JSONs dann über die Buttons „JSONâ€‘Dateien laden …“ bzw. „JSONâ€‘Ordner wählen …“.
+Hinweis: Im „file://“-Modus (ohne Server) ist Auto-Scan der JSON-Dateien deaktiviert. Lade die JSONs dann über die Buttons „JSON-Dateien laden …“ bzw. „JSON-Ordner wählen …“.
 
 
 ## Bedienung
 
 - Startseite zeigt alle verfügbaren Quizze (je 12 Karten)
-- „Starten“ öffnet den Fragenâ€‘Runner
+- „Starten“ öffnet den Fragen-Runner
   - Navigation: Zurück/Weiter, Hinweis einblenden, „Fertig“ zum Auswerten
   - Antworten sind pro Frage zufällig angeordnet
 - Ergebnis: Korrekte/insgesamt, Prozent, Note, Fortschrittsbalken
-- Abgeschlossenâ€‘Status: In der Übersicht rechts oben je Karte als Badge sichtbar; bleibt beim nächsten Start erhalten
+- Abgeschlossen-Status: In der Übersicht rechts oben je Karte als Badge sichtbar; bleibt beim nächsten Start erhalten
 - Dashboard (oben): Übersicht über abgeschlossene Quizze, Versuche, Durchschnitt/Best/Schlechteste Note
 - Problemthemen: Zeigt nur Themen mit mindestens einem Fehler, sortiert nach Fehlerzahl/Quote
 - Verlauf/Statistik
@@ -59,7 +59,7 @@ Das Tool fasst deine Antworten je Themengebiet zusammen (Versuche über die Zeit
 
 - Netzwerke
 - Projektmanagement (inkl. Scrum/Kanban)
-- ITâ€‘Sicherheit
+- IT-Sicherheit
 - Web & HTTP
 - Cloud & Virtualisierung
 - Speicher & RAID
@@ -67,9 +67,9 @@ Das Tool fasst deine Antworten je Themengebiet zusammen (Versuche über die Zeit
 - Betriebssysteme & Tools
 - Recht & BWL
 - Softwareentwurf & UML
-- Allgemeine ITâ€‘Grundlagen (nur wenn keine andere Zuordnung passt)
+- Allgemeine IT-Grundlagen (nur wenn keine andere Zuordnung passt)
 
-Tipp: Setze optional `topic` (String) oder `tags` (String/Array) in den JSONâ€‘Fragen, um die Zuordnung explizit zu steuern.
+Tipp: Setze optional `topic` (String) oder `tags` (String/Array) in den JSON-Fragen, um die Zuordnung explizit zu steuern.
 
 
 ## Inhalte anpassen (JSON)
@@ -93,7 +93,7 @@ Alle Fragen liegen im Ordner `JSON/` als `QuizNN.json`. Jede Datei enthält ein 
 
 Richtlinien:
 - 12 Fragen je Quizdatei (einheitlich für die App)
-- Keine SQLâ€‘Aufgaben (fallen in AP1 weg)
+- Keine SQL-Aufgaben (fallen in AP1 weg)
 - Keine doppelten Fragen über verschiedene Quizze hinweg
 - Aussagekräftige, nicht abgekürzte Formulierungen (z.â€¯B. statt „OCP heißt…?“: vollständige Beschreibung/Frage)
 
@@ -106,16 +106,16 @@ Nach Änderungen einfach die Seite neu laden.
 - `JS/app.js` – Logik (Laden der JSON, Runner, Auswertung, Problemthemen, Persistenz)
 - `CSS/style.css` – Layout und Styles
 - `JSON/QuizNN.json` – Fragenkataloge
-- `start_quiz_server.bat` – Startet lokalen Server auf Windows (öffnet Standardâ€‘Browser)
-- `server.ps1` – Simpler PowerShellâ€‘Server mit Logging in `Logs/`
+- `start_quiz_server.bat` – Startet lokalen Server auf Windows (öffnet Standard-Browser)
+- `server.ps1` – Simpler PowerShell-Server mit Logging in `Logs/`
 
 
 ## Häufige Fragen (FAQ)
 
 - „Ich sehe die JSONs nicht im file:// Modus“
-  - Im Dateimodus ist das automatische Scannen aus Sicherheitsgründen aus. Nutze die Buttons oben, um JSONâ€‘Dateien/Ordner zu laden, oder starte den lokalen Server.
+  - Im Dateimodus ist das automatische Scannen aus Sicherheitsgründen aus. Nutze die Buttons oben, um JSON-Dateien/Ordner zu laden, oder starte den lokalen Server.
 - „Die Änderungen werden nicht angezeigt“
-  - Mit Strg+F5 hart neu laden (Browsercache umgehen). Bei Serverstart über Batch wird dein Standardâ€‘Browser genutzt.
+  - Mit Strg+F5 hart neu laden (Browsercache umgehen). Bei Serverstart über Batch wird dein Standard-Browser genutzt.
 - „Wo werden meine Ergebnisse gespeichert?“
   - Lokal im Browser (LocalStorage). Export/Import über INI ist möglich.
 
@@ -133,7 +133,8 @@ Nach Änderungen einfach die Seite neu laden.
 
 ## Hinweise
 
-- Das Tool arbeitet vollständig lokal. Es sendet keine Daten nach außen. Der mitgelieferte PowerShellâ€‘Server schreibt reine Textâ€‘Logs in `Logs/` für das lokale Debugging.
+- Das Tool arbeitet vollständig lokal. Es sendet keine Daten nach außen. Der mitgelieferte PowerShell-Server schreibt reine Text-Logs in `Logs/` für das lokale Debugging.
+- Wenn du das mitgelieferte PDF „Zusammenfassung_Abschlussprüfung – Fast alle Themen.pdf“ ersetzen willst, lege die neue Datei einfach neben die HTML ab und passe ggf. den Link in der Topbar an.
 
 Viel Erfolg beim Lernen – und viel Spaß beim gezielten Schließen deiner Wissenslücken!
 ## Themen (Quiz01–11)
