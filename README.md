@@ -26,18 +26,6 @@ Repo: `https://github.com/YouNix24/FIAE-Karteikarten-Quiz`
 
 Alternative (ohne Batch): Die Datei `FIAE_Quiz.html` im Browser öffnen und oben per Button die JSON-Dateien bzw. den `JSON/`-Ordner manuell laden.
 
-### macOS / Linux
-
-- Mit Python-HTTP-Server
-  - In den Projektordner wechseln und starten: `python3 -m http.server 8000`
-  - Browser öffnen: `http://localhost:8000/FIAE_Quiz.html`
-- Oder mit Node Serve
-  - `npx serve -l 8000`
-  - `http://localhost:8000/FIAE_Quiz.html`
-
-Hinweis: Im „file://“-Modus (ohne Server) ist Auto-Scan der JSON-Dateien deaktiviert. Lade die JSONs dann über die Buttons „JSON-Dateien laden …“ bzw. „JSON-Ordner wählen …“.
-
-
 ## Bedienung
 
 - Startseite zeigt alle verfügbaren Quizze (je 12 Karten)
