@@ -1,10 +1,11 @@
 ﻿# FIAE-Karteikarten-Quiz
 ![alt text](Preview.png)
 
-Ein leichtgewichtiges, lokales Lern- und Selbsttest-Tool zur Vorbereitung auf die Abschlussprüfung (AP1). Ziel ist es, schnell die eigenen Problemthemen zu erkennen und gezielt zu üben – ohne Installation, ohne Backend, direkt im Browser.
+Ein leichtgewichtiges, lokales Lern- und Selbsttest-Tool zur Vorbereitung auf die Abschlussprüfung (AP1). 
+Ziel ist es, schnell die eigenen Problemthemen zu erkennen und gezielt zu üben – ohne Installation, ohne Backend, direkt im Browser.
 
-- Fragetafeln pro Themenblock (12 Fragen je Quiz)
-- Zufällige Antwortreihenfolge (kein „oben links ist immer richtig“)
+- Fragetafeln pro Themenblock (12-13 Fragen je Quiz)
+- Zufällige Antwortreihenfolge
 - Ergebnisanzeige mit Prozent und Note, „Abgeschlossen“-Badge in der Übersicht
 - Problemthemen: wertet Fehler über alle Versuche aus und listet nur echte Schwächen
 - Fortschritt bleibt lokal erhalten (LocalStorage) und kann als INI exportiert/importiert werden
