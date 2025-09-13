@@ -81,7 +81,7 @@ Alle Fragen liegen im Ordner `JSON/` als `QuizNN.json`. Jede Datei enthält ein 
 ```
 
 Richtlinien:
-- 12 Fragen je Quizdatei (einheitlich für die App)
+- 12-13 Fragen je Quizdatei (einheitlich für die App)
 - Keine SQL-Aufgaben (fallen in AP1 weg)
 - Keine doppelten Fragen über verschiedene Quizze hinweg
 - Aussagekräftige, nicht abgekürzte Formulierungen (z.â€¯B. statt „OCP heißt…?“: vollständige Beschreibung/Frage)
@@ -126,7 +126,7 @@ Nach Änderungen einfach die Seite neu laden.
 - Wenn du das mitgelieferte PDF „Zusammenfassung_Abschlussprüfung – Fast alle Themen.pdf“ ersetzen willst, lege die neue Datei einfach neben die HTML ab und passe ggf. den Link in der Topbar an.
 
 Viel Erfolg beim Lernen – und viel Spaß beim gezielten Schließen deiner Wissenslücken!
-## Themen (Quiz01–11)
+## Themen (Quiz01–12)
 
 Kurzüberblick der Themen je Quiz:
 
