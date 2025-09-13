@@ -2,7 +2,12 @@
   "cards": [
     {
       "question": "Wofür steht die Abkürzung DDR bei Arbeitsspeicher?",
-      "choices": ["Double Data Rate", "Direct Data Read", "Dynamic Data Routing", "Dual Disk Redundancy"],
+      "choices": [
+        "Double Data Rate",
+        "Direct Data Read",
+        "Dynamic Data Routing",
+        "Dual Disk Redundancy"
+      ],
       "correct_index": 0,
       "hint": "Datenübertragung auf steigender und fallender Taktflanke.",
       "topic": "DDR-RAM",
@@ -10,7 +15,12 @@
     },
     {
       "question": "Welche Eigenschaft beschreibt flüchtigen Speicher (RAM)?",
-      "choices": ["Inhalte gehen ohne Strom verloren", "Inhalte bleiben ohne Strom erhalten", "Nur Lesen, kein Schreiben möglich", "Nur im BIOS sichtbar"],
+      "choices": [
+        "Inhalte gehen ohne Strom verloren",
+        "Inhalte bleiben ohne Strom erhalten",
+        "Nur Lesen, kein Schreiben möglich",
+        "Nur im BIOS sichtbar"
+      ],
       "correct_index": 0,
       "hint": "RAM verliert Daten bei Stromverlust.",
       "topic": "DDR-RAM",
@@ -20,13 +30,18 @@
       "question": "Welche Betriebsspannung nutzt DDR5 typischerweise?",
       "choices": ["1,1 V", "1,8 V", "2,5 V", "1,5 V"],
       "correct_index": 0,
-      "hint": "DDR: 2,5V → DDR2:1,8V → DDR3:1,5V → DDR4:1,2V → DDR5:1,1V.",
+      "hint": "DDR: 2,5V → DDR2: 1,8V → DDR3: 1,5V → DDR4: 1,2V → DDR5: 1,1V.",
       "topic": "DDR-RAM",
       "tags": ["DDR5", "Spannung", "Energie"]
     },
     {
       "question": "Welchen Effekt hat Dual-/Quad-Channel-Betrieb?",
-      "choices": ["Erhöht die Speicherbandbreite durch parallele Kanäle", "Verringert die Kapazität pro Modul", "Erhöht die Latenzzeiten deutlich", "Ersetzt die Grafikkarte"],
+      "choices": [
+        "Erhöht die Speicherbandbreite durch parallele Kanäle",
+        "Verringert die Kapazität pro Modul",
+        "Erhöht die Latenzzeiten deutlich",
+        "Ersetzt die Grafikkarte"
+      ],
       "correct_index": 0,
       "hint": "Mehr Kanäle = mehr Durchsatz (Bandbreite).",
       "topic": "DDR-RAM",
@@ -34,7 +49,12 @@
     },
     {
       "question": "Welche architektonische Neuerung bringt DDR5 auf Modul-Ebene?",
-      "choices": ["Zwei unabhängige 32‑Bit‑Kanäle pro DIMM", "Drei 16‑Bit‑Kanäle pro DIMM", "Ein einzelner 128‑Bit‑Kanal", "Integrierte CPU‑Kerne im DIMM"],
+      "choices": [
+        "Zwei unabhängige 32‑Bit‑Kanäle pro DIMM",
+        "Drei 16‑Bit‑Kanäle pro DIMM",
+        "Ein einzelner 128‑Bit‑Kanal",
+        "Integrierte CPU‑Kerne im DIMM"
+      ],
       "correct_index": 0,
       "hint": "DDR4 hatte effektiv einen 64‑Bit‑Kanal pro Modul.",
       "topic": "DDR-RAM",
@@ -42,59 +62,96 @@
     },
     {
       "question": "Welche Aussage zur Kompatibilität der DDR‑Generationen ist korrekt?",
-      "choices": ["DDR‑Generationen sind nicht abwärtskompatibel", "DDR5 ist abwärtskompatibel zu DDR4", "DDR4 läuft in DDR3‑Slots", "Alle DDR‑Typen sind gegenseitig kompatibel"],
+      "choices": [
+        "DDR‑Generationen sind nicht abwärtskompatibel",
+        "DDR5 ist abwärtskompatibel zu DDR4",
+        "DDR4 läuft in DDR3‑Slots",
+        "Alle DDR‑Typen sind gegenseitig kompatibel"
+      ],
       "correct_index": 0,
-      "hint": "Mechanik/Signalpegel unterscheiden sich pro Generation.",
+      "hint": "Mechanik und Signalpegel unterscheiden sich pro Generation.",
       "topic": "DDR-RAM",
       "tags": ["Kompatibilität", "DDR4", "DDR5"]
     },
-    {
-      "question": "Welche Hauptaufgabe hat ein Router im Netzwerk?",
-      "choices": ["Vernetzen unterschiedlicher Netze und Weiterleitung per IP (Layer 3)", "Signale verstärken, um Reichweite zu erhöhen", "Daten an alle Ports senden (Broadcast)", "WLAN‑Endgeräte direkt miteinander koppeln"],
+
+    { 
+      "question": "Was kennzeichnet Open‑Source‑Software?",
+      "choices": [
+        "Quellcode frei verfügbar; Nutzung, Weitergabe und Änderungen erlaubt",
+        "Kostenlos, aber Quellcode geheim",
+        "Nur zeitlich begrenzte Testversion",
+        "Nur auf einem Gerät nutzbar"
+      ],
       "correct_index": 0,
-      "hint": "Router arbeiten auf OSI‑Schicht 3 (Vermittlung).",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Router", "Layer 3", "Routing"]
+      "hint": "Freie Nutzung und Modifikation des Quellcodes.",
+      "topic": "Lizenzarten",
+      "tags": ["Open Source", "Lizenz", "Quellcode"]
     },
     {
-      "question": "Wodurch unterscheidet sich ein Switch von einem Hub?",
-      "choices": ["Switch leitet gezielt per MAC an den richtigen Port, Hub sendet an alle", "Switch arbeitet auf Layer 1, Hub auf Layer 2", "Switch erzeugt WLAN, Hub verbindet WAN", "Es gibt keinen Unterschied"],
+      "question": "Welche Bedingung schreibt die GPL vor?",
+      "choices": [
+        "Weitergabe nur unter derselben Lizenz (Copyleft)",
+        "Kommerzielle Nutzung strikt verboten",
+        "Quellcode darf nicht veröffentlicht werden",
+        "Lizenz läuft automatisch nach 30 Tagen ab"
+      ],
       "correct_index": 0,
-      "hint": "Switch: Schicht 2, MAC‑Tabellen; Hub: einfache Verteilung an alle Ports.",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Switch", "Hub", "MAC", "Layer 2"]
+      "hint": "Copyleft verpflichtet zur gleichen Lizenz bei Verteilung.",
+      "topic": "Lizenzarten",
+      "tags": ["GPL", "Copyleft", "Open Source"]
     },
     {
-      "question": "Welche Aufgabe hat ein Access Point (AP)?",
-      "choices": ["Aufbau eines WLAN und Anbindung an ein kabelgebundenes LAN", "Adressumsetzung zwischen IPv4 und IPv6", "Datenverkehr zwischen VLANs routen", "Datenpakete verschlüsseln auf Layer 3"],
+      "question": "Worin unterscheidet sich die LGPL von der GPL?",
+      "choices": [
+        "Erlaubt Einbindung in proprietäre Software (Linking)",
+        "Verbietet das Verlinken mit Open‑Source‑Bibliotheken",
+        "Erfordert zwingend eine Patentlizenz",
+        "Erlaubt keine Weitergabe des Quellcodes"
+      ],
       "correct_index": 0,
-      "hint": "AP verbindet Funk‑Clients mit dem kabelgebundenen Netz.",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Access Point", "WLAN", "LAN"]
+      "hint": "LGPL ist für Bibliotheken gedacht und erlaubt Linking.",
+      "topic": "Lizenzarten",
+      "tags": ["LGPL", "GPL", "Linking"]
     },
     {
-      "question": "Wofür wird ein Repeater eingesetzt?",
-      "choices": ["Signale regenerieren/verlängern für größere Reichweiten", "Pakete zwischen Netzen routen", "WLAN‑Clients authentifizieren", "MAC‑Adressen filtern"],
+      "question": "Was regelt die Apache‑Lizenz zusätzlich gegenüber MIT?",
+      "choices": [
+        "Patentrechtliche Regelungen/Grant",
+        "Verbot kommerzieller Nutzung",
+        "Pflicht zur Closed‑Source‑Veröffentlichung",
+        "Zeitliche Nutzungsbegrenzung"
+      ],
       "correct_index": 0,
-      "hint": "Bekannt als WLAN‑Repeater zur Reichweitenerhöhung.",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Repeater", "Signal", "Reichweite"]
+      "hint": "Apache enthält ausdrückliche Patentklauseln.",
+      "topic": "Lizenzarten",
+      "tags": ["Apache", "MIT", "Patent"]
     },
     {
-      "question": "Was macht ein Modem im Heimnetz typischerweise?",
-      "choices": ["Wandelt Leitungs-/Trägersignale (z. B. DSL, Kabel, Glasfaser)", "Stellt IP‑Routing zwischen Subnetzen bereit", "Verteilt Frames anhand MAC‑Tabellen", "Erstellt VLANs für Segmentierung"],
+      "question": "Was beschreibt Shareware am besten?",
+      "choices": [
+        "Kostenlose Testversion mit zeitlicher/umfangsbezogener Einschränkung",
+        "Vollständig freie Software ohne Einschränkungen",
+        "Vorinstallierte, nicht übertragbare Lizenz",
+        "Öffentliches Gemeingut ohne Urheberrechte"
+      ],
       "correct_index": 0,
-      "hint": "Oft in Routern integriert (Kombi‑Geräte).",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Modem", "Signalwandlung", "Zugang"]
+      "hint": "Nach Testphase meist lizenzpflichtig (z. B. 30 Tage).",
+      "topic": "Lizenzarten",
+      "tags": ["Shareware", "Testversion", "Lizenz"]
     },
     {
-      "question": "Welche Aufgabe hat eine Firewall?",
-      "choices": ["Regelt Netzwerkverkehr nach definierten Regeln", "Erhöht ausschließlich die Bandbreite", "Vergibt Hostnamen im LAN", "Misst ausschließlich Latenzen"],
+      "question": "Was bedeutet Concurrent‑User‑Lizenz?",
+      "choices": [
+        "Begrenzt die Anzahl gleichzeitiger Nutzer",
+        "Bindet die Lizenz an genau ein Gerät",
+        "Nur in Verbindung mit vorinstallierter Hardware gültig",
+        "Erlaubt beliebig viele parallele Nutzer"
+      ],
       "correct_index": 0,
-      "hint": "Filterung/Regeln, z. B. Ports/Protokolle/Zonen.",
-      "topic": "Netzwerkgeräte",
-      "tags": ["Firewall", "Filter", "Sicherheit"]
+      "hint": "Gezählt werden parallele Sitzungen, nicht Installationen.",
+      "topic": "Lizenzarten",
+      "tags": ["Lizenz", "Concurrent User", "Nutzerzahl"]
     }
   ]
 }
+

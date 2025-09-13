@@ -68,13 +68,17 @@ body {
 .spinner { width: 32px; height: 32px; border-radius: 50%; border: 4px solid #2a3055; border-top-color: #5b76ff; animation: spin 1s linear infinite; }
 @keyframes spin { from { transform: rotate(0deg) } to { transform: rotate(360deg) } }
 .runner-card { width: min(920px, 92vw); background: linear-gradient(180deg, var(--panel), var(--elev)); border: 1px solid #2a2f52; border-radius: 16px; box-shadow: var(--shadow);
-  padding: 18px; display:flex; flex-direction:column; gap: 14px; }
+  padding: 18px; display:flex; flex-direction:column; gap: 14px; max-height: 92vh; overflow: hidden; }
 .runner-header { display:flex; justify-content: space-between; align-items:center; }
 .runner-title { font-size: 16px; color: var(--muted); }
 .progressbar { height: 8px; background: #262a44; border-radius: 999px; overflow: hidden; }
 .progressbar > div { height: 100%; width: 0%; background: linear-gradient(90deg, #5b76ff, #19c37d); transition: width .25s ease; }
 .question { font-size: 20px; font-weight: 650; margin-top: 6px; }
-.question pre.code { margin-top: 8px; padding: 12px; border-radius: 10px; border: 1px solid #2a3055; background: #101633; color: #e8ebf3; overflow: auto; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; white-space: pre; }
+.question pre.code { margin-top: 8px; padding: 12px; border-radius: 10px; border: 1px solid #2a3055; background: #101633; color: #e8ebf3; overflow: auto; font: 14px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace; white-space: pre; max-height: 45vh; overscroll-behavior: contain; }
+
+@media (max-height: 700px){
+  .question pre.code { max-height: 35vh; }
+}
 .ui-logs { position: fixed; left: 12px; right: 12px; bottom: 12px; max-height: 38vh; overflow: auto; background: rgba(13,16,33,.92); border: 1px solid #2a3055; border-radius: 10px; box-shadow: var(--shadow); padding: 8px 10px; font: 12px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; color: #b9c2e5; }
 .ui-logs.hidden { display: none; }
 .ui-logs .entry { white-space: pre-wrap; border-bottom: 1px dashed #2a3055; padding: 4px 0; }

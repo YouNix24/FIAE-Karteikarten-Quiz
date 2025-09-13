@@ -137,7 +137,7 @@ Kurzüberblick der Themen je Quiz:
 - Quiz05: IP-Adressierung, Speicher & RAID, Stakeholder
 - Quiz06: Anforderungsmanagement, ERP, Organisation & Führung, Qualität & Prozesse, SLA & Betrieb
 - Quiz07: Netzwerkgeräte, Versionierung
-- Quiz08: DDR-RAM, Netzwerkgeräte
+- Quiz08: DDR-RAM, Lizenzarten
 - Quiz09: Vorgehensmodelle
 - Quiz10: Logikgatter, UEFI/BIOS, USV-Berechnung
 - Quiz11: Programmlogik
@@ -152,6 +152,7 @@ Gesamtliste aller Themen aus Quiz01–11 (einmalig, alphabetisch):
 - IP-Adressierung
 - IT-Sicherheit
 - Logikgatter
+- Lizenzarten
 - Netzwerkgeräte
 - Netzwerktopologien
 - Organisation & Führung
