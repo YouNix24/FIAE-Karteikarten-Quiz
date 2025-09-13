@@ -1,12 +1,17 @@
 {
   "cards": [
     {
-      "question": "Wofür steht die Abkürzung DDR bei Arbeitsspeicher?",
-      "choices": ["Double Data Rate", "Direct Data Read", "Dynamic Data Routing", "Dual Disk Redundancy"],
+      "question": "Was beschreibt in JSON ein Schlüssel-Wert-Paar?",
+      "choices": [
+        "Die Zuordnung eines Namens (Key) zu einem Wert",
+        "Eine geordnete Liste von Werten ohne Namen",
+        "Eine binäre Kodierung von Daten",
+        "Einen Kommentarabschnitt im Dokument"
+      ],
       "correct_index": 0,
-      "hint": "Datenübertragung auf steigender und fallender Taktflanke.",
-      "topic": "Logikgatter",
-      "tags": ["DDR", "RAM", "Taktflanke"]
+      "hint": "JSON-Objekte bestehen aus solchen Zuordnungen: \"name\": \"Max\"",
+      "topic": "JSON – Schlüsselpaare",
+      "tags": ["JSON", "Key-Value", "Objekt"]
     },
     {
       "question": "Welches Verhalten hat ein NOT-Gatter?",
@@ -73,10 +78,10 @@
       "tags": ["USV", "VA", "Leistungsfaktor"]
     },
     {
-      "question": "USV‑Überbrückungszeit: 12 V · 200 Ah Batterie, Last 2400 W. Ideale Dauer?",
+      "question": "USV‑Überbrückungszeit: 12 V × 200 Ah Batterie, Last 2400 W. Ideale Dauer?",
       "choices": ["≈ 60 Minuten", "≈ 30 Minuten", "≈ 90 Minuten", "≈ 120 Minuten"],
       "correct_index": 0,
-      "hint": "Energie=12·200=2400 Wh → 2400/2400 W=1 h.",
+      "hint": "Energie=12×200=2400 Wh → 2400/2400 W=1 h.",
       "topic": "USV-Berechnung",
       "tags": ["USV", "Wh", "Überbrückungszeit"]
     },
@@ -98,3 +103,4 @@
     }
   ]
 }
+

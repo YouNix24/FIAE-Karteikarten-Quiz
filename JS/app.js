@@ -403,7 +403,9 @@ function startRun(q){
   state.run = { id: q.id, title: q.title, cards, idx: 0, chosen: Array(cards.length).fill(-1), finished:false };
   document.getElementById('runnerTitle').textContent = `${q.title} • ${cards.length} Fragen`;
   document.getElementById('resultBox').classList.add('hidden');
-  document.getElementById('btnFinish').disabled = false;
+  const btnFinish = document.getElementById('btnFinish');
+  btnFinish.disabled = false;
+  btnFinish.classList.toggle('hidden', cards.length > 1);
   document.getElementById('overlay').classList.remove('hidden');
   renderRun();
 }
@@ -437,7 +439,11 @@ function renderRun(){
   }
   document.getElementById('progressFill').style.width = `${((r.idx)/r.cards.length)*100}%`;
   document.getElementById('btnPrev').disabled = (r.idx===0);
-  document.getElementById('btnNext').disabled = (r.idx===r.cards.length-1);
+  const btnNext = document.getElementById('btnNext');
+  btnNext.disabled = (r.idx===r.cards.length-1);
+  btnNext.classList.toggle('hidden', (r.idx===r.cards.length-1));
+  const btnFinish = document.getElementById('btnFinish');
+  btnFinish.classList.toggle('hidden', !(r.idx === r.cards.length - 1));
 }
 
 function showCorrection(qIdx, choiceIdx){
