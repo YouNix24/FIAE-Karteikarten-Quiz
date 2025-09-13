@@ -1,0 +1,141 @@
+DATENAUSTAUSCHFORMAT
+JSON
+
+JASON VOORHEES
+
+Nach der Lektion kann man....
+erklären, was JSON ist und warum es sich als Datenaustauschformat durchgesetzt
+hat.
+lesen und schreiben einfacher bis mittelkomplexer JSON-Dokumente
+zwischen JSON-Grundtypen (String, Number, Boolean, Null, Array, Object)
+unterscheiden.
+typische Einsatzgebiete (Web-APIs, Konfigurationsdateien, NoSQL-Datenbanken
+u.ä.) benennen.
+JSON-Daten mit einem Validator prüfen und Fehler beheben.
+
+JSON ist...
+Java Script Object Notation
+leichtes Datenaustauschformat
+einfacher Text in JS - Syntax
+ein Standard zum Senden von Daten
+
+Ähnelt syntaktisch dem Code zum Erstellen von JS-Objekten
+Integrierte Funktionen in JS:
+JSON.parse() - Erstellt Objekte
+JSON.stringify() - Erstellt JSON-Zeichenketten
+
+Zeichen der Basisstruktur
+{}[]:,
+
+Syntax & Datentypen
+String
+
+“Berlin”
+
+Unicode, in doppelten Anführungszeichen
+
+Number
+
+42 ; 3.1415 ; -13
+
+Boolean
+
+true ; false
+
+Kein führendes 0, Punkt als
+Dezimaltrenner
+Kleinschreibung!
+
+Null
+
+null
+
+Platzhalter für “kein Wert”
+
+Array
+
+[“rot”, “grün”, “blau”]
+
+Geordnete Liste, 0-basiert
+
+Object
+
+{”stadt”:”Berlin”, “plz”:10115}
+
+Ungeordnete Wert-Paare
+
+Regeln bei JSON
+Nur doppelte Anführungszeichen
+Letztes Element in Arrays/Objects
+ohne Komma
+Schlüsselnamen immer als String
+UTF-8-ohne-BOM empfohlen
+
+Beispiel und Vergleich zu JavaScript
+JSON
+{”name”:”John”}
+JavaScript
+{name:’John’}
+
+Verwendung von JSON
+REST- und GraphQL-APIs
+Konfigurationsdateien (VSC settings.json)
+NoSQL-Datenbanken (MongoDB, CouchDB)
+Inter-Process-Communication
+Statische Daten für Frontend-Apps
+
+JSON-Werte dürfen kein(e) / nicht
+Funktion
+Datum
+undefiniert
+sein.
+
+Beispiele:
+JSON-Zeichenfolge
+{”name”:”John”}
+JSON-Zahlen
+{”age”:30}
+
+Beispiele:
+JSON-Objekte
+{
+“employee”:{”name”:”John”, “age”:30}
+}
+JSON-Arrays
+{
+“employees”:[“John”, “Anna”, “Peter”]
+}
+
+Beispiele:
+JSON-Boolesche Werte
+{”Sommer”:true}
+JSON null
+{”Zweiter_Vorname”:null}
+
+Aufgabe:
+Entwirf ein JSON-Dokument, das eine Schulklasse
+mit folgenden Anforderungen beschreibt:
+Klassenbezeichnung (z.B. “10b”)
+Jahrgang
+Tutor (Name, E-Mail)
+Liste der SchülerInnen (jeweils Name,
+Geburtsdatum, Notendurchschnitt)
+Wahlpflichtfächer als Array von Strings
+
+Online-Hilfen
+JSON Lint - Online Validator mit Fehleranalyse
+JSON Schema - formale Validierung großer
+Dokumente
+jq - mächtiges Command-Line-Tool zum
+Filtern/Transformieren
+
+<body>
+<script>
+let klasse1 = {
+JSON
+};
+console.log(klasse1.Tutor);
+</script>
+</body>
+
+

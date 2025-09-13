@@ -1,0 +1,163 @@
+{
+  "cards": [
+    {
+      "question": "Wofür steht die Abkürzung JSON?",
+      "choices": [
+        "JavaScript Object Notation",
+        "Java Source Object Network",
+        "Just Simple Object Numbers",
+        "JavaScript Oriented Network"
+      ],
+      "correct_index": 0,
+      "hint": "Leichtgewichtiges Datenaustauschformat aus der Webwelt.",
+      "topic": "JSON",
+      "tags": ["JSON", "Abkürzung", "Grundlagen"]
+    },
+    {
+      "question": "Welche Aussage zu JSON-Schlüsseln ist korrekt?",
+      "choices": [
+        "Schlüssel müssen Strings in doppelten Anführungszeichen sein",
+        "Schlüssel dürfen unquoted sein wie in JavaScript-Objekten",
+        "Schlüssel dürfen einfache oder doppelte Anführungszeichen nutzen",
+        "Schlüssel dürfen Funktionen enthalten"
+      ],
+      "correct_index": 0,
+      "hint": "In JSON sind nur doppelte Anführungszeichen zulässig.",
+      "topic": "JSON",
+      "tags": ["Syntax", "Schlüssel", "Anführungszeichen"]
+    },
+    {
+      "question": "Welcher Wert ist ein gültiger JSON-Wert?",
+      "choices": [
+        "null",
+        "undefined",
+        "function(){}",
+        "new Date()"
+      ],
+      "correct_index": 0,
+      "hint": "JSON erlaubt String, Number, Boolean, Null, Array, Object.",
+      "topic": "JSON",
+      "tags": ["Datentypen", "Werte", "Null"]
+    },
+    {
+      "question": "Welche Funktion parst eine JSON-Zeichenkette in JavaScript zu einem Objekt?",
+      "choices": [
+        "JSON.parse()",
+        "JSON.encode()",
+        "JSON.toObject()",
+        "JSON.stringify()"
+      ],
+      "correct_index": 0,
+      "hint": "Stringify ergibt String, Parse ergibt Objekt.",
+      "topic": "JSON",
+      "tags": ["JSON.parse", "JavaScript", "Parser"]
+    },
+
+    {
+      "question": "Welches ist ein immaterielles Gut?",
+      "choices": [
+        "Lizenzrecht",
+        "Schokolade",
+        "Computer",
+        "Auto"
+      ],
+      "correct_index": 0,
+      "hint": "Immaterielle Güter sind z. B. Dienstleistungen, Informationen, Rechte.",
+      "topic": "Güterarten",
+      "tags": ["immateriell", "Dienstleistung", "Rechte"]
+    },
+    {
+      "question": "Welches Beispiel ist ein Verbrauchsgut (Konsumgut)?",
+      "choices": [
+        "Druckerpapier",
+        "Werkzeug",
+        "Regal",
+        "Maschine"
+      ],
+      "correct_index": 0,
+      "hint": "Verbrauchsgüter werden bei Nutzung verbraucht (z. B. Papier, Strom).",
+      "topic": "Güterarten",
+      "tags": ["Konsumgut", "Verbrauchsgut", "Beispiel"]
+    },
+    {
+      "question": "Welches Güterpaar ist komplementär?",
+      "choices": [
+        "Drucker und Toner",
+        "Auto und Bahn",
+        "PC und Lebensmittel",
+        "Blumen und Zigaretten"
+      ],
+      "correct_index": 0,
+      "hint": "Komplementärgüter ergänzen sich im Gebrauch.",
+      "topic": "Güterarten",
+      "tags": ["Komplementär", "Beziehung", "Paare"]
+    },
+    {
+      "question": "Welches ist ein typischer Hilfsstoff im Einkauf?",
+      "choices": [
+        "Klebstoff",
+        "Eisenblech (Gehäuse)",
+        "Schmieröl",
+        "Handelsware"
+      ],
+      "correct_index": 0,
+      "hint": "Hilfsstoffe sind Nebenbestandteile (z. B. Farbe, Klebstoff, Heftklammern).",
+      "topic": "Güterarten",
+      "tags": ["Hilfsstoffe", "Einkauf", "Leistungserstellung"]
+    },
+
+    {
+      "question": "Wofür steht das S in SMART?",
+      "choices": [
+        "Spezifisch",
+        "Schnell",
+        "Streng",
+        "Standardisiert"
+      ],
+      "correct_index": 0,
+      "hint": "Ziele präzise und konkret formulieren.",
+      "topic": "SMART-Ziele",
+      "tags": ["SMART", "Spezifisch", "Zielsetzung"]
+    },
+    {
+      "question": "Wofür steht das M in SMART?",
+      "choices": [
+        "Messbar",
+        "Modern",
+        "Modular",
+        "Monetär"
+      ],
+      "correct_index": 0,
+      "hint": "Fortschritt anhand geeigneter Metriken nachverfolgen.",
+      "topic": "SMART-Ziele",
+      "tags": ["SMART", "Messbar", "Metriken"]
+    },
+    {
+      "question": "Wofür steht das T in SMART?",
+      "choices": [
+        "Terminiert",
+        "Technisch",
+        "Taktisch",
+        "Transparent"
+      ],
+      "correct_index": 0,
+      "hint": "Ziele mit einem festen Datum versehen (Deadline).",
+      "topic": "SMART-Ziele",
+      "tags": ["SMART", "Terminiert", "Deadline"]
+    },
+    {
+      "question": "Welcher Vorteil beschreibt SMART-Ziele am besten?",
+      "choices": [
+        "Verbesserte Klarheit und Messbarkeit der Zielsetzung",
+        "Utopische Ziele erhöhen immer die Motivation",
+        "Kein Bedarf an Zeitvorgaben (flexibel ohne Frist)",
+        "Weniger Struktur erhöht die Kreativität"
+      ],
+      "correct_index": 0,
+      "hint": "SMART sorgt für klare, messbare und erreichbare Ziele.",
+      "topic": "SMART-Ziele",
+      "tags": ["Vorteile", "Zielsetzung", "Struktur"]
+    }
+  ]
+}
+

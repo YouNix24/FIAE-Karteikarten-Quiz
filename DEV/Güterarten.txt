@@ -1,0 +1,127 @@
+Güterarten
+Unternehmen produzieren oder bieten Güter an, für die Wirtschaftssubjekte (private und
+öffentliche Haushalte, privatwirtschaftliche und öffentliche Unternehmen) bereit sind,
+genügend Geld auszugeben.
+Güter lassen sich nach verschiedenen Kriterien unterschiedlichen Güterarten zuordnen:
+Güterarten (Güter sind Mittel zur Bedürfnisbefriedigung)
+Kriterium
+Güterarten
+Beispiele
+Beschaffenheit
+Materielle Güter
+Gebäude, Auto,
+Computer,
+Schokolade
+Immaterielle Güter
+Dienstleistungen,
+Informationen,
+Rechte
+Konsumgüter
+Verbrauchsgüter
+Druckerpapier,
+Strom,
+Ort und Zweck
+Telefondienste
+Gebrauchsgüter
+Maschinen, Regale,
+Werkzeuge, Autos,
+Bücher
+Betriebsmittel
+Gebäude,
+Investitionsgüter
+Maschinen,
+Werkzeuge,
+Testgeräte
+Werkstoffe
+Rohstoffe,
+Hilfsstoffe,
+Betriebsstoffe
+Erzeugnisse, Waren Hergestellte
+Produkte,
+Handelswaren
+Beziehung
+Komplementäre Güter
+Drucker und Toner
+zueinander
+Substitutive Güter
+Tintenstrahl- zu
+Laserdrucker, Auto
+zu Bahn
+Unverbundene Güter
+Lebensmittel und
+PC, Blumen und
+Zigaretten
+Knappheit
+Freie Güter
+Atemluft,
+Naturerlebnisse,
+Sonnenschein
+Wirtschaftliche Güter
+Sauerstoff, MusikDienst, Sonnenbank,
+Ausschließbarkeit
+Private Güter
+Kinovorstellung,
+Computer
+Öffentliche Güter
+Stadtfest
+
+Aus der Sicht des Einkaufs der Unternehmen und damit zur Erstellung von Leistungen könnte
+man Güter wie folgt unterscheiden:
+Güter zur Leistungserstellung
+Einkauf
+Erläuterungen
+Rohstoffe
+Hauptbestandteile eines Erzeugnisses, z. B. Eisen für Gehäuse
+Hilfsstoffe
+Nebenbestandteile eines Erzeugnisses, z. B. Farbe, Klebstoff,
+Heftklammern
+Betriebsstoffe
+Nicht direkt einem Erzeugnis zuzurechnen, z. B. Schmieröle,
+Brennstoffe
+Einbauteile
+Komponenten, die für die Herstellung eines Produktes verwendet
+werden (wenn nicht als Rohstoffe oder Hilfsstoffe angesehen)
+Handelswaren
+Güter, die an den Endverbraucher weiterverkauft werden
+Dienstleistungen Fremdleistungen (Dienste), die zur Leistungserstellung notwendig sind
+Lizenzen, Rechte Markenrechte, Softwarenutzungsrechte, Patente und Urheberrechte,
+die bei der Leistungserstellung zu berücksichtigen sind
+
+Organisationsmittel
+Unter Organisationsmitteln werden in der Aufbau- und Ablauforganisation sowohl
+Arbeitsmittel als auch formale Gestaltungsmittel verstanden. Mit dem Ziel der Digitalisierung
+stehen hier große Veränderungen an.
+
+Klassisches Büro,
+klassische
+Organisationsmittel
+
+Papierloses Büro,
+digitale
+Organisationsmittel
+
+Organisationsmittel
+Arbeitsmittel
+Computer, Büromaschinen, technische
+Anlagen, oder Werkzeuge. Büromaterial,
+Ordner, Hefter, Register, Mappen
+Gestaltungsmittel Arbeitsanweisungen, Formular- und
+Vordruckwesen, Kontenplan,
+Kontenrahmen, Organigramm
+Arbeitsmittel
+Computer und vernetze Peripheriegeräte
+mit Kommunikationsschnittstellen, Office
+und Organisationssoftware,
+Informationsmanagementsystem
+Digitale
+Alle Gestaltungsmittel stehen digital zur
+Gestaltungsmittel Verfügung, z. B. als Organisationspläne,
+Ordner, Verzeichnisse, Formulare
+Kollaboration
+Gestaltungsmittel können kommuniziert,
+initiiert, gemeinsam bearbeitet,
+abgestimmt und organisiert werden,
+Innovations- und Projektmanagement
+werden ganzheitlich integriert
+
+

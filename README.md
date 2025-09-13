@@ -141,6 +141,7 @@ Kurzüberblick der Themen je Quiz:
 - Quiz09: Vorgehensmodelle
 - Quiz10: Logikgatter, UEFI/BIOS, USV-Berechnung
 - Quiz11: Programmlogik
+- Quiz12: JSON, Güterarten, SMART-Ziele
 
 Gesamtliste aller Themen aus Quiz01–11 (einmalig, alphabetisch):
 
@@ -149,6 +150,7 @@ Gesamtliste aller Themen aus Quiz01–11 (einmalig, alphabetisch):
 - DDR-RAM
 - DHCP
 - ERP
+- Güterarten
 - IP-Adressierung
 - IT-Sicherheit
 - Logikgatter
@@ -162,6 +164,8 @@ Gesamtliste aller Themen aus Quiz01–11 (einmalig, alphabetisch):
 - SLA & Betrieb
 - Speicher & RAID
 - Stakeholder
+- SMART-Ziele
+- JSON
 - UEFI/BIOS
 - USV-Berechnung
 - Versionierung
